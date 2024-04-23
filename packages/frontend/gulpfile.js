@@ -11,8 +11,8 @@ function clean() {
 
 function buildScripts() {
   return multipleExec(
-    `esbuild --bundle src/scripts/index.ts --outfile=build/scripts/main.js --minify`,
-    'esbuild --bundle src/scripts/prerenderIndex.ts --outfile=build/scripts/prerender.js --minify',
+    `esbuild --bundle src/scripts/index.ts --outfile=build/scripts/main.js`,
+    'esbuild --bundle src/scripts/prerenderIndex.ts --outfile=build/scripts/prerender.js',
   )
 }
 

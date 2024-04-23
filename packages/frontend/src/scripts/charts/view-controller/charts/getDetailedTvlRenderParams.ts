@@ -2,7 +2,7 @@ import { formatTimestamp } from '../../../../utils'
 import { formatCurrency } from '../../../../utils/format'
 import { RenderParams } from '../../renderer/ChartRenderer'
 import { SeriesStyle } from '../../styles'
-import { getEntriesByDays } from '../getEntriesByDays'
+import { getProjectEntriesByDays } from '../getEntriesByDays'
 import { DetailedTvlData, renderDetailedTvlHover } from '../hovers'
 import { ChartControlsState } from '../types'
 
@@ -17,9 +17,9 @@ export function getDetailedTvlRenderParams(
       throw new Error('Invalid unit')
     }
 
-    const dataInRange = getEntriesByDays(
+    const dataInRange = getProjectEntriesByDays(
       state.timeRangeInDays,
-      state.data.values,
+      state.data.projectData,
       { trimLeft: true },
     )
     const useEth = state.unit === 'ETH'

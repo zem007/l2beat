@@ -3,7 +3,7 @@ import compact from 'lodash/compact'
 
 import { Config } from '../../../../build/config'
 import { getFooterProps, getNavbarProps } from '../../../../components'
-import { getChartUrl } from '../../../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../../../scripts/charts/data-controller/ChartDataController'
 import { getCharts } from '../../../../utils/project/getCharts'
 import { PagesData, Wrapped } from '../../../Page'
 import { ProjectPageProps } from '../view/ProjectPage'
@@ -44,9 +44,9 @@ export function getProps(
     },
     wrapper: {
       preloadApis: compact([
-        charts.tvl && getChartUrl(charts.tvl.initialType),
-        charts.activity && getChartUrl(charts.activity.initialType),
-        charts.costs && getChartUrl(charts.costs.initialType),
+        charts.tvl && getChartUrls(charts.tvl.initialType),
+        charts.activity && getChartUrls(charts.activity.initialType),
+        charts.costs && getChartUrls(charts.costs.initialType),
       ]),
       metadata: getPageMetadata(bridge),
       banner: config.features.banner,

@@ -2,7 +2,7 @@ import { formatNumber, formatTimestamp } from '../../../../utils'
 import { RenderParams } from '../../renderer/ChartRenderer'
 import { SeriesStyle } from '../../styles'
 import { TokenInfo } from '../../types'
-import { getEntriesByDays } from '../getEntriesByDays'
+import { getProjectEntriesByDays } from '../getEntriesByDays'
 import { renderTokenTvlHover } from '../hovers'
 import { ChartControlsState } from '../types'
 
@@ -15,9 +15,9 @@ export function getTokenTvlRenderParams(
     }
     const { tokenSymbol, tokenType } = state.data
 
-    const dataInRange = getEntriesByDays(
+    const dataInRange = getProjectEntriesByDays(
       state.timeRangeInDays,
-      state.data.values,
+      state.data.projectData,
       {
         trimLeft: true,
       },

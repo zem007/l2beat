@@ -1,7 +1,7 @@
 import { Bridge, Layer2 } from '@l2beat/config'
 import { ActivityApiResponse, TvlApiResponse } from '@l2beat/shared-pure'
 
-import { getChartUrl } from '../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../scripts/charts/data-controller/ChartDataController'
 import { ChartType } from '../../scripts/charts/types'
 import { getTpsDaily } from '../../utils/activity/getTpsDaily'
 import { formatUSD, getPercentageChange } from '../../utils/utils'
@@ -50,7 +50,7 @@ export function getProps(
       htmlClassName: 'light overflow-hidden h-[100vh] meta',
       bodyClassName: 'overflow-hidden h-[100vh]',
       metadata: { title: 'Meta Image', description: '', image: '', url: '' },
-      preloadApis: [getChartUrl(chartType)],
+      preloadApis: [getChartUrls(chartType)],
       banner: false,
     },
   }
@@ -75,7 +75,7 @@ export function getPropsActivity(
       htmlClassName: 'light overflow-hidden h-[100vh] meta',
       bodyClassName: 'overflow-hidden h-[100vh]',
       metadata: { title: 'Meta Image', description: '', image: '', url: '' },
-      preloadApis: [getChartUrl({ type: 'scaling-activity' })],
+      preloadApis: [getChartUrls({ type: 'scaling-activity' })],
       banner: false,
     },
   }
@@ -112,7 +112,7 @@ export function getPropsDetailed(
       htmlClassName: 'light overflow-hidden h-[100vh] meta',
       bodyClassName: 'overflow-hidden h-[100vh]',
       metadata: { title: 'Meta Image', description: '', image: '', url: '' },
-      preloadApis: [getChartUrl(chartType)],
+      preloadApis: [getChartUrls(chartType)],
       banner: false,
     },
   }

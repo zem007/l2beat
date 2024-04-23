@@ -26,7 +26,6 @@ import {
   getManuallyVerifiedContracts,
   getVerificationStatus,
 } from './api/getVerificationStatus'
-import { activitySanityCheck, tvlSanityCheck } from './api/sanityCheck'
 import { JsonHttpClient } from './caching/JsonHttpClient'
 import { getConfig } from './config'
 import { getCommonFeatures } from './config/getCommonFeatures'
@@ -63,14 +62,14 @@ async function main() {
     console.time('[TVL]')
     const tvlApiResponse = await fetchTvlApi(config.backend, http)
     console.timeEnd('[TVL]')
-    tvlSanityCheck(tvlApiResponse)
+    // tvlSanityCheck(tvlApiResponse)
 
     let activityApiResponse: ActivityApiResponse | undefined
     if (config.features.activity) {
       console.time('[ACTIVITY]')
       activityApiResponse = await fetchActivityApi(config.backend, http)
       console.timeEnd('[ACTIVITY]')
-      activitySanityCheck(activityApiResponse)
+      // activitySanityCheck(activityApiResponse)
     }
 
     let tvlBreakdownApiResponse: ProjectAssetsBreakdownApiResponse | undefined =

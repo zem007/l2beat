@@ -5,6 +5,7 @@ import {
   AssetType,
   ChainId,
   L2CostsApiResponse,
+  notUndefined,
   ProjectId,
   TvlApiResponse,
 } from '@l2beat/shared-pure'
@@ -31,19 +32,30 @@ export function getCharts(
   const hasTvl =
     project.config.escrows.length !== 0 &&
     !!tvlApiResponse.projects[project.id.toString()]
+  const tvlComparableProjects = getComparableProjects(
+    config.layer2s,
+    (project) => !!tvlApiResponse.projects[project.id.toString()],
+  )
+
   const hasActivity =
     !!config?.features.activity &&
     !!activityApiResponse?.projects[project.id.toString()]
+  const activityComparableProjects = getComparableProjects(
+    config.layer2s,
+    (project) => !!activityApiResponse?.projects[project.id.toString()],
+  )
+
   const hasCosts = !!costsApiResponse?.projects[project.id.toString()]
+  const costsComparableProjects = getComparableProjects(
+    config.layer2s,
+    (project) => !!costsApiResponse?.projects[project.id.toString()],
+  )
 
   return {
     tvl: hasTvl
       ? {
           settingsId: `project-${project.display.slug}-tvl`,
-          initialType:
-            project.type === 'bridge'
-              ? { type: 'project-tvl', slug: project.display.slug }
-              : { type: 'project-detailed-tvl', slug: project.display.slug },
+          initialType: { type: 'project-tvl', slug: project.display.slug },
           tokens: getTokens(
             project.id,
             tvlApiResponse,
@@ -56,6 +68,7 @@ export function getCharts(
               : undefined,
           milestones: project.milestones,
           showComingSoon: !hasTvl && !hasActivity,
+          comparableProjects: tvlComparableProjects,
         }
       : undefined,
     activity: hasActivity
@@ -63,6 +76,7 @@ export function getCharts(
           settingsId: `project-${project.display.slug}-activity`,
           initialType: { type: 'project-activity', slug: project.display.slug },
           milestones: project.milestones,
+          comparableProjects: activityComparableProjects,
         }
       : undefined,
     costs: hasCosts
@@ -70,6 +84,7 @@ export function getCharts(
           settingsId: `project-${project.display.slug}-costs`,
           initialType: { type: 'project-costs', slug: project.display.slug },
           milestones: project.milestones,
+          comparableProjects: costsComparableProjects,
         }
       : undefined,
   }
@@ -155,6 +170,12 @@ function getTokenInfo(
       }
 }
 
-function notUndefined<T>(x: T | undefined): x is T {
-  return x !== undefined
+function getComparableProjects(
+  projects: Layer2[],
+  check: (project: Layer2) => boolean,
+) {
+  return projects.filter(check).map((project) => ({
+    slug: project.display.slug,
+    name: project.display.name,
+  }))
 }

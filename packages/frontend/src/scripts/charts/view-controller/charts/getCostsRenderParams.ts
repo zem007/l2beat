@@ -1,3 +1,5 @@
+import compact from 'lodash/compact'
+
 import { formatNumber, formatTimestamp } from '../../../../utils'
 import { formatCurrency } from '../../../../utils/format'
 import { RenderParams } from '../../renderer/ChartRenderer'
@@ -17,18 +19,24 @@ export function getCostsRenderParams(
       throw new Error('Invalid data type')
     }
 
+    const [_, ...compareWith] = state.data.projectsData
+    const isCompared = compareWith.length > 0
     const dataInRange = getEntriesByDays(
       state.timeRangeInDays,
-      state.data.values,
-      { trimLeft: true },
+      state.data.projectsData,
+      {
+        trimLeft: true,
+      },
     )
 
-    const points = dataInRange.map((dataPoint) => {
-      const [timestamp] = dataPoint
+    const points = dataInRange.map((dataPoints) => {
+      const [primary] = dataPoints
+      const series = getSeries(dataPoints, state.unit)
+
       return {
-        series: getSeries(dataPoint, state.unit),
-        data: getData(dataPoint, state.unit),
-        milestone: state.milestones[timestamp],
+        series,
+        data: getData(primary, state.unit),
+        milestone: state.milestones[primary[0]],
       }
     })
 
@@ -37,25 +45,40 @@ export function getCostsRenderParams(
         ? formatNumber(value)
         : formatCurrency(value, state.unit, { showLessThanMinimum: false })
 
-    const seriesStyle: SeriesStyle[] = [
-      {
-        line: 'blue',
-        fill: 'blue',
-        point: 'circle',
-      },
-      {
-        line: 'light-yellow',
-        fill: 'light-yellow',
-      },
-      {
-        line: 'pink',
-        fill: 'pink',
-      },
-      {
-        line: 'purple',
-        fill: 'purple',
-      },
-    ]
+    const seriesStyle: SeriesStyle[] = isCompared
+      ? [
+          {
+            line: 'yellow',
+          },
+          {
+            line: 'purple',
+          },
+          {
+            line: 'pink',
+          },
+          {
+            line: 'light-yellow',
+          },
+        ]
+      : [
+          {
+            line: 'blue',
+            fill: 'blue',
+            point: 'circle',
+          },
+          {
+            line: 'light-yellow',
+            fill: 'light-yellow',
+          },
+          {
+            line: 'pink',
+            fill: 'pink',
+          },
+          {
+            line: 'purple',
+            fill: 'purple',
+          },
+        ]
 
     return {
       formatYAxisLabel,
@@ -63,14 +86,19 @@ export function getCostsRenderParams(
       seriesStyle,
       renderHoverContents: (data) => renderCostsHover(data),
       useLogScale: state.useLogScale,
-      range: [dataInRange[0][0], dataInRange[dataInRange.length - 1][0]],
+      range: [dataInRange[0][0][0], dataInRange[dataInRange.length - 1][0][0]],
       theme: state.theme,
     }
   }
 }
 
-function getSeries(dataPoint: CostsChart['data'][number], unit: ChartUnit) {
+function getSeries(dataPoints: CostsChart['data'][number][], unit: ChartUnit) {
+  const [primary, ...compareWith] = dataPoints
   const [
+    timestamp,
+    totalGas,
+    totalEth,
+    totalUsd,
     overheadGas,
     overheadEth,
     overheadUsd,
@@ -83,29 +111,52 @@ function getSeries(dataPoint: CostsChart['data'][number], unit: ChartUnit) {
     blobsGas,
     blobsEth,
     blobsUsd,
-  ] = dataPoint.slice(4)
+  ] = primary
+  const isCompared = compareWith.length > 0
+
   switch (unit) {
     case 'USD':
-      return [
-        overheadUsd + computeUsd + blobsUsd + calldataUsd,
-        overheadUsd + computeUsd + blobsUsd,
-        overheadUsd + computeUsd,
-        overheadUsd,
-      ]
+      return isCompared
+        ? [
+            totalUsd,
+            ...compact(
+              compareWith.map((data) => data[0] === timestamp && data[3]),
+            ),
+          ]
+        : [
+            overheadUsd + computeUsd + blobsUsd + calldataUsd,
+            overheadUsd + computeUsd + blobsUsd,
+            overheadUsd + computeUsd,
+            overheadUsd,
+          ]
     case 'ETH':
-      return [
-        overheadEth + computeEth + blobsEth + calldataEth,
-        overheadEth + computeEth + blobsEth,
-        overheadEth + computeEth,
-        overheadEth,
-      ]
+      return isCompared
+        ? [
+            totalEth,
+            ...compact(
+              compareWith.map((data) => data[0] === timestamp && data[2]),
+            ),
+          ]
+        : [
+            overheadEth + computeEth + blobsEth + calldataEth,
+            overheadEth + computeEth + blobsEth,
+            overheadEth + computeEth,
+            overheadEth,
+          ]
     case 'GAS':
-      return [
-        overheadGas + computeGas + blobsGas + calldataGas,
-        overheadGas + computeGas + blobsGas,
-        overheadGas + computeGas,
-        overheadGas,
-      ]
+      return isCompared
+        ? [
+            totalGas,
+            ...compact(
+              compareWith.map((data) => data[0] === timestamp && data[1]),
+            ),
+          ]
+        : [
+            overheadGas + computeGas + blobsGas + calldataGas,
+            overheadGas + computeGas + blobsGas,
+            overheadGas + computeGas,
+            overheadGas,
+          ]
   }
 }
 

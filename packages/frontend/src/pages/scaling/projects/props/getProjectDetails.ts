@@ -65,27 +65,27 @@ export function getProjectDetails(
     })
   }
 
-  if (charts.activity) {
-    items.push({
-      type: 'ChartSection',
-      props: {
-        ...charts.activity,
-        id: 'activity',
-        title: 'Activity',
-      },
-    })
-  }
+  // if (charts.activity) {
+  //   items.push({
+  //     type: 'ChartSection',
+  //     props: {
+  //       ...charts.activity,
+  //       id: 'activity',
+  //       title: 'Activity',
+  //     },
+  //   })
+  // }
 
-  if (charts.costs) {
-    items.push({
-      type: 'ChartSection',
-      props: {
-        ...charts.costs,
-        id: 'costs',
-        title: 'Costs',
-      },
-    })
-  }
+  // if (charts.costs) {
+  //   items.push({
+  //     type: 'ChartSection',
+  //     props: {
+  //       ...charts.costs,
+  //       id: 'costs',
+  //       title: 'Costs',
+  //     },
+  //   })
+  // }
 
   if (!isUpcoming && project.milestones && !isEmpty(project.milestones)) {
     items.push({

@@ -17,30 +17,33 @@ export type ChartData =
 
 interface ChartTvlData {
   type: 'tvl'
-  values: AggregateDetailedTvlResponse
+  projectsData: [
+    AggregateDetailedTvlResponse,
+    ...AggregateDetailedTvlResponse[],
+  ]
 }
 
 interface ChartActivityData {
   type: 'activity'
-  values: ActivityResponse
+  projectsData: [ActivityResponse, ...ActivityResponse[]]
   isAggregate: boolean
 }
 
 interface ChartCostsData {
   type: 'costs'
-  values: CostsResponse
+  projectsData: [CostsResponse, ...CostsResponse[]]
 }
 
 interface ChartDetailedTvlData {
   type: 'detailed-tvl'
-  values: AggregateDetailedTvlResponse
+  projectData: AggregateDetailedTvlResponse
 }
 
 interface ChartTokenTvlData {
   type: 'token-tvl'
   tokenType: 'regular' | 'CBV' | 'EBV' | 'NMV'
   tokenSymbol: string
-  values: TokenTvlResponse
+  projectData: TokenTvlResponse
 }
 
 export type ChartUnit = z.infer<typeof ChartUnit>

@@ -22,6 +22,10 @@ import { ScaleControls } from './ScaleControls'
 import { TimeRange } from './TimeRange'
 import { TokenControl, TokenControls } from './TokenControls'
 
+interface ComparableProject {
+  name: string
+  slug: string
+}
 export interface ChartProps {
   title?: string
   id?: string
@@ -37,6 +41,7 @@ export interface ChartProps {
   header?: 'tvl' | 'activity' | 'costs' | 'project'
   showComingSoon?: boolean
   withoutSeparator?: boolean
+  comparableProjects?: ComparableProject[]
 }
 
 export function Chart(props: ChartProps) {
@@ -153,6 +158,18 @@ export function Chart(props: ChartProps) {
               <ScaleControls chartType={props.initialType} />
             </div>
           </div>
+          <select
+            name="compare-with"
+            id="compare-with-select"
+            multiple
+            className="max-h-16"
+          >
+            {props.comparableProjects?.map((project) => (
+              <option value={project.slug} key={project.slug}>
+                {project.name}
+              </option>
+            ))}
+          </select>
         </div>
       </section>
       {!props.withoutSeparator && (

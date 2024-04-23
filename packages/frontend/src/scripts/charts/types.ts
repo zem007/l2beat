@@ -2,6 +2,13 @@ import { Milestone } from '@l2beat/config'
 import { AssetType } from '@l2beat/shared-pure'
 import { z } from 'zod'
 
+export type WithoutTimestamp<T extends number[]> = T extends [
+  infer _,
+  ...infer Rest,
+]
+  ? Rest
+  : never
+
 export interface AggregateTvlChart {
   type: 'AggregateTvlChart'
   points: {
@@ -240,28 +247,44 @@ export type ChartType = z.infer<typeof ChartType>
 export const ChartType = z.discriminatedUnion('type', [
   z.object({
     type: z.literal('scaling-tvl'),
-    filteredSlugs: z.array(z.string()).optional(),
+    filteredSlugs: z.string().array().optional(),
   }),
   z.object({
     type: z.literal('scaling-detailed-tvl'),
-    filteredSlugs: z.array(z.string()).optional(),
+    filteredSlugs: z.string().array().optional(),
   }),
   z.object({
     type: z.literal('scaling-activity'),
-    filteredSlugs: z.array(z.string()).optional(),
+    filteredSlugs: z.string().array().optional(),
   }),
   z.object({
     type: z.literal('scaling-costs'),
   }),
   z.object({ type: z.literal('bridges-tvl'), includeCanonical: z.boolean() }),
-  z.object({ type: z.literal('project-tvl'), slug: z.string() }),
+  z.object({
+    type: z.literal('project-tvl'),
+    slug: z.string(),
+    compareWith: z.string().array().optional(),
+  }),
   z.object({
     type: z.literal('project-token-tvl'),
     info: TokenInfo,
   }),
-  z.object({ type: z.literal('project-detailed-tvl'), slug: z.string() }),
-  z.object({ type: z.literal('project-costs'), slug: z.string() }),
-  z.object({ type: z.literal('project-activity'), slug: z.string() }),
+  z.object({
+    type: z.literal('project-detailed-tvl'),
+    slug: z.string(),
+    compareWith: z.string().array().optional(),
+  }),
+  z.object({
+    type: z.literal('project-costs'),
+    slug: z.string(),
+    compareWith: z.string().array().optional(),
+  }),
+  z.object({
+    type: z.literal('project-activity'),
+    slug: z.string(),
+    compareWith: z.string().array().optional(),
+  }),
   z.object({ type: z.literal('storybook-fake-tvl') }),
   z.object({ type: z.literal('storybook-fake-activity') }),
   z.object({ type: z.literal('storybook-fake-detailed-tvl') }),

@@ -1,6 +1,6 @@
 import { Config } from '../../../../build/config'
 import { getFooterProps, getNavbarProps } from '../../../../components'
-import { getChartUrl } from '../../../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../../../scripts/charts/data-controller/ChartDataController'
 import { getDefaultPageMetadata } from '../../../metadata'
 import { Wrapped } from '../../../Page'
 import { ActivityPagesData } from '../types'
@@ -26,7 +26,7 @@ export function getProps(
         image: 'https://l2beat.com/meta-images/overview-scaling-activity.png',
         url: 'https://l2beat.com/scaling/activity',
       }),
-      preloadApis: [getChartUrl({ type: 'scaling-activity' })],
+      preloadApis: [getChartUrls({ type: 'scaling-activity' })],
       banner: config.features.banner,
     },
   }

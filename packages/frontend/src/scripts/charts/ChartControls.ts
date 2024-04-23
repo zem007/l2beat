@@ -85,6 +85,20 @@ export class ChartControls {
     this.configureCanonicalToggle(query)
     this.configureProjectFilters()
     this.configureRefetchButton(query)
+    this._configureCompareWithSelect(query)
+  }
+
+  private _configureCompareWithSelect(query: Query) {
+    const { $ } = query
+    const compareWithSelect = $.maybe<HTMLSelectElement>('#compare-with-select')
+    if (!compareWithSelect) return
+
+    compareWithSelect.addEventListener('change', () => {
+      const values = Array.from(compareWithSelect.selectedOptions).map(
+        (o) => o.value,
+      )
+      this.updateChartType({ ...this.chartType, compareWith: values })
+    })
   }
 
   private configureThemeControls() {

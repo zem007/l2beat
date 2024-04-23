@@ -1,3 +1,5 @@
+import { WithoutTimestamp } from '../types'
+
 interface ResponseLike<T extends number[]> {
   hourly?: { data: T[] }
   sixHourly?: { data: T[] }
@@ -5,6 +7,36 @@ interface ResponseLike<T extends number[]> {
 }
 
 export function getEntriesByDays<T extends number[]>(
+  days: number,
+  response: ResponseLike<T>[],
+  options: { trimLeft?: boolean } = {},
+): [number, WithoutTimestamp<T>[]][] {
+  const map = new Map<number, number[][]>()
+  const dataInRange = response.map((r) =>
+    getProjectEntriesByDays(days, r, options),
+  )
+  const [primary, ...rest] = dataInRange
+  const timestamps = dataInRange.flatMap((d) =>
+    d.map(([timestamp]) => timestamp),
+  )
+
+  for (const dataPoint of primary) {
+    const [timestamp, ...rest] = dataPoint
+    map.set(timestamp, [rest])
+  }
+
+  for (const dataPoints of rest) {
+    for (const dataPoint of dataPoints) {
+      const [timestamp, ...rest] = dataPoint
+      const setValue = map.get(timestamp)
+      setValue?.push(rest)
+    }
+  }
+
+  return Array.from(map)
+}
+
+export function getProjectEntriesByDays<T extends number[]>(
   days: number,
   response: ResponseLike<T>,
   options: { trimLeft?: boolean } = {},

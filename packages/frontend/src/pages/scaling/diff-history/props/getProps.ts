@@ -3,7 +3,7 @@ import { DiffHistoryApiResponse } from '@l2beat/shared-pure'
 
 import { Config } from '../../../../build/config'
 import { getFooterProps, getNavbarProps } from '../../../../components'
-import { getChartUrl } from '../../../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../../../scripts/charts/data-controller/ChartDataController'
 import { Wrapped } from '../../../Page'
 import { DiffHistoryPageProps } from '../view/DiffHistoryPage'
 import { diffHistoryToMarkdown } from './diffHistoryToMarkdown'
@@ -34,7 +34,7 @@ export function getProps(
     },
     wrapper: {
       metadata: getPageMetadata(project),
-      preloadApis: [getChartUrl({ type: 'scaling-activity' })],
+      preloadApis: [getChartUrls({ type: 'scaling-activity' })],
       banner: config.features.banner,
     },
   }

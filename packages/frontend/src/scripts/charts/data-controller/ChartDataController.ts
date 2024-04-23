@@ -1,3 +1,4 @@
+import { FetchAPI } from '../../utils/FetchAPI'
 import {
   ActivityResponse,
   AggregateDetailedTvlResponse,
@@ -13,6 +14,7 @@ export class ChartDataController {
   private chartType?: ChartType
   private abortController?: AbortController
   private readonly cache = new Map<string, unknown>()
+  private readonly fetchApi = new FetchAPI()
 
   constructor(private readonly chartViewController: ChartViewController) {}
 
@@ -33,31 +35,26 @@ export class ChartDataController {
     }
     this.abortController?.abort()
     this.abortController = new AbortController()
+    this.fetchApi.setAbortSignal(this.abortController.signal)
 
     this.chartViewController.showLoader()
     const chartType = this.chartType
-    const url = getChartUrl(chartType)
+    const urls = getChartUrls(chartType)
 
-    if (this.cache.has(url)) {
-      this.parseAndConfigure(chartType, this.cache.get(url))
-      this.chartViewController.hideLoader()
-      return
-    }
-
-    void fetch(url, { signal: this.abortController.signal })
-      .then((res) => {
-        if (res.status === 404) {
+    const requests = Promise.all(urls.map((url) => this.fetchApi.fetch(url)))
+    requests
+      .then(async (responses) => {
+        const primary = responses[0]
+        if (primary.status === 404) {
           this.chartViewController.showEmptyState()
           return
         }
-        return res.json()
-      })
-      .then((data: unknown) => {
-        if (!data) {
-          return
-        }
+
+        const data = await Promise.all(
+          responses.map((response) => response.json),
+        )
+
         this.parseAndConfigure(chartType, data)
-        this.cache.set(url, data)
         this.chartViewController.hideLoader()
       })
       .catch((err) => {
@@ -70,41 +67,52 @@ export class ChartDataController {
       })
   }
 
-  private parseAndConfigure(chartType: ChartType, data: unknown) {
+  private parseAndConfigure(chartType: ChartType, data: unknown[]) {
     const parsedData = this.parseData(chartType, data)
     this.chartViewController.configure({ data: parsedData })
   }
 
-  private parseData(chartType: ChartType, data: unknown): ChartData {
+  private parseData(chartType: ChartType, data: unknown[]): ChartData {
+    const [primaryProject, ...toCompare] = data
     switch (chartType.type) {
       case 'scaling-tvl':
       case 'bridges-tvl':
-      case 'project-tvl':
       case 'storybook-fake-tvl':
         return {
           type: 'tvl',
-          values: AggregateDetailedTvlResponse.parse(data),
+          projectsData: [AggregateDetailedTvlResponse.parse(primaryProject)],
+        }
+      case 'project-tvl':
+        return {
+          type: 'tvl',
+          projectsData: [
+            AggregateDetailedTvlResponse.parse(primaryProject),
+            ...AggregateDetailedTvlResponse.array().parse(toCompare),
+          ],
         }
       case 'scaling-detailed-tvl':
       case 'project-detailed-tvl':
       case 'storybook-fake-detailed-tvl':
         return {
           type: 'detailed-tvl',
-          values: AggregateDetailedTvlResponse.parse(data),
+          projectData: AggregateDetailedTvlResponse.parse(primaryProject),
         }
       case 'scaling-costs':
       case 'project-costs':
       case 'storybook-fake-costs':
         return {
           type: 'costs',
-          values: CostsResponse.parse(data),
+          projectsData: [
+            CostsResponse.parse(primaryProject),
+            ...CostsResponse.array().parse(toCompare),
+          ],
         }
       case 'project-token-tvl':
         return {
           type: 'token-tvl',
           tokenSymbol: chartType.info.symbol,
           tokenType: chartType.info.type,
-          values: TokenTvlResponse.parse(data),
+          projectData: TokenTvlResponse.parse(primaryProject),
         }
 
       case 'scaling-activity':
@@ -115,7 +123,10 @@ export class ChartDataController {
           isAggregate:
             chartType.type === 'scaling-activity' &&
             chartType.filteredSlugs?.length !== 1,
-          values: ActivityResponse.parse(data),
+          projectsData: [
+            ActivityResponse.parse(primaryProject),
+            ...ActivityResponse.array().parse(toCompare),
+          ],
         }
       default:
         assertUnreachable(chartType)
@@ -123,41 +134,65 @@ export class ChartDataController {
   }
 }
 
-export function getChartUrl<T extends ChartType>(chartType: T) {
+export function getChartUrls<T extends ChartType>(
+  chartType: T,
+): [string, ...string[]] {
   switch (chartType.type) {
     case 'scaling-tvl':
     case 'scaling-detailed-tvl':
       return chartType.filteredSlugs
-        ? `/api/tvl/aggregate?projectSlugs=${chartType.filteredSlugs.join(',')}`
-        : '/api/tvl/scaling.json'
+        ? [
+            `/api/tvl/aggregate?projectSlugs=${chartType.filteredSlugs.join(',')}`,
+          ]
+        : ['/api/tvl/scaling.json']
     case 'scaling-activity':
       return chartType.filteredSlugs
-        ? `/api/activity/aggregate?projectSlugs=${chartType.filteredSlugs.join(
-            ',',
-          )}`
-        : '/api/activity/combined.json'
+        ? [
+            `/api/activity/aggregate?projectSlugs=${chartType.filteredSlugs.join(
+              ',',
+            )}`,
+          ]
+        : ['/api/activity/combined.json']
     case 'scaling-costs':
-      return '/api/costs/combined.json'
+      return ['/api/costs/combined.json']
     case 'bridges-tvl':
       return chartType.includeCanonical
-        ? '/api/tvl/combined.json'
-        : '/api/tvl/bridges.json'
+        ? ['/api/tvl/combined.json']
+        : ['/api/tvl/bridges.json']
     case 'project-tvl':
+      return chartType.compareWith
+        ? [
+            `/api/tvl/${chartType.slug}.json`,
+            ...chartType.compareWith.map((slug) => `/api/tvl/${slug}.json`),
+          ]
+        : [`/api/tvl/${chartType.slug}.json`]
     case 'project-detailed-tvl':
-      return `/api/tvl/${chartType.slug}.json`
+      return [`/api/tvl/${chartType.slug}.json`]
     case 'project-token-tvl':
-      return getTokenTvlUrl(chartType.info)
+      return [getTokenTvlUrl(chartType.info)]
     case 'project-costs':
-      return `/api/costs/${chartType.slug}.json`
+      return chartType.compareWith
+        ? [
+            `/api/costs/${chartType.slug}.json`,
+            ...chartType.compareWith.map((slug) => `/api/costs/${slug}.json`),
+          ]
+        : [`/api/costs/${chartType.slug}.json`]
     case 'project-activity':
-      return `/api/activity/${chartType.slug}.json`
+      return chartType.compareWith
+        ? [
+            `/api/activity/${chartType.slug}.json`,
+            ...chartType.compareWith.map(
+              (slug) => `/api/activity/${slug}.json`,
+            ),
+          ]
+        : [`/api/activity/${chartType.slug}.json`]
     case 'storybook-fake-tvl':
     case 'storybook-fake-detailed-tvl':
-      return '/fake-tvl.json'
+      return ['/fake-tvl.json']
     case 'storybook-fake-activity':
-      return '/fake-activity.json'
+      return ['/fake-activity.json']
     case 'storybook-fake-costs':
-      return '/fake-costs.json'
+      return ['/fake-costs.json']
     default:
       assertUnreachable(chartType)
   }

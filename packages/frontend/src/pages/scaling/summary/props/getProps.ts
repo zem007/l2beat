@@ -1,6 +1,6 @@
 import { Config } from '../../../../build/config'
 import { getFooterProps, getNavbarProps } from '../../../../components'
-import { getChartUrl } from '../../../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../../../scripts/charts/data-controller/ChartDataController'
 import { getTvlWithChange } from '../../../../utils/tvl/getTvlWithChange'
 import { getDefaultPageMetadata } from '../../../metadata'
 import { PagesData, Wrapped } from '../../../Page'
@@ -30,7 +30,7 @@ export function getProps(
       milestones: config.milestones,
     },
     wrapper: {
-      preloadApis: [getChartUrl({ type: 'scaling-tvl' })],
+      preloadApis: [getChartUrls({ type: 'scaling-tvl' })],
       metadata: getDefaultPageMetadata({
         image: 'https://l2beat.com/meta-images/overview-scaling.png',
         url: 'https://l2beat.com/scaling/summary',

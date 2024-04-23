@@ -1,6 +1,6 @@
 import { Config } from '../../../../build/config'
 import { getFooterProps, getNavbarProps } from '../../../../components'
-import { getChartUrl } from '../../../../scripts/charts/data-controller/ChartDataController'
+import { getChartUrls } from '../../../../scripts/charts/data-controller/ChartDataController'
 import { getDefaultPageMetadata } from '../../../metadata'
 import { Wrapped } from '../../../Page'
 import { BridgesPagesData } from '../../types'
@@ -22,7 +22,7 @@ export function getProps(
     },
     wrapper: {
       preloadApis: [
-        getChartUrl({
+        getChartUrls({
           type: 'bridges-tvl',
           includeCanonical: false,
         }),

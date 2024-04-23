@@ -110,10 +110,11 @@ export class ChartViewController {
       this.state?.data?.type === 'detailed-tvl'
     ) {
       const currency = getTvlCurrency(this.state)
-      const { tvl, tvlWeeklyChange } = getTvlWithChange(
-        this.state.data.values,
-        currency,
-      )
+      const values =
+        this.state?.data?.type === 'tvl'
+          ? this.state.data.projectsData[0]
+          : this.state.data.projectData
+      const { tvl, tvlWeeklyChange } = getTvlWithChange(values, currency)
       this.header.value.innerHTML = formatCurrency(tvl, currency, {
         showLessThanMinimum: false,
       })
@@ -126,7 +127,8 @@ export class ChartViewController {
     }
 
     if (this.state?.data?.type === 'activity') {
-      const scalingFactor = getScalingFactor(this.state.data.values)
+      const [main] = this.state.data.projectsData
+      const scalingFactor = getScalingFactor(main)
       this.header.value.innerHTML = scalingFactor
     }
   }
