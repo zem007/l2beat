@@ -65,6 +65,7 @@
           "type": "object",
           "unevaluatedProperties": false,
           "properties": {
+            "extends": { "type": "string" },
             "ignoreDiscovery": { "type": "boolean" },
             "proxyType": { "type": "string" },
             "ignoreInWatchMode": {
