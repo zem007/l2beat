@@ -98,13 +98,14 @@ export class AddressAnalyzer {
       address,
       proxy?.implementations,
     )
+    logger.logName(sources.name)
 
     const flattened = flattenMainSource(sources)
-
-
-    logger.logName(sources.name)
-    console.log(sources.name)
-    findSimilarTemplates(flattened)
+    const similarTemplates = findSimilarTemplates(flattened)
+    if (similarTemplates.length > 0) {
+      console.log(sources.name)
+      console.log(similarTemplates)
+    }
 
     const { results, values, errors } = await this.handlerExecutor.execute(
       address,
@@ -259,23 +260,22 @@ function iterateFoldersRecursively(
   }
 }
 
-function findSimilarTemplates(flatSource: string): void {
+function findSimilarTemplates(flatSource: string): string[] {
   const content = removeComments(flatSource)
   const sourceHashed: HashedFileContent = {
     path: '',
     hashChunks: buildSimilarityHashmap(content),
     content,
   }
+  const similarTemplates: string[] = []
   iterateFoldersRecursively(TEMPLATES_PATH, (path) => {
-    console.log(path)
-
     const shapeFolder = join(path, TEMPLATE_SHAPE_FOLDER)
     if (existsSync(shapeFolder)) {
       const files = readdirSync(shapeFolder, {
         withFileTypes: true,
       }).filter((x) => x.isFile() && x.name.endsWith('.sol'))
+      const similarities: number[] = []
       for (const file of files) {
-        console.log(file.name)
         const shapePath = join(shapeFolder, file.name)
         const templateSource = removeComments(readFileSync(shapePath, 'utf8'))
         const templateHashed: HashedFileContent = {
@@ -284,10 +284,14 @@ function findSimilarTemplates(flatSource: string): void {
           content: templateSource,
         }
         const similarity = estimateSimilarity(sourceHashed, templateHashed)
-        console.log(similarity)
+        similarities.push(similarity)
+      }
+      if (Math.max(...similarities) > 0.9) {
+        similarTemplates.push(path)
       }
     }
   })
+  return similarTemplates
 }
 
 function removeComments(source: string): string {
