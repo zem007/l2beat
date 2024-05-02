@@ -6,6 +6,11 @@ import {
 } from '@l2beat/discovery-types'
 import { isEqual } from 'lodash'
 
+import { flattenStartingFrom } from '../../flatten/flattenStartingFrom'
+import {
+  FileContent,
+  ParsedFilesManager,
+} from '../../flatten/ParsedFilesManager'
 import { EthereumAddress } from '../../utils/EthereumAddress'
 import { UnixTime } from '../../utils/UnixTime'
 import { ContractOverrides } from '../config/DiscoveryOverrides'
@@ -14,6 +19,7 @@ import { HandlerExecutor } from '../handlers/HandlerExecutor'
 import { DiscoveryProvider } from '../provider/DiscoveryProvider'
 import { ProxyDetector } from '../proxies/ProxyDetector'
 import {
+  ContractSources,
   PerContractSource,
   SourceCodeService,
 } from '../source/SourceCodeService'
@@ -76,6 +82,9 @@ export class AddressAnalyzer {
       address,
       proxy?.implementations,
     )
+
+    const flattened = flattenMainSource(sources)
+    console.log(flattened)
 
     logger.logName(sources.name)
 
@@ -188,4 +197,26 @@ function getRelevantValues(
       obj[key] = contractValues[key]
       return obj
     }, {})
+}
+
+function flattenMainSource(sources: ContractSources): string {
+  const source = sources.sources[0]
+  if (source === undefined) {
+    throw Error('asdf')
+  }
+
+  const input: FileContent[] = Object.entries(source.source.files)
+    .map(([fileName, content]) => ({
+      path: fileName,
+      content,
+    }))
+    .filter((e) => e.path.endsWith('.sol'))
+
+  const parsedFileManager = ParsedFilesManager.parseFiles(
+    input,
+    source.source.remappings,
+  )
+
+  const output = flattenStartingFrom(source.name, parsedFileManager)
+  return output
 }
