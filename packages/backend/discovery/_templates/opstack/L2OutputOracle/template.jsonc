@@ -9,7 +9,7 @@
     "nextBlockNumber",
     "nextOutputIndex",
     "latestBlockNumber",
-    "latestOutputIndex",
+    "latestOutputIndex"
   ],
   "fields": {
     "deletedOutputs": {
