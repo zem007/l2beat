@@ -1,3 +1,4 @@
 {
+  "$schema": "../../../../discovery/schemas/contract.schema.json",
   "ignoreInWatchMode": ["nonce"],
 }
