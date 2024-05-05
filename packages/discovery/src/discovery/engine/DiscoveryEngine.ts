@@ -1,4 +1,5 @@
 import { DiscoveryOutput } from '@l2beat/discovery-types'
+import { isEmpty } from 'lodash'
 
 import { AddressAnalyzer, Analysis } from '../analysis/AddressAnalyzer'
 import { DiscoveryConfig } from '../config/DiscoveryConfig'
@@ -64,6 +65,18 @@ export class DiscoveryEngine {
     this.checkErrors(resolved)
 
     this.logger.log(`Address count = ${stack.getAddressCount()}`)
+    for (const analysis of resolved) {
+      if (analysis.type === 'Contract') {
+        if (!isEmpty(analysis.similarTemplates)) {
+          const name = analysis.name
+          console.log(`"${name}-${analysis.address.toString().substring(0, 10)}": {`)
+          for (const [template, similarity] of Object.entries(analysis.similarTemplates)) {
+            console.log(`  "extends": "${template}" // similarity: ${similarity},`)
+          }
+          console.log(`}`)
+        }
+      }
+    }
 
     return resolved
   }

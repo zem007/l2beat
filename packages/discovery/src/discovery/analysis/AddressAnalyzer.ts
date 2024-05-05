@@ -43,6 +43,7 @@ export interface AnalyzedContract {
   errors: Record<string, string>
   abis: Record<string, string[]>
   sourceBundles: PerContractSource[]
+  similarTemplates: Record<string, number>
 }
 
 export interface AnalyzedEOA {
@@ -52,6 +53,7 @@ export interface AnalyzedEOA {
 
 const TEMPLATES_PATH = join('discovery', '_templates')
 const TEMPLATE_SHAPE_FOLDER = 'shape'
+const TEMPLATE_SIMILARITY_THRESHOLD = 0.9
 
 interface HashedChunks {
   content: string
@@ -100,11 +102,10 @@ export class AddressAnalyzer {
     )
     logger.logName(sources.name)
 
-    const flattened = flattenMainSource(sources)
-    const similarTemplates = findSimilarTemplates(flattened)
-    if (similarTemplates.length > 0) {
-      console.log(sources.name)
-      console.log(similarTemplates)
+    let similarTemplates = {}
+    if (overrides?.extends === undefined) {
+      const flattened = flattenMainSource(sources)
+      similarTemplates = findSimilarTemplates(flattened)
     }
 
     const { results, values, errors } = await this.handlerExecutor.execute(
@@ -130,6 +131,7 @@ export class AddressAnalyzer {
         errors: errors ?? {},
         abis: sources.abis,
         sourceBundles: sources.sources,
+        similarTemplates
       },
       relatives: getRelatives(
         results,
@@ -260,15 +262,19 @@ function iterateFoldersRecursively(
   }
 }
 
-function findSimilarTemplates(flatSource: string): string[] {
+function findSimilarTemplates(
+  flatSource: string,
+  threshold: number = TEMPLATE_SIMILARITY_THRESHOLD,
+): Record<string, number> {
   const content = removeComments(flatSource)
   const sourceHashed: HashedFileContent = {
     path: '',
     hashChunks: buildSimilarityHashmap(content),
     content,
   }
-  const similarTemplates: string[] = []
+  const result: Record<string, number> = {}
   iterateFoldersRecursively(TEMPLATES_PATH, (path) => {
+    const templateName = path.substring(TEMPLATES_PATH.length + 1)
     const shapeFolder = join(path, TEMPLATE_SHAPE_FOLDER)
     if (existsSync(shapeFolder)) {
       const files = readdirSync(shapeFolder, {
@@ -286,12 +292,13 @@ function findSimilarTemplates(flatSource: string): string[] {
         const similarity = estimateSimilarity(sourceHashed, templateHashed)
         similarities.push(similarity)
       }
-      if (Math.max(...similarities) > 0.9) {
-        similarTemplates.push(path)
+      const maxSimilarity = Math.max(...similarities)
+      if (maxSimilarity >= threshold) {
+        result[templateName] = maxSimilarity
       }
     }
   })
-  return similarTemplates
+  return result
 }
 
 function removeComments(source: string): string {
