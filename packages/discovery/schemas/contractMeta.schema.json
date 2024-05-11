@@ -20,8 +20,10 @@
   "$defs": {
     "review": {
       "type": "object",
+      "unevaluatedProperties": false,
       "properties": {
         "description": { "type": ["string", "null"] },
+        "targetContractDescription": { "type": "string" },
         "severity": {
           "type": ["string", "null"],
           "enum": ["LOW", "MEDIUM", "HIGH", null]

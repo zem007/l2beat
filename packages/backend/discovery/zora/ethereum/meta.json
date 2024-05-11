@@ -119,7 +119,9 @@
     {
       "name": "OptimismPortal",
       "values": {
-        "GUARDIAN": {},
+        "GUARDIAN": {
+          "targetContractDescription": "Guardian of the OptimismPortal, meaning it can halt withdrawals"
+        },
         "L2_ORACLE": {},
         "SYSTEM_CONFIG": {},
         "guardian": {},
