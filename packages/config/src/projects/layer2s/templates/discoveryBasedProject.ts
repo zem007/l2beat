@@ -284,21 +284,13 @@ export function opStackCommon(
       ],
     },
     permissions: [
-      ...templateVars.discovery.getOpStackPermissions({
-        batcherHash: 'Sequencer',
-        PROPOSER: 'Proposer',
-        GUARDIAN: 'Guardian',
-        CHALLENGER: 'Challenger',
-        ...(templateVars.roleOverrides ?? {}),
-      }),
-      ...(templateVars.nonTemplatePermissions ?? []),
+      ...templateVars.discovery.getDiscoveryBasedPermissions(),
     ],
     contracts: {
       addresses: [
         ...templateVars.discovery.getDiscoveryBasedContractDetails(
           upgradeability,
         ),
-        // ...(templateVars.nonTemplateContracts ?? []),
       ],
       risks: [CONTRACTS.UPGRADE_NO_DELAY_RISK],
     },

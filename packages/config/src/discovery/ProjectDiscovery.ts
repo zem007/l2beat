@@ -624,6 +624,36 @@ export class ProjectDiscovery {
     }
     return result
   }
+
+  getDiscoveryBasedPermissions(): ScalingProjectPermission[] {
+    const targetDescriptions: Record<string, string> = {}
+    for (const contractMeta of this.meta.contracts) {
+      const values = contractMeta.values || {}
+      for (const [field, value] of Object.entries(values)) {
+        if (value.targetContractDescription !== undefined) {
+          targetDescriptions[`${contractMeta.name}.${field}`] = value.targetContractDescription
+        }
+      }
+    }
+
+    const result: ScalingProjectPermission[] = []
+
+    const inversion = this.getInversion()
+    for (const invertedContract of inversion.values()) {
+      for (const role of invertedContract.roles) {
+        const description = targetDescriptions[`${role.atName}.${role.name}`]
+        if (description !== undefined) {
+          result.push({
+            name: invertedContract.name ?? invertedContract.address,
+            accounts: [this.formatPermissionedAccount(invertedContract.address)],
+            description,
+            chain: this.chain,
+          })
+        }
+      }
+    }
+    return result
+  }
 }
 
 function isNonNullable<T>(

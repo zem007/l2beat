@@ -9,6 +9,15 @@ export const ValueType = z.enum([
   'PERMISSION',
 ])
 
+export function isEmptyValueMeta(value: ValueMeta): boolean {
+  return (
+    isEmpty(value) ||
+    (value.description === null &&
+      value.severity === null &&
+      value.type === null)
+  )
+}
+
 export type ValueMeta = z.infer<typeof ValueMeta>
 export const ValueMeta = z
   .object({
@@ -21,15 +30,6 @@ export const ValueMeta = z
       .optional(),
   })
   .strict()
-
-export function isEmptyValueMeta(value: ValueMeta): boolean {
-  return (
-    isEmpty(value) ||
-    (value.description === null &&
-      value.severity === null &&
-      value.type === null)
-  )
-}
 
 export type ContractMeta = z.infer<typeof ContractMeta>
 export const ContractMeta = z
