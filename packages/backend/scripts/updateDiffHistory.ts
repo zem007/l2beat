@@ -47,7 +47,7 @@ async function updateDiffHistoryFile() {
   const configReader = new ConfigReader()
   const curDiscovery = await configReader.readDiscovery(projectName, chain)
   const config = await configReader.readConfig(projectName, chain)
-  const meta = await configReader.readMeta(projectName, chain)
+  const meta = configReader.readMeta(projectName, chain)
   const discoveryFolder = `./discovery/${projectName}/${chain}`
   const { content: discoveryJsonFromMainBranch, mainBranchHash } =
     getFileVersionOnMainBranch(`${discoveryFolder}/discovered.json`)

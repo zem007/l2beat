@@ -142,9 +142,7 @@ describe(UpdateMonitor.name, () => {
           return [mockConfig(PROJECT_A, chain)]
         },
 
-        readMeta: async () => {
-          return undefined
-        },
+        readMeta: mockFn().returns(undefined),
       })
 
       const repository = mockObject<UpdateMonitorRepository>({
@@ -219,9 +217,7 @@ describe(UpdateMonitor.name, () => {
           mockConfig(PROJECT_B),
         ],
 
-        readMeta: async () => {
-          return undefined
-        },
+        readMeta: mockFn().returns(undefined),
       })
 
       const repository = mockObject<UpdateMonitorRepository>({
@@ -385,9 +381,7 @@ describe(UpdateMonitor.name, () => {
           contracts: [],
           version: 0,
         }),
-        readMeta: async () => {
-          return undefined
-        },
+        readMeta: mockFn().returns(undefined),
       })
 
       const repository = mockObject<UpdateMonitorRepository>({
@@ -703,7 +697,7 @@ describe(UpdateMonitor.name, () => {
           return [mockConfig(PROJECT_A, chain), mockConfig(PROJECT_B, chain)]
         },
 
-        readMeta: async (_: string, chain: string) => {
+        readMeta: (_: string, chain: string) => {
           let valueMeta: ValueMeta | undefined = undefined
           if (chain === 'arbitrum') {
             valueMeta = {
@@ -786,9 +780,7 @@ describe(UpdateMonitor.name, () => {
           return [mockConfig(PROJECT_A, chain)]
         },
 
-        readMeta: async () => {
-          return undefined
-        },
+        readMeta: mockFn().returns(undefined),
       })
       const updateMonitor = new UpdateMonitor(
         runners,

@@ -85,7 +85,7 @@ export class UpdateMonitor {
           continue
         }
 
-        const meta = await this.configReader.readMeta(
+        const meta = this.configReader.readMeta(
           projectConfig.name,
           runner.chain,
         )
@@ -299,7 +299,7 @@ export class UpdateMonitor {
       await this.updateNotifier.handleUpdate(
         projectConfig.name,
         diff,
-        await this.configReader.readMeta(projectConfig.name, chain),
+        this.configReader.readMeta(projectConfig.name, chain),
         blockNumber,
         this.chainConverter.toChainId(chain),
         dependents,

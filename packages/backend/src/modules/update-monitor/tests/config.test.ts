@@ -257,12 +257,10 @@ describe('discovery config.jsonc', () => {
     }
   })
 
-  it('meta.json is of correct schema', async () => {
+  it('meta.json is of correct schema', () => {
     for (const configs of chainConfigs ?? []) {
       for (const c of configs) {
-        await expect(
-          async () => await configReader.readMeta(c.name, c.chain),
-        ).not.toBeRejected()
+        expect(() => configReader.readMeta(c.name, c.chain)).not.toThrow()
       }
     }
   })

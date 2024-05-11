@@ -1,6 +1,7 @@
 import { EthereumAddress } from '@l2beat/shared-pure'
 import { expect, mockObject } from 'earl'
 
+import { ConfigReader } from '@l2beat/discovery'
 import {
   contractStub,
   discoveredJsonStub,
@@ -12,8 +13,16 @@ describe(ProjectDiscovery.name, () => {
   const fsMock = mockObject<Filesystem>({
     readFileSync: () => JSON.stringify(discoveredJsonStub),
   })
+  const configReaderMock = mockObject<ConfigReader>({
+    readMeta: () => ({ contracts: [] }),
+  })
   const projectName = 'ExampleProject'
-  const discovery = new ProjectDiscovery('ExampleProject', 'ethereum', fsMock)
+  const discovery = new ProjectDiscovery(
+    'ExampleProject',
+    'ethereum',
+    fsMock,
+    configReaderMock,
+  )
 
   describe(ProjectDiscovery.prototype.getContract.name, () => {
     it('should return contract for given address', () => {
@@ -113,7 +122,15 @@ describe(ProjectDiscovery.name, () => {
     const fsMock = mockObject<Filesystem>({
       readFileSync: () => JSON.stringify(discoveredOpStackJsonStub),
     })
-    const discovery = new ProjectDiscovery('ExampleProject', 'ethereum', fsMock)
+    const configReaderMock = mockObject<ConfigReader>({
+      readMeta: () => ({ contracts: [] }),
+    })
+    const discovery = new ProjectDiscovery(
+      'ExampleProject',
+      'ethereum',
+      fsMock,
+      configReaderMock,
+    )
 
     const upgradesProxy = {
       upgradableBy: ['MockAdmin'],
@@ -236,7 +253,15 @@ describe(ProjectDiscovery.name, () => {
     const fsMock = mockObject<Filesystem>({
       readFileSync: () => JSON.stringify(discoveredOpStackJsonStub),
     })
-    const discovery = new ProjectDiscovery('ExampleProject', 'ethereum', fsMock)
+    const configReaderMock = mockObject<ConfigReader>({
+      readMeta: () => ({ contracts: [] }),
+    })
+    const discovery = new ProjectDiscovery(
+      'ExampleProject',
+      'ethereum',
+      fsMock,
+      configReaderMock,
+    )
 
     it('should return all op stack permissions with correct overrides', () => {
       const permissions = discovery.getOpStackPermissions()
@@ -264,7 +289,15 @@ describe(ProjectDiscovery.name, () => {
     const fsMock = mockObject<Filesystem>({
       readFileSync: () => JSON.stringify(discoveredJsonStub),
     })
-    const discovery = new ProjectDiscovery('ExampleProject', 'arbitrum', fsMock)
+    const configReaderMock = mockObject<ConfigReader>({
+      readMeta: () => ({ contracts: [] }),
+    })
+    const discovery = new ProjectDiscovery(
+      'ExampleProject',
+      'arbitrum',
+      fsMock,
+      configReaderMock,
+    )
     const contract = discovery.getContract(contractStub.address)
 
     expect(JSON.stringify(contract)).toEqual(JSON.stringify(contractStub))

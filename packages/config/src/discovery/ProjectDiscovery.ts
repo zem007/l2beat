@@ -1,6 +1,12 @@
 import fs from 'fs'
 import path from 'path'
-import { InvertedAddresses, calculateInversion } from '@l2beat/discovery'
+import {
+  ConfigReader,
+  ContractMeta,
+  DiscoveryMeta,
+  InvertedAddresses,
+  calculateInversion,
+} from '@l2beat/discovery'
 import type {
   ContractParameters,
   ContractValue,
@@ -60,12 +66,16 @@ const filesystem = {
 
 export class ProjectDiscovery {
   private readonly discovery: DiscoveryOutput
+  private readonly meta: DiscoveryMeta
+
   constructor(
     public readonly projectName: string,
     public readonly chain: string = 'ethereum',
     private readonly fs: Filesystem = filesystem,
+    private readonly configReader = new ConfigReader('../backend'),
   ) {
     this.discovery = this.getDiscoveryJson(projectName)
+    this.meta = this.getDiscoveryMeta(projectName)
   }
 
   private getDiscoveryJson(project: string): DiscoveryOutput {
@@ -76,6 +86,10 @@ export class ProjectDiscovery {
     )
 
     return JSON.parse(discoveryFile) as DiscoveryOutput
+  }
+
+  private getDiscoveryMeta(project: string): DiscoveryMeta {
+    return this.configReader.readMeta(project, this.chain)
   }
 
   getContractDetails(
@@ -587,6 +601,28 @@ export class ProjectDiscovery {
 
   private getContractByName(name: string): ContractParameters[] {
     return this.discovery.contracts.filter((contract) => contract.name === name)
+  }
+
+  getContractMeta(contractName: string): ContractMeta | undefined {
+    return this.meta.contracts.find((c) => c.name === contractName)
+  }
+
+  getDiscoveryBasedContractDetails(
+    upgradesProxy: Partial<ScalingProjectContractSingleAddress>,
+  ): ScalingProjectContractSingleAddress[] {
+    const result = []
+    for (const contract of this.discovery.contracts) {
+      const meta = this.getContractMeta(contract.name)
+      if (meta?.description !== undefined) {
+        result.push(
+          this.getContractDetails(contract.name, {
+            description: meta.description,
+            ...upgradesProxy, // TODO: this should be figured out from discovery
+          }),
+        )
+      }
+    }
+    return result
   }
 }
 

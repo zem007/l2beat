@@ -1,4 +1,4 @@
-import { readdirSync } from 'fs'
+import { readFileSync, readdirSync } from 'fs'
 import path, { posix } from 'path'
 import { assert } from '@l2beat/backend-tools'
 import { DiscoveryOutput } from '@l2beat/discovery-types'
@@ -19,8 +19,8 @@ export const TEMPLATES_PATH = path.join('discovery', '_templates')
 export class ConfigReader {
   public templateService: TemplateService
 
-  constructor() {
-    this.templateService = new TemplateService()
+  constructor(private readonly rootPath: string = '') {
+    this.templateService = new TemplateService(rootPath)
   }
 
   async readConfig(name: string, chain: string): Promise<DiscoveryConfig> {
@@ -50,12 +50,12 @@ export class ConfigReader {
     return config
   }
 
-  async readMeta(
+  readMeta(
     name: string,
     chain: string,
     skipTemplates: boolean = false,
-  ): Promise<DiscoveryMeta | undefined> {
-    const projectPath = posix.join('discovery', name)
+  ): DiscoveryMeta {
+    const projectPath = posix.join(this.rootPath, 'discovery', name)
     const chainPath = posix.join(projectPath, chain)
     const metaPath = posix.join(chainPath, 'meta.json')
 
@@ -69,10 +69,10 @@ export class ConfigReader {
     )
 
     if (!fileExistsCaseSensitive(metaPath)) {
-      return undefined
+      return { contracts: [] }
     }
 
-    const contents = await readFile(metaPath, 'utf-8')
+    const contents = readFileSync(metaPath, 'utf-8')
 
     const meta = DiscoveryMeta.parse(JSON.parse(contents))
     if (!skipTemplates) {

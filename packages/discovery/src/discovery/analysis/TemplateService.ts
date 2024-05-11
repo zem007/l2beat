@@ -22,6 +22,7 @@ const TEMPLATE_SIMILARITY_THRESHOLD = 0.55
 
 export class TemplateService {
   constructor(
+    private readonly rootPath: string = '',
     private readonly similarityThreshold: number = TEMPLATE_SIMILARITY_THRESHOLD,
   ) {}
 
@@ -79,7 +80,7 @@ export class TemplateService {
 
   async readContractTemplate(template: string): Promise<DiscoveryContract> {
     const templateJsonc = await readJsonc(
-      path.join(TEMPLATES_PATH, template, 'template.jsonc'),
+      path.join(this.rootPath, TEMPLATES_PATH, template, 'template.jsonc'),
     )
     return DiscoveryContract.parse(templateJsonc)
   }
@@ -102,7 +103,7 @@ export class TemplateService {
 
   readContractMetaTemplate(template: string): ContractMeta {
     const rawTemplate = readFileSync(
-      path.join(TEMPLATES_PATH, template, 'meta.json'),
+      path.join(this.rootPath, TEMPLATES_PATH, template, 'meta.json'),
       'utf8',
     )
     return ContractMeta.parse(JSON.parse(rawTemplate))
