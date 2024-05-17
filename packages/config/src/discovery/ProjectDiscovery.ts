@@ -1,5 +1,6 @@
 import {
   ConfigReader,
+  DiscoveryConfig,
   InvertedAddresses,
   calculateInversion,
 } from '@l2beat/discovery'
@@ -58,15 +59,16 @@ type PickType<T, K extends AllKeys<T>> = T extends { [k in K]?: T[K] }
 
 export class ProjectDiscovery {
   private readonly discoveries: DiscoveryOutput[]
+  private readonly config: DiscoveryConfig
   constructor(
     public readonly projectName: string,
     public readonly chain: string = 'ethereum',
     configReader = new ConfigReader('../backend/'),
   ) {
-    const config = configReader.readConfig(projectName, chain)
+    this.config = configReader.readConfig(projectName, chain)
     this.discoveries = [
       configReader.readDiscovery(projectName, chain),
-      ...config.sharedModules.map((module) =>
+      ...this.config.sharedModules.map((module) =>
         configReader.readDiscovery(module, chain),
       ),
     ]
@@ -638,6 +640,49 @@ export class ProjectDiscovery {
       (discovery) => discovery.contracts,
     )
     return contracts.filter((contract) => contract.name === name)
+  }
+
+  private getProjectDiscoveryOutput(): DiscoveryOutput {
+    const discovery = this.discoveries[0]
+    if (!discovery) {
+      throw new Error('No discovery found')
+    }
+    return discovery
+  }
+
+  getDiscoveryBasedContractDetails(
+    upgradesProxy: Partial<ScalingProjectContractSingleAddress>,
+  ): ScalingProjectContractSingleAddress[] {
+    const result: ScalingProjectContractSingleAddress[] = []
+    const discovery = this.getProjectDiscoveryOutput()
+    for (const contract of discovery.contracts) {
+      const meta = this.config.overrides.get(contract.address)
+      if (contract.upgradeability.type !== 'gnosis safe') {
+        result.push(
+          this.getContractDetails(contract.name, {
+            description: meta.description,
+            ...upgradesProxy, // TODO: this should be figured out from discovery
+          }),
+        )
+      }
+    }
+    return result
+  }
+
+  getDiscoveryBasedPermissions(): ScalingProjectPermission[] {
+    const result: ScalingProjectPermission[] = []
+    const discovery = this.getProjectDiscoveryOutput()
+    for (const contract of discovery.contracts) {
+      const meta = this.config.overrides.get(contract.address)
+      if (contract.upgradeability.type === 'gnosis safe') {
+        for (const permission of this.getMultisigPermission(
+          contract.name,
+          meta.description ?? '',
+        ))
+          result.push(permission)
+      }
+    }
+    return result
   }
 }
 

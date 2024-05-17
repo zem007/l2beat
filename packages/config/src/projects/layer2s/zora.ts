@@ -2,8 +2,8 @@ import { UnixTime } from '@l2beat/shared-pure'
 
 import { DERIVATION } from '../../common'
 import { ProjectDiscovery } from '../../discovery/ProjectDiscovery'
-import { opStackL2 } from './templates/opStack'
 import { Layer2 } from './types'
+import { discoveryBasedProject } from './templates/discoveryBasedProject'
 
 const discovery = new ProjectDiscovery('zora')
 
@@ -17,7 +17,7 @@ const superchainUpgradeability = {
   upgradeDelay: 'No delay',
 }
 
-export const zora: Layer2 = opStackL2({
+export const zora: Layer2 = discoveryBasedProject({
   discovery,
   display: {
     name: 'Zora',

@@ -27,6 +27,7 @@
       "ignoreInWatchMode": ["nonce"]
     },
     "OptimismPortal": {
+      "description": "This contract is the main entry point to deposit funds from L1 to L2. It also allows to prove and finalize withdrawals.",
       "ignoreMethods": ["isOutputFinalized"],
       "ignoreInWatchMode": ["params"]
     },
@@ -37,10 +38,12 @@
       "ignoreInWatchMode": ["nonce"]
     },
     "L1CrossDomainMessenger": {
+      "description": "This contract (L1xDM) contract sends messages from L1 to L2, and relays messages from L2 onto L1. In the event that a message sent from L1 to L2 is rejected for exceeding the L2 epoch gas limit, it can be resubmitted via this contract's replay function.",
       "ignoreMethods": ["xDomainMessageSender"],
       "ignoreInWatchMode": ["messageNonce"]
     },
     "SystemConfig": {
+      "description": "This contract contains configuration parameters such as the Sequencer address, the L2 gas limit and the unsafe block signer address.",
       "fields": {
         // this overrides the batcherHash method return type (bytes32 -> address) so our discovery detects it as an address
         "batcherHash": {
