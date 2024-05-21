@@ -17,7 +17,7 @@ import {
   notUndefined,
 } from '@l2beat/shared-pure'
 import { utils } from 'ethers'
-import { isArray, isString } from 'lodash'
+import { add, isArray, isString } from 'lodash'
 
 import {
   ScalingProjectEscrow,
@@ -650,17 +650,38 @@ export class ProjectDiscovery {
     return discovery
   }
 
+  getAddressMetaFromReferrers(address: EthereumAddress): string {
+    const discovery = this.getProjectDiscoveryOutput()
+    const result: string[] = []
+    for (const contract of discovery.contracts) {
+      const upgradeabilityAdmin = (
+        contract.upgradeability as { admin?: EthereumAddress }
+      )['admin']
+      const upgradeabilityOwner = (
+        contract.upgradeability as { owner?: EthereumAddress }
+      )['owner']
+      if (upgradeabilityAdmin === address) {
+        result.push(`Admin of ${contract.name}`)
+      }
+      if (upgradeabilityOwner === address) {
+        result.push(`Owner of ${contract.name}`)
+      }
+    }
+    return result.join('. ')
+  }
+
   getDiscoveryBasedContractDetails(
     upgradesProxy: Partial<ScalingProjectContractSingleAddress>,
   ): ScalingProjectContractSingleAddress[] {
     const result: ScalingProjectContractSingleAddress[] = []
     const discovery = this.getProjectDiscoveryOutput()
     for (const contract of discovery.contracts) {
-      const meta = this.config.overrides.get(contract.address)
+      const override = this.config.overrides.get(contract.address)
+      const meta = this.getAddressMetaFromReferrers(contract.address)
       if (contract.upgradeability.type !== 'gnosis safe') {
         result.push(
           this.getContractDetails(contract.name, {
-            description: meta.description,
+            description: meta + override.description,
             ...upgradesProxy, // TODO: this should be figured out from discovery
           }),
         )
@@ -673,14 +694,23 @@ export class ProjectDiscovery {
     const result: ScalingProjectPermission[] = []
     const discovery = this.getProjectDiscoveryOutput()
     for (const contract of discovery.contracts) {
-      const meta = this.config.overrides.get(contract.address)
+      const override = this.config.overrides.get(contract.address)
+      const meta = this.getAddressMetaFromReferrers(contract.address)
       if (contract.upgradeability.type === 'gnosis safe') {
         for (const permission of this.getMultisigPermission(
           contract.name,
-          meta.description ?? '',
+          meta + (override.description ?? ''),
         ))
           result.push(permission)
       }
+    }
+    for (const eoa of discovery.eoas) {
+      const meta = this.getAddressMetaFromReferrers(eoa)
+      result.push({
+        name: eoa.toString(),
+        accounts: [{ address: eoa, type: 'EOA' }],
+        description: meta,
+      })
     }
     return result
   }

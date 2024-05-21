@@ -1,6 +1,7 @@
 {
   "$schema": "../../../../../discovery/schemas/contract.v2.schema.json",
-  "description": "This contract contains a list of proposed state roots which Proposers assert to be a result of block execution. Currently only the PROPOSER address can submit new state roots.",
+  "displayName": "L2OutputOracle",
+  "description": "Contains a list of proposed state roots which Proposers assert to be a result of block execution. Currently only the PROPOSER address can submit new state roots.",
   "ignoreMethods": [
     "getL2OutputAfter",
     "getL2OutputIndexAfter",
