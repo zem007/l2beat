@@ -15,6 +15,16 @@
     "latestOutputIndex"
   ],
   "fields": {
+    "proposer": {
+      "target": {
+        "role": "Proposer"
+      }
+    },
+    "challenger": {
+      "target": {
+        "role": "Challenger"
+      }
+    },
     "deletedOutputs": {
       "handler": {
         "type": "stateFromEvent",

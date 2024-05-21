@@ -2,5 +2,12 @@
   "$schema": "../../../../../discovery/schemas/contract.v2.schema.json",
   "description": "The main entry point to deposit funds from L1 to L2. It also allows to prove and finalize withdrawals.",
   "ignoreMethods": ["isOutputFinalized"],
-  "ignoreInWatchMode": ["params"]
+  "ignoreInWatchMode": ["params"],
+  "fields": {
+    "guardian": {
+      "target": {
+        "role": "Guardian"
+      }
+    }
+  }
 }

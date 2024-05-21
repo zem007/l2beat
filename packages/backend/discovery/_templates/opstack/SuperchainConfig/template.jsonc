@@ -5,8 +5,7 @@
   "fields": {
     "guardian": {
       "target": {
-        "role": "Guardian",
-        "category": "Upgrades&Governance"
+        "role": "Guardian"
       }
     }
   }
