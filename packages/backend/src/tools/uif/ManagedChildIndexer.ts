@@ -38,7 +38,10 @@ export abstract class ManagedChildIndexer extends ChildIndexer {
     )
 
     if (safeHeight === undefined) {
-      return this.options.minHeight - 1
+      return {
+        safeHeight: this.options.minHeight - 1,
+        configHash: this.options.configHash,
+      }
     }
 
     if (this.options.configHash) {
@@ -56,23 +59,34 @@ export abstract class ManagedChildIndexer extends ChildIndexer {
           targetHeight: this.options.minHeight - 1,
         })
 
-        // TODO: This should happen atomically alongside setSafeHeight
-        await this.options.indexerService.setConfigHash(
-          this.indexerId,
-          this.options.configHash,
-        )
-
-        return this.options.minHeight - 1
+        return {
+          safeHeight: this.options.minHeight - 1,
+          configHash: this.options.configHash,
+        }
       }
     }
 
-    return safeHeight
+    return {
+      safeHeight: safeHeight,
+      configHash: this.options.configHash,
+    }
   }
 
   async setSafeHeight(safeHeight: number) {
     return await this.options.indexerService.setSafeHeight(
       this.indexerId,
       safeHeight,
+    )
+  }
+
+  async initializeState(
+    safeHeight: number,
+    configHash?: string | undefined,
+  ): Promise<void> {
+    return await this.options.indexerService.initializeState(
+      this.indexerId,
+      safeHeight,
+      configHash,
     )
   }
 }

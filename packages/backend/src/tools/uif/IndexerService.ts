@@ -28,6 +28,18 @@ export class IndexerService {
     await this.indexerStateRepository.setConfigHash(indexerId, configHash)
   }
 
+  async initializeState(
+    indexerId: string,
+    safeHeight: number,
+    configHash?: string,
+  ) {
+    await this.indexerStateRepository.addOrUpdate({
+      indexerId,
+      safeHeight,
+      configHash,
+    })
+  }
+
   // #endregion
   // #region ManagedMultiIndexer
 

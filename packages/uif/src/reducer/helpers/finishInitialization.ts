@@ -16,7 +16,13 @@ export function finishInitialization(
         safeHeight: state.height,
         invalidateToHeight: state.height,
       },
-      [{ type: 'SetSafeHeight', safeHeight: state.height }],
+      [
+        {
+          type: 'InitializeState',
+          safeHeight: state.height,
+          configHash: state.configHash,
+        },
+      ],
     ]
   }
 
@@ -32,7 +38,11 @@ export function finishInitialization(
         invalidateToHeight: height,
       },
       [
-        { type: 'SetSafeHeight', safeHeight: height },
+        {
+          type: 'InitializeState',
+          safeHeight: height,
+          configHash: state.configHash,
+        },
         { type: 'Invalidate', targetHeight: height },
       ],
     ]

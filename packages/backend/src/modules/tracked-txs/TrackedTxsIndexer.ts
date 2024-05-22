@@ -113,9 +113,22 @@ export class TrackedTxsIndexer extends ChildIndexer {
     return [configurationsToSync, syncTo]
   }
 
-  override async initialize(): Promise<number> {
+  override async initialize() {
     await this.doInitialize()
-    return await this.getSafeHeight()
+    const safeHeight = await this.getSafeHeight()
+    return { safeHeight }
+  }
+
+  override async initializeState(
+    safeHeight: number,
+    configHash?: string | undefined,
+  ): Promise<void> {
+    await this.stateRepository.addOrUpdate({
+      indexerId: this.indexerId,
+      safeHeight,
+      configHash,
+      minTimestamp: this.minTimestamp,
+    })
   }
 
   private async doInitialize(): Promise<void> {

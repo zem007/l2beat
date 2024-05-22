@@ -1,6 +1,9 @@
 import { IndexerState } from './types/IndexerState'
 
-export function getInitialState(parentCount: number): IndexerState {
+export function getInitialState(
+  parentCount: number,
+  configHash?: string,
+): IndexerState {
   return {
     status: 'init',
     height: 0,
@@ -19,5 +22,6 @@ export function getInitialState(parentCount: number): IndexerState {
     updateBlocked: false,
     invalidateBlocked: false,
     tickBlocked: false,
+    configHash,
   }
 }

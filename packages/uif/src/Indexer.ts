@@ -8,6 +8,7 @@ import { getInitialState } from './reducer/getInitialState'
 import { indexerReducer } from './reducer/indexerReducer'
 import { IndexerAction } from './reducer/types/IndexerAction'
 import {
+  InitializeStateEffect,
   InvalidateEffect,
   NotifyReadyEffect,
   SetSafeHeightEffect,
@@ -19,6 +20,7 @@ export interface IndexerOptions {
   tickRetryStrategy?: RetryStrategy
   updateRetryStrategy?: RetryStrategy
   invalidateRetryStrategy?: RetryStrategy
+  configHash?: string
 }
 
 export abstract class Indexer {
@@ -53,7 +55,12 @@ export abstract class Indexer {
    * @returns The height that the indexer has synced up to or the target height
    * for the entire system if this is a root indexer.
    */
-  abstract initialize(): Promise<number>
+  abstract initialize(): Promise<{ safeHeight: number; configHash?: string }>
+
+  abstract initializeState(
+    safeHeight: number,
+    configHash?: string,
+  ): Promise<void>
 
   /**
    * Saves the height (most likely to a database). The height given is the
@@ -128,7 +135,7 @@ export abstract class Indexer {
     options?: IndexerOptions,
   ) {
     this.logger = this.logger.for(this)
-    this.state = getInitialState(parents.length)
+    this.state = getInitialState(parents.length, options?.configHash)
     this.parents.forEach((parent) => {
       this.logger.debug('Subscribing to parent', {
         parent: parent.constructor.name,
@@ -152,10 +159,11 @@ export abstract class Indexer {
     assert(!this.started, 'Indexer already started')
     this.started = true
     this.logger.info('Starting...')
-    const height = await this.initialize()
+    const initializedState = await this.initialize()
     this.dispatch({
       type: 'Initialized',
-      safeHeight: height,
+      safeHeight: initializedState.safeHeight,
+      configHash: initializedState.configHash,
       childCount: this.children.length,
     })
   }
@@ -199,6 +207,8 @@ export abstract class Indexer {
           return void this.executeUpdate(effect)
         case 'Invalidate':
           return void this.executeInvalidate(effect)
+        case 'InitializeState':
+          return void this.executeInitializeState(effect)
         case 'SetSafeHeight':
           return void this.executeSetSafeHeight(effect)
         case 'NotifyReady':
@@ -273,6 +283,19 @@ export abstract class Indexer {
       }
       this.dispatch({ type: 'InvalidateFailed', fatal })
     }
+  }
+
+  private async executeInitializeState(
+    effect: InitializeStateEffect,
+  ): Promise<void> {
+    this.logger.info('Initializing state', {
+      safeHeight: effect.safeHeight,
+      configHash: effect.configHash,
+    })
+    this.children.forEach((child) =>
+      child.notifyUpdate(this, effect.safeHeight),
+    )
+    await this.initializeState(effect.safeHeight, effect.configHash)
   }
 
   private executeScheduleRetryInvalidate(): void {

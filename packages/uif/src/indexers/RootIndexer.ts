@@ -15,6 +15,10 @@ export abstract class RootIndexer extends Indexer {
     return await Promise.reject(new Error('RootIndexer cannot invalidate'))
   }
 
+  override async initializeState(): Promise<void> {
+    return await Promise.resolve()
+  }
+
   override async setSafeHeight(): Promise<void> {
     return await Promise.resolve()
   }
