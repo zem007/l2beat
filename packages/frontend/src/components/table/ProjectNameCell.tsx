@@ -26,7 +26,7 @@ export interface ProjectCellProps {
 
 export function ProjectNameCell({ project, showIsL3 }: ProjectCellProps) {
   return (
-    <div className="pl-2 2xl:pl-3">
+    <div className="flex flex-row items-center pl-2 2xl:pl-3">
       <span className="font-bold text-base md:text-lg group-hover:underline">
         {project.shortName ?? project.name}
       </span>
