@@ -33,7 +33,7 @@ export interface ConfigFeatures {
   finality: boolean
   banner: boolean
   tvlBreakdown: boolean
-  implementationChange: boolean
+  implementationChangeReport: boolean
   gitcoinOption: boolean
   hiringBadge: boolean
   buildAllProjectPages: boolean

@@ -14,7 +14,7 @@ export function createImplementationChangeModule(
   logger: Logger,
   peripherals: Peripherals,
 ): ApplicationModule | undefined {
-  if (!config.implementationChangeReporterEnabled) {
+  if (!config.implementationChangeReport) {
     logger.info('DiffHistory module disabled')
     return
   }

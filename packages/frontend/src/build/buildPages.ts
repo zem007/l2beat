@@ -78,7 +78,7 @@ async function main() {
       config.features.finality
         ? fetchFinalityApi(config.backend, http)
         : undefined,
-      config.features.implementationChange
+      config.features.implementationChangeReport
         ? fetchImplementationChangeReport(config.backend, http)
         : undefined,
       config.features.costsPage

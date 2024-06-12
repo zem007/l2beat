@@ -30,7 +30,7 @@ export const common: Omit<Config, 'backend'> = {
     hiringBadge: true,
     activity: true,
     tvlBreakdown: true,
-    implementationChange: true,
+    implementationChangeReport: true,
     buildAllProjectPages: false,
     costsPage: true,
     zkCatalog: true,

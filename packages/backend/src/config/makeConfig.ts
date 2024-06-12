@@ -182,9 +182,7 @@ export function makeConfig(
         .filter((chain) => flags.isEnabled('updateMonitor', chain))
         .map((chain) => getChainDiscoveryConfig(env, chain)),
     },
-    implementationChangeReporterEnabled: flags.isEnabled(
-      'implementationChangeReporter',
-    ),
+    implementationChangeReport: flags.isEnabled('implementationChangeReport'),
     chains: chains.map((x) => ({ name: x.name, chainId: ChainId(x.chainId) })),
 
     // Must be last

@@ -19,7 +19,7 @@ export const ScalingNavigationTabs: Story = {
       zkCatalog: true,
       banner: false,
       tvlBreakdown: false,
-      implementationChange: false,
+      implementationChangeReport: false,
       gitcoinOption: false,
       hiringBadge: false,
       buildAllProjectPages: false,

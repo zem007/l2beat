@@ -30,7 +30,7 @@ export interface Config {
   readonly finality: FinalityConfig | false
   readonly activity: ActivityConfig | false
   readonly updateMonitor: UpdateMonitorConfig | false
-  readonly implementationChangeReporterEnabled: boolean
+  readonly implementationChangeReport: boolean
   readonly lzOAppsEnabled: boolean
   readonly statusEnabled: boolean
   readonly chains: { name: string; chainId: ChainId }[]
