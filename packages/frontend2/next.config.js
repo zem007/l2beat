@@ -12,22 +12,7 @@ const nextConfig = {
     return {
       beforeFiles: [],
       afterFiles: [],
-      fallback: [
-        {
-          source: '/:path*',
-          has: [{ type: 'host', value: '.*localhost.*' }],
-          destination: 'http://127.0.0.1:8080/:path*',
-        },
-        {
-          source: '/:path*',
-          has: [{ type: 'host', value: '.*staging.*' }],
-          destination: 'https://l2beat-staging.vercel.app/:path*',
-        },
-        {
-          source: '/:path*',
-          destination: `https://l2beat-production.vercel.app/:path*`,
-        },
-      ],
+      fallback: []
     }
   },
   // Webpack config for svgr
