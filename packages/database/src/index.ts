@@ -84,4 +84,5 @@ export function createRepositories(config?: PoolConfig) {
 export type Database = ReturnType<typeof createRepositories>
 
 export type { CurrentPrice } from './current-price'
+export type { Value } from './value'
 export type { Stake } from './stake'
