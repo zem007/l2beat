@@ -45,8 +45,8 @@ export class ValueRepository {
               'in',
               projectIds.map((id) => id.toString()),
             ),
-            eb('timestamp', '>', from.toDate().toString()),
-            eb('timestamp', '<=', to.toDate().toString()),
+            eb('timestamp', '>', from.toDate()),
+            eb('timestamp', '<=', to.toDate()),
           ]),
         )
         .orderBy('timestamp', 'asc')
