@@ -3,26 +3,15 @@ import {
   UnixTime,
   assertUnreachable,
   type ProjectId,
-  CoingeckoId,
-  AssetId,
 } from '@l2beat/shared-pure'
 import { groupBy } from 'lodash'
 import { db } from '~/server/database'
-import { createPriceId } from '@l2beat/backend/src/modules/tvl/utils/createPriceId'
 import { layer2s } from '@l2beat/config'
 import { asNumber } from './chart-utils'
+import { getEthPrices } from './get-eth-prices'
 
 type Timespan = '7d' | '30d' | '90d' | '180d' | '1y' | 'max'
 type Resolution = 'hourly' | 'sixHourly' | 'daily'
-
-const ethPriceId = createPriceId({
-  type: 'coingecko',
-  coingeckoId: CoingeckoId('ethereum'),
-  assetId: AssetId.ETH,
-  address: 'native',
-  chain: 'ethereum',
-  sinceTimestamp: UnixTime.ZERO,
-})
 
 type GetTvlChartDataParameters = {
   timespan: Timespan
@@ -114,14 +103,6 @@ function getChartData(values: Value[], ethPrices: Record<number, number>) {
       asNumber(summedValues.nativeEth, 2),
     ] as const
   })
-}
-
-async function getEthPrices() {
-  const prices = await db.price.getByConfigId(ethPriceId)
-  return prices.reduce<Record<number, number>>((acc, curr) => {
-    acc[curr.timestamp.toNumber()] = curr.priceUsd
-    return acc
-  }, {})
 }
 
 async function getValuesByTimespan(
