@@ -1,7 +1,7 @@
-import { upcomingL2 } from './templates/upcoming'
+import { underReviewL2 } from './templates/underReview'
 import { Layer2 } from './types'
 
-export const payy: Layer2 = upcomingL2({
+export const payy: Layer2 = underReviewL2({
   id: 'payy',
   display: {
     name: 'Payy',
