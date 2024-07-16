@@ -56,6 +56,8 @@ export function createTvlModule(
 
   const syncOptimizer = new SyncOptimizer(clock)
 
+  console.log('amounts', config.tvl.amounts.length)
+
   const configMapping = new ConfigMapping(
     config.tvl.prices,
     config.tvl.amounts,

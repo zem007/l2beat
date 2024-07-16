@@ -78,14 +78,15 @@ export class AmountsDataService {
     configurations: (AmountConfigEntry & { configId: string })[],
     targetTimestamp: UnixTime,
   ) {
-    const amounts = await this.$.amountRepository.getByIdsAndTimestamp(
-      configurations.map((c) => c.configId),
-      targetTimestamp,
-    )
+    const amounts =
+      await this.$.amountRepository.getByIdsAndTimestamp(targetTimestamp)
+
     const status = await this.$.indexerService.getAmountsStatus(
       configurations,
       targetTimestamp,
     )
+
+    console.log(status.lagging.length)
 
     const lagging = new Map()
 

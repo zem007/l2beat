@@ -30,14 +30,9 @@ export class AmountRepository extends BaseRepository {
     this.autoWrap<CheckConvention<AmountRepository>>(this)
   }
 
-  async getByIdsAndTimestamp(
-    configIds: string[],
-    timestamp: UnixTime,
-  ): Promise<AmountRecord[]> {
+  async getByIdsAndTimestamp(timestamp: UnixTime): Promise<AmountRecord[]> {
     const knex = await this.knex()
-    const rows = await knex('amounts')
-      .whereIn('configuration_id', configIds)
-      .andWhere('timestamp', timestamp.toDate())
+    const rows = await knex('amounts').andWhere('timestamp', timestamp.toDate())
     return rows.map(toRecord)
   }
 

@@ -1,7 +1,7 @@
 import { assert, Logger } from '@l2beat/backend-tools'
 
 import { PriceConfigEntry, UnixTime } from '@l2beat/shared-pure'
-import { Dictionary } from 'lodash'
+import { Dictionary, groupBy } from 'lodash'
 import { Clock } from '../../../../../tools/Clock'
 import { IndexerService } from '../../../../../tools/uif/IndexerService'
 import { PriceRepository } from '../../../repositories/PriceRepository'
@@ -83,6 +83,7 @@ export class PricesDataService {
     targetTimestamp: UnixTime,
   ) {
     const prices = await this.$.priceRepository.getByTimestamp(targetTimestamp)
+
     const status = await this.$.indexerService.getConfigurationsStatus(
       configurations,
       targetTimestamp,
@@ -98,13 +99,21 @@ export class PricesDataService {
       return result
     }
 
-    await Promise.all(
-      status.lagging.map(async (laggingConfig) => {
-        const latestRecord =
-          await this.$.priceRepository.findByConfigAndTimestamp(
-            laggingConfig.id,
-            laggingConfig.latestTimestamp,
-          )
+    if (status.lagging.length > 0) {
+      const uniqueTimestamps = new Set<number>()
+      status.lagging.forEach((l) =>
+        uniqueTimestamps.add(l.latestTimestamp.toNumber()),
+      )
+
+      const data = await this.$.priceRepository.getByTimestamps(
+        Array.from(uniqueTimestamps).map((u) => new UnixTime(u)),
+      )
+      const dataByConfigId = groupBy(data, 'configId')
+
+      for (const laggingConfig of status.lagging) {
+        const latestRecord = dataByConfigId[laggingConfig.id]?.find((d) =>
+          d.timestamp.equals(laggingConfig.latestTimestamp),
+        )
 
         assert(latestRecord, `Undefined record for ${laggingConfig.id}`)
 
@@ -114,8 +123,8 @@ export class PricesDataService {
         })
 
         result.prices.push({ ...latestRecord, timestamp: targetTimestamp })
-      }),
-    )
+      }
+    }
 
     return result
   }

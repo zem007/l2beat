@@ -53,6 +53,16 @@ export class PriceRepository extends BaseRepository {
     return rows.map(toRecord)
   }
 
+  async getByTimestamps(timestamps: UnixTime[]): Promise<PriceRecord[]> {
+    const knex = await this.knex()
+    const rows = await knex('prices').whereIn(
+      'timestamp',
+      timestamps.map((t) => t.toDate()),
+    )
+
+    return rows.map(toRecord)
+  }
+
   async findByConfigAndTimestamp(
     configId: string,
     timestamp: UnixTime,

@@ -14,7 +14,7 @@ describeDatabase(AmountRepository.name, (knex, kysely) => {
   suite(newRepo)
 
   function suite(amountRepository: typeof oldRepo | typeof newRepo) {
-    describe(AmountRepository.prototype.getByIdsAndTimestamp.name, () => {
+    describe(AmountRepository.prototype.getByTimestamp.name, () => {
       it('gets by timestamp', async () => {
         await amountRepository.addMany([
           amount('a', new UnixTime(100), 1n),
@@ -27,7 +27,7 @@ describeDatabase(AmountRepository.name, (knex, kysely) => {
         ])
 
         const configIds = ['a'.repeat(12), 'b'.repeat(12)]
-        const result = await amountRepository.getByIdsAndTimestamp(
+        const result = await amountRepository.getByTimestamp(
           configIds,
           new UnixTime(200),
         )
