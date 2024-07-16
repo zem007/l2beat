@@ -1,0 +1,32 @@
+{
+  "$schema": "../../../../discovery/schemas/config.v2.schema.json",
+  "chain": "ethereum",
+  "name": "wirex",
+  "initialAddresses": [
+    "0x78253E2E6120164bd826668A4C96Db20f78A94c9", // rollupContract
+    "0x0775e11309d75aA6b0967917fB0213C5673eDf81" // verifier
+  ],
+  "names": {
+    "0x78253E2E6120164bd826668A4C96Db20f78A94c9": "WirexValidiumPolygonCDK",
+    "0x755e9A5B4BAEFc78Bb82BA7E6d2386CCB2F238a5": "PolygonDataCommittee"
+  },
+  "sharedModules": {
+    "PolygonRollupManager": "shared-polygon-cdk"
+  },
+  "overrides": {
+    "PolygonDataCommittee": {
+      "fields": {
+        "members": {
+          "handler": {
+            "type": "array",
+            "method": "members",
+            "maxLength": 10
+          }
+        }
+      }
+    },
+    "WirexValidiumPolygonCDK": {
+      "ignoreInWatchMode": ["lastAccInputHash"]
+    }
+  }
+}
