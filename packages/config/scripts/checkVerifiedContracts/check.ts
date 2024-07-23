@@ -7,7 +7,7 @@ import {
   getUniqueContractsForAllProjects,
 } from './addresses'
 import { getChainNames } from './chains'
-import { getEtherscanClient } from './etherscan'
+import { getEtherscanClient, getProvider } from './etherscan'
 import {
   PROJECTS_OUTPUT_PATH,
   VerificationMap,
@@ -32,11 +32,13 @@ export async function check(workersCount: number, logger: Logger) {
     const previouslyVerified = await loadPreviouslyVerifiedContracts(chain)
     const addresses = getUniqueContractsForAllProjects(projects, chain)
     const etherscanClient = getEtherscanClient(chain)
+    const provider = getProvider(chain)
     const addressVerificationMap = await verifyContracts(
       addresses,
       previouslyVerified,
       manuallyVerified,
       etherscanClient,
+      provider,
       workersCount,
       logger,
     )
