@@ -21,7 +21,8 @@ export async function isContractVerified(
     // Return true if it's an EOA because otherwise
     // we say project has unverified contracts while
     // those are actually EOAs
-    const isEOA = (await provider.getCode(address.toString())).length === 0
+    const code = await provider.getCode(address.toString())
+    const isEOA = code.length === 0
     return isEOA
   }
   return true
