@@ -166,11 +166,27 @@ export class ProjectDiscovery {
   }
 
   isEOA(address: EthereumAddress): boolean {
-    const eoas = this.discoveries.flatMap((discovery) => discovery.eoas)
-    return (
-      eoas.find((x) => x.address.toString() === address.toString()) !==
-      undefined
-    )
+    const isEoa = this.discoveries
+      .flatMap((discovery) => discovery.eoas)
+      .map((eoa) => eoa.address)
+      .includes(address)
+
+    if (isEoa) {
+      return true
+    }
+
+    const isContract = this.discoveries
+      .flatMap((discovery) => discovery.contracts)
+      .map((contract) => contract.address)
+      .includes(address)
+
+    if (!isContract) {
+      throw new Error(
+        `Address ${address} not found in discovery at all (when checking for EOA status)`,
+      )
+    }
+
+    return false
   }
 
   getInversion(): InvertedAddresses {

@@ -33,7 +33,9 @@ describe(DiscoveryEngine.name, () => {
   const strB = B.toString()
   const strC = C.toString()
   const strD = D.toString()
-  const provider = mockObject<IProvider>({})
+  const provider = mockObject<IProvider>({
+    getBytecode: mockFn().resolvesTo('sourceCode'),
+  })
 
   it('can perform a discovery', async () => {
     const config = generateFakeConfig([A], {

@@ -17,6 +17,7 @@ import {
 } from '../source/SourceCodeService'
 import { TemplateService } from './TemplateService'
 import { getRelativesWithSuggestedTemplates } from './getRelativesWithSuggestedTemplates'
+import { isEoa } from './isEoa'
 import { ContractMeta, getSelfMeta, getTargetsMeta } from './metaUtils'
 
 export type Analysis = AnalyzedContract | AnalyzedEOA
@@ -75,8 +76,7 @@ export class AddressAnalyzer {
     logger: DiscoveryLogger,
     suggestedTemplates?: Set<string>,
   ): Promise<Analysis> {
-    const code = await provider.getBytecode(address)
-    if (code.length === 0) {
+    if (await isEoa(provider, address)) {
       logger.logEoa()
       return { type: 'EOA', address }
     }

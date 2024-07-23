@@ -41,7 +41,8 @@ export class DiscoveryEngine {
       removeAlreadyAnalyzed(toAnalyze, Object.values(resolved))
 
       for (const address of Object.keys(toAnalyze)) {
-        const skipReason = shouldSkip(
+        const skipReason = await shouldSkip(
+          provider,
           EthereumAddress(address),
           config,
           depth,
