@@ -107,7 +107,7 @@ export const scalingLayer2sColumns = [
           associatedTokenSymbols={value.associatedTokens}
           tvlWarnings={value.warnings}
           breakdown={value.breakdown}
-          change={value.change ?? undefined}
+          change={value.change}
         />
       )
     },

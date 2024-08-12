@@ -56,6 +56,7 @@ const defaultValues: ScalingFilterContextValue = {
 }
 
 export function useScalingFilterValues() {
+  console.log('using -> useScalingFilterValues')
   const context = useContext(ScalingFilterContext)
   if (!context) {
     throw new Error(
@@ -67,9 +68,9 @@ export function useScalingFilterValues() {
     // Check if all values are default, in which case the filter is effectively disabled
     // This is used e.g. to determine if we should pass the project list to the backend
     // or just use the predefined query type.
-    empty: (Object.keys(defaultValues) as (keyof typeof defaultValues)[]).every(
-      (key) => context[key] === defaultValues[key],
-    ),
+    // empty: (Object.keys(defaultValues) as (keyof typeof defaultValues)[]).every(
+    //   (key) => context[key] === defaultValues[key],
+    // ),
   }
 }
 
@@ -82,6 +83,8 @@ type ScalingEntry =
   | ScalingSummaryEntry
 
 export function useScalingFilter() {
+  console.log('using -> useScalingFilter')
+
   const scalingFilters = useScalingFilterValues()
 
   const filter = useCallback(
@@ -131,6 +134,7 @@ export function ScalingFilterContextProvider({
 
   const set = useCallback(
     (newValue: Partial<ScalingFilterContextValue>) => {
+      console.log('setting new filter value')
       setValue((prev) => ({ ...prev, ...newValue }))
     },
     [setValue],
@@ -143,6 +147,7 @@ export function ScalingFilterContextProvider({
     [value, set, reset],
   )
 
+  console.log('rendering -> ScalingFilterContextProvider')
   return (
     <ScalingFilterContext.Provider value={contextValue}>
       {children}

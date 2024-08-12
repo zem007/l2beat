@@ -10,13 +10,11 @@ import { Skeleton } from '~/app/_components/skeleton'
 import { useCookieState } from '~/hooks/use-cookie-state'
 import { useIsClient } from '~/hooks/use-is-client'
 import { useLocalStorage } from '~/hooks/use-local-storage'
+import { type LatestTvl } from '~/server/features/tvl/get-latest-tvl'
 import { type TvlChartRange } from '~/server/features/tvl/range-utils'
 import { api } from '~/trpc/react'
 import { formatTimestamp } from '~/utils/dates'
 import { formatCurrency, formatCurrencyExactValue } from '~/utils/format'
-import { useChartLoading } from './core/chart-loading-context'
-import { type LatestTvl } from '~/server/features/tvl/get-latest-tvl'
-
 interface TvlChartPointData {
   timestamp: number
   usdValue: number
@@ -27,9 +25,17 @@ interface Props {
   milestones: Milestone[]
   tag?: string
   latestTvl: LatestTvl
+  // entries: ScalingSummaryEntry[]
 }
 
-export function TvlChart({ milestones, tag = 'summary', latestTvl }: Props) {
+export function TvlChart({
+  milestones,
+  tag = 'summary',
+  latestTvl,
+  // entries,
+}: Props) {
+  // const filter = useScalingFilter()
+
   const [timeRange, setTimeRange] = useCookieState('chartRange')
   const [unit, setUnit] = useLocalStorage<'usd' | 'eth'>(`${tag}-unit`, 'usd')
   const [scale, setScale] = useLocalStorage(`${tag}-scale`, 'lin')
@@ -139,20 +145,17 @@ function Header({
   unit,
   value,
   change,
-  range,
 }: {
   unit: string
   value: number
   change: number
   range: TvlChartRange
 }) {
-  const loading = useChartLoading()
-
   return (
     <header className="flex flex-col justify-between text-base md:flex-row">
       <div>
         <h1 className="mb-1 text-3xl font-bold">Value Locked</h1>
-        <p className="hidden text-gray-500 dark:text-gray-600 md:block">
+        <p className="hidden text-gray-500 md:block dark:text-gray-600">
           Sum of all canonically bridged, externally bridged, and natively
           minted tokens, converted to {unit.toUpperCase()}
         </p>
@@ -167,7 +170,7 @@ function Header({
           <PercentChange value={change} /> / 7 days
         </p>
       </div>
-      <hr className="mt-2 w-full border-gray-200 dark:border-zinc-700 md:hidden md:border-t" />
+      <hr className="mt-2 w-full border-gray-200 md:hidden md:border-t dark:border-zinc-700" />
     </header>
   )
 }
