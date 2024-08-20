@@ -5,7 +5,7 @@ import { type TvlProject } from './get-tvl-projects'
 
 const CONSIDER_EXCLUDED_AFTER_DAYS = 7
 
-export function getValuesStatus(
+export function getTvlValuesStatus(
   project: TvlProject,
   valuesByTimestamp: Dictionary<ValueRecord[]>,
   targetTimestamp: UnixTime,

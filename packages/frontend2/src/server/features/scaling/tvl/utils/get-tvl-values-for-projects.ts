@@ -4,7 +4,7 @@ import { type Dictionary, groupBy, range as lodashRange } from 'lodash'
 import { db } from '~/server/database'
 import { type TvlProject } from './get-tvl-projects'
 import { getTvlTargetTimestamp } from './get-tvl-target-timestamp'
-import { getValuesStatus } from './get-tvl-values-status'
+import { getTvlValuesStatus } from './get-tvl-values-status'
 import { type TvlChartRange, getRangeConfig } from './range'
 
 export async function getTvlValuesForProjects(
@@ -29,7 +29,7 @@ export async function getTvlValuesForProjects(
     assert(project, `Project ${projectId.toString()} not found`)
 
     const valuesByTimestamp = groupBy(projectValues, 'timestamp')
-    const status = getValuesStatus(project, valuesByTimestamp, target)
+    const status = getTvlValuesStatus(project, valuesByTimestamp, target)
 
     const valuesByTimestampForProject: Dictionary<ValueRecord[]> = {}
 

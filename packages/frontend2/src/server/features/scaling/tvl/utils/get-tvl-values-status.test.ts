@@ -1,16 +1,20 @@
 import { ProjectId, UnixTime } from '@l2beat/shared-pure'
 import { expect } from 'earl'
 import { type TvlProject } from './get-tvl-projects'
-import { getValuesStatus } from './get-tvl-values-status'
+import { getTvlValuesStatus } from './get-tvl-values-status'
 
-describe(getValuesStatus.name, () => {
+describe(getTvlValuesStatus.name, () => {
   it('everything up to date', () => {
     const targetTimestamp = new UnixTime(100)
     const valuesByTimestamp = {
       '100': [mockValue('A', 100), mockValue('B', 100), mockValue('C', 100)],
     }
     const project = mockProject(['A', 'B', 'C'])
-    const result = getValuesStatus(project, valuesByTimestamp, targetTimestamp)
+    const result = getTvlValuesStatus(
+      project,
+      valuesByTimestamp,
+      targetTimestamp,
+    )
     expect(result.lagging).toBeEmpty()
     expect(result.excluded).toBeEmpty()
   })
@@ -27,7 +31,11 @@ describe(getValuesStatus.name, () => {
 
     const project = mockProject(['A', 'B'])
 
-    const result = getValuesStatus(project, valuesByTimestamp, targetTimestamp)
+    const result = getTvlValuesStatus(
+      project,
+      valuesByTimestamp,
+      targetTimestamp,
+    )
 
     expect(result.lagging).toBeEmpty()
     expect(result.excluded).toEqual(new Set(['A', 'B']))
@@ -48,7 +56,11 @@ describe(getValuesStatus.name, () => {
 
     const project = mockProject(['A'])
 
-    const result = getValuesStatus(project, valuesByTimestamp, targetTimestamp)
+    const result = getTvlValuesStatus(
+      project,
+      valuesByTimestamp,
+      targetTimestamp,
+    )
 
     expect(result.lagging).toEqual([
       {
