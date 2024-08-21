@@ -1,5 +1,7 @@
+import { type OnchainVerifier } from '@l2beat/config'
 import { getVerifiersFromConfig } from '@l2beat/config/build/src/projects/other/zk-catalog'
-import { UnixTime, branded } from '@l2beat/shared-pure'
+import { type VerifierStatusRecord } from '@l2beat/database'
+import { type ChainId, UnixTime, branded } from '@l2beat/shared-pure'
 import {
   unstable_cache as cache,
   unstable_noStore as noStore,
@@ -18,26 +20,38 @@ export async function getVerifiers() {
 }
 
 const getCachedVerifiersStatus = cache(
-  async () => {
-    const verifiers = getVerifiersFromConfig()
-
-    const coercedQueries = verifiers.map(async (verifier) => {
-      const status = await db.verifierStatus.findVerifierStatus(
-        verifier.contractAddress.toString(),
-        verifier.chainId,
-      )
-
-      return {
-        address: verifier.contractAddress.toString(),
-        timestamp: status ? status.lastUsed.toNumber() : null,
-      }
-    })
-
-    return Promise.all(coercedQueries)
-  },
+  () => getVerifiersStatusLogic(),
   ['zkCatalogVerifiers'],
-  { revalidate: 10 * UnixTime.MINUTE },
+  {
+    revalidate: 10 * UnixTime.MINUTE,
+  },
 )
+
+export function getVerifiersStatusLogic(
+  findVerifierStatus: (
+    address: string,
+    chainId: ChainId,
+  ) => Promise<
+    VerifierStatusRecord | undefined
+  > = db.verifierStatus.findVerifierStatus.bind(db.verifierStatus),
+  getVerifiers: () => OnchainVerifier[] = getVerifiersFromConfig,
+) {
+  const verifiers = getVerifiers()
+
+  const coercedQueries = verifiers.map(async (verifier) => {
+    const status = await findVerifierStatus(
+      verifier.contractAddress.toString(),
+      verifier.chainId,
+    )
+
+    return {
+      address: verifier.contractAddress.toString(),
+      timestamp: status ? status.lastUsed.toNumber() : null,
+    }
+  })
+
+  return Promise.all(coercedQueries)
+}
 
 export const VerifierStatus = z.object({
   address: z.string(),
