@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { getLiveness } from '~/server/features/scaling/liveness/get-liveness'
+import { getActualTvlBreakdown } from '~/server/features/scaling/tvl/breakdown/get-actual-tvl-breakdown'
 
 export async function GET() {
   const isDev = process.env.NODE_ENV === 'development'
@@ -7,6 +7,6 @@ export async function GET() {
     return NextResponse.json({ error: 'Not allowed' }, { status: 403 })
   }
 
-  const liveness = await getLiveness()
-  return NextResponse.json(liveness)
+  await getActualTvlBreakdown()
+  return NextResponse.json({ msg: 'check console' })
 }
