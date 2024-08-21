@@ -1,7 +1,7 @@
 import { type OnchainVerifier } from '@l2beat/config'
-import { getVerifiersStatusLogic } from './get-verifiers'
 import { ChainId, EthereumAddress, UnixTime } from '@l2beat/shared-pure'
 import { expect } from 'earl'
+import { getVerifiersStatusLogic } from './get-verifiers'
 
 describe(getVerifiersStatusLogic.name, () => {
   it('correctly maps verifier statuses', async () => {
