@@ -17,7 +17,6 @@ import { INFINITY } from '~/consts/characters'
 import { useCookieState } from '~/hooks/use-cookie-state'
 import { useLocalStorage } from '~/hooks/use-local-storage'
 import { type ScalingTvlEntry } from '~/server/features/scaling/tvl/get-scaling-tvl-entries'
-import { type TvlLayer2ProjectFilter } from '~/server/features/scaling/tvl/utils/project-filter-utils'
 import { type TvlChartRange } from '~/server/features/scaling/tvl/utils/range'
 import { api } from '~/trpc/react'
 import { cn } from '~/utils/cn'
@@ -26,6 +25,7 @@ import { formatCurrency } from '~/utils/format'
 import { useScalingAssociatedTokensContext } from '../../../_components/scaling-associated-tokens-context'
 import { UnitAndScaleControls } from '../../_components/unit-and-scale-controls'
 import { tvlRangeToReadable } from '../../_utils/tvl-range-to-readable'
+import { type TvlLayer2ProjectFilter } from '~/server/features/scaling/tvl/utils/project-filter-types'
 
 interface Props {
   milestones: Milestone[]
