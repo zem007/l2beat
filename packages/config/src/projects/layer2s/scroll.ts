@@ -312,7 +312,7 @@ export const scroll: Layer2 = {
         {
           contract: 'ScrollChain',
           references: [
-            'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+            'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
           ],
         },
       ],
@@ -323,7 +323,7 @@ export const scroll: Layer2 = {
         {
           contract: 'ScrollChain',
           references: [
-            'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+            'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
           ],
         },
       ],
@@ -345,7 +345,7 @@ export const scroll: Layer2 = {
         {
           contract: 'L1MessageQueue',
           references: [
-            'https://etherscan.io/address/0xeBaed7A81c298B24EE6d59c22698A951dc448E01#code',
+            'https://etherscan.io/address/0x137CC585F607EDeBBc3CA6360AffCFeab507B374#code',
           ],
         },
         {
@@ -362,7 +362,7 @@ export const scroll: Layer2 = {
         {
           contract: 'ScrollChain',
           references: [
-            'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+            'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
           ],
         },
       ],
@@ -378,8 +378,8 @@ export const scroll: Layer2 = {
       ...STATE_CORRECTNESS.VALIDITY_PROOFS,
       references: [
         {
-          text: 'ScrollChain.sol - Etherscan source code, verifyAggregateProof() and verifyAggregateProof4844() calls',
-          href: 'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+          text: 'ScrollChain.sol - Etherscan source code, verifyAggregateProof4844() and verifyBundleProof() calls',
+          href: 'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
         },
       ],
     },
@@ -387,8 +387,8 @@ export const scroll: Layer2 = {
       ...TECHNOLOGY_DATA_AVAILABILITY.ON_CHAIN_BLOB_OR_CALLDATA,
       references: [
         {
-          text: 'ScrollChain.sol - Etherscan source, code commitBatch() function',
-          href: 'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+          text: 'ScrollChain.sol - Etherscan source code commitBatch() and commitBatchWithBlobProof() functions',
+          href: 'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
         },
       ],
     },
@@ -396,8 +396,8 @@ export const scroll: Layer2 = {
       ...OPERATOR.CENTRALIZED_OPERATOR,
       references: [
         {
-          text: 'ScrollChain.sol - Etherscan source code, finalizeBatchWithProof() function modifier',
-          href: 'https://etherscan.io/address/0x4F250B05262240C787a1eE222687C6eC395C628A#code',
+          text: 'ScrollChain.sol - Etherscan source code, finalizeBundleWithProof() function modifier',
+          href: 'https://etherscan.io/address/0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f#code',
         },
       ],
     },
