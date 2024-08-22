@@ -8,7 +8,7 @@ Generated with discovered.json: 0xf1c352ded1836901c9397001da79a0e3ed570292
 
 ## Description
 
-Provide description of changes. This section will be preserved.
+Scroll can now prove bundles (i.e. multiple DA submissions) in a single proof. Full changelog: <https://scroll.io/blog/proof-recursion-scrolls-darwin-upgrade>. It also seems to have forgotten to update a permission for the new `revertBatch` function sig, they have been notified.
 
 ## Watched changes
 
