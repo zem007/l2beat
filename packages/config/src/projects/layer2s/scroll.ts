@@ -212,6 +212,7 @@ export const scroll: Layer2 = {
           functionSignature:
             'function finalizeBatchWithProof(bytes _batchHeader,bytes32 _prevStateRoot,bytes32 _postStateRoot,bytes32 _withdrawRoot,bytes _aggrProof)',
           sinceTimestamp: new UnixTime(1696782323),
+          untilTimestamp: new UnixTime(1724227415),
         },
       },
       {
@@ -238,6 +239,22 @@ export const scroll: Layer2 = {
       },
       {
         uses: [
+          { type: 'liveness', subtype: 'stateUpdates' },
+          { type: 'l2costs', subtype: 'stateUpdates' },
+        ],
+        query: {
+          formula: 'functionCall',
+          address: EthereumAddress(
+            '0xa13BAF47339d63B743e7Da8741db5456DAc1E556',
+          ),
+          selector: '0x4f099e3d',
+          functionSignature:
+            'function finalizeBundleWithProof(bytes,bytes32,bytes32,bytes)',
+          sinceTimestamp: new UnixTime(1724227415),
+        },
+      },
+      {
+        uses: [
           { type: 'liveness', subtype: 'batchSubmissions' },
           { type: 'l2costs', subtype: 'batchSubmissions' },
         ],
@@ -250,6 +267,22 @@ export const scroll: Layer2 = {
           functionSignature:
             'function commitBatch(uint8 _version,bytes _parentBatchHeader,bytes[] _chunks,bytes _skippedL1MessageBitmap)',
           sinceTimestamp: new UnixTime(1696782323),
+        },
+      },
+      {
+        uses: [
+          { type: 'liveness', subtype: 'batchSubmissions' },
+          { type: 'l2costs', subtype: 'batchSubmissions' },
+        ],
+        query: {
+          formula: 'functionCall',
+          address: EthereumAddress(
+            '0xa13BAF47339d63B743e7Da8741db5456DAc1E556',
+          ),
+          selector: '0x86b053a9',
+          functionSignature:
+            'function commitBatchWithBlobProof(uint8,bytes,bytes[],bytes,bytes)',
+          sinceTimestamp: new UnixTime(1724227415),
         },
       },
     ],
@@ -604,6 +637,13 @@ export const scroll: Layer2 = {
       discovery.getContractDetails('PlonkVerifierV2', {
         description:
           'Plonk verifier used to verify ZK proofs using blobs for DA.',
+      }),
+      discovery.getContractDetails('ZkEvmVerifierV2', {
+        description:
+          'Verifier proving bundles (group of batches), used to prepare data for the PlonkVerifierV3.',
+      }),
+      discovery.getContractDetails('PlonkVerifierV3', {
+        description: 'Plonk verifier used to verify ZK proofs for bundles.',
       }),
       discovery.getContractDetails('L1ETHGateway', {
         description: 'Contract used to bridge ETH from L1 to L2.',

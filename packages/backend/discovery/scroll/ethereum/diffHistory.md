@@ -1,3 +1,84 @@
+Generated with discovered.json: 0xf1c352ded1836901c9397001da79a0e3ed570292
+
+# Diff at Thu, 22 Aug 2024 07:45:44 GMT:
+
+- author: Luca Donno (<donnoh99@gmail.com>)
+- comparing to: main@98d686e098f2a1649b0d716a2b61a3a0af30073c block: 20369470
+- current block number: 20582574
+
+## Description
+
+Provide description of changes. This section will be preserved.
+
+## Watched changes
+
+```diff
+    contract L1MessageQueue (0x0d7E906BD9cAFa154b048cFa766Cc1E54E39AF9B) {
+    +++ description: None
+      values.$implementation:
+-        "0xeBaed7A81c298B24EE6d59c22698A951dc448E01"
++        "0x137CC585F607EDeBBc3CA6360AffCFeab507B374"
+    }
+```
+
+```diff
+    contract ScrollOwner (0x798576400F7D662961BA15C6b3F3d813447a26a6) {
+    +++ description: Owner of all contracts in the system. It implements an extension of AccessControl that manages roles and functions allowed to be called by each role.
+      values.accessControl.targets.0xa13BAF47339d63B743e7Da8741db5456DAc1E556.revertBatch(bytes,uint256):
+-        ["SCROLL_MULTISIG_NO_DELAY_ROLE","EMERGENCY_MULTISIG_NO_DELAY_ROLE"]
+      values.accessControl.targets.0xa13BAF47339d63B743e7Da8741db5456DAc1E556.0x10d44583:
++        ["SCROLL_MULTISIG_NO_DELAY_ROLE","EMERGENCY_MULTISIG_NO_DELAY_ROLE"]
+      values.accessControl.targets.0x4CEA3E866e7c57fD75CB0CA3E9F5f1151D4Ead3F:
++        {"updateVerifier(uint256,uint64,address)":["TIMELOCK_7DAY_DELAY_ROLE"]}
+    }
+```
+
+```diff
+    contract ScrollChain (0xa13BAF47339d63B743e7Da8741db5456DAc1E556) {
+    +++ description: None
+      values.$implementation:
+-        "0x4F250B05262240C787a1eE222687C6eC395C628A"
++        "0x9bB163401E8C72573854c4Cd968aFA7A7b02D25f"
+      values.verifier:
+-        "0xf94AfBD9370E25Dd6Ca557d5D67634aeFDA2416B"
++        "0x4CEA3E866e7c57fD75CB0CA3E9F5f1151D4Ead3F"
+    }
+```
+
+```diff
+-   Status: DELETED
+    contract MultipleVersionRollupVerifier (0xf94AfBD9370E25Dd6Ca557d5D67634aeFDA2416B)
+    +++ description: Used to update the verifier and keep track of current and old versions.
+```
+
+```diff
++   Status: CREATED
+    contract ZkEvmVerifierV2 (0x2d6e16d8e8a0C3Bc7750E774B108Ec39Ab0C18fB)
+    +++ description: None
+```
+
+```diff
++   Status: CREATED
+    contract MultipleVersionRollupVerifier (0x4CEA3E866e7c57fD75CB0CA3E9F5f1151D4Ead3F)
+    +++ description: None
+```
+
+```diff
++   Status: CREATED
+    contract PlonkVerifierV3 (0x8759E83b6570A0bA46c3CE7eB359F354F816c9a9)
+    +++ description: None
+```
+
+## Source code changes
+
+```diff
+.../L1MessageQueueWithGasPriceOracle.sol           |  91 +-
+ .../MultipleVersionRollupVerifier.sol              |  28 +-
+ .../ScrollChain/ScrollChain.sol                    | 982 +++++++++++++--------
+ .../scroll/ethereum/.flat/ZkEvmVerifierV2.sol      | 108 +++
+ 4 files changed, 812 insertions(+), 397 deletions(-)
+```
+
 Generated with discovered.json: 0x7abca15987bdd3cc1c67142350cc77260caaa885
 
 # Diff at Wed, 21 Aug 2024 10:05:37 GMT:
