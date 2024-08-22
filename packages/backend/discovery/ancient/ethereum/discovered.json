@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19927693,
   "configHash": "0x40ef5e7ec6070e99fc0753c31b29859c9086903a0d48af264137629c2d536643",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "L1CrossDomainMessenger",
@@ -67,6 +67,7 @@
         "sequencerInbox": "0xd5df46c580fD2FBdaEE751dc535E14295C0336F3",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x132F4CbD6aE20b264620602fd4faa7a10B084f8c",
+        "upgradeCount": 1,
         "version": "1.3.1",
         "VERSION": 0
       },
@@ -91,6 +92,7 @@
         "messenger": "0x012c341506ee1939e56084F43Ae5dbCe224Ce2af",
         "MESSENGER": "0x012c341506ee1939e56084F43Ae5dbCe224Ce2af",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.1"
       },
       "derivedName": "L1StandardBridge"
@@ -206,6 +208,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0x0b4cfc49aCc656CE6D03CB0794860Da92bE3E8ec",
+        "upgradeCount": 1,
         "version": "1.7.2"
       },
       "derivedName": "OptimismPortal"
@@ -294,6 +297,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1706027387,
         "SUBMISSION_INTERVAL": 1800,
+        "upgradeCount": 1,
         "version": "1.3.1"
       },
       "derivedName": "L2OutputOracle"
@@ -317,6 +321,7 @@
         "MESSENGER": "0x012c341506ee1939e56084F43Ae5dbCe224Ce2af",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000014",
         "otherBridge": "0x4200000000000000000000000000000000000014",
+        "upgradeCount": 1,
         "version": "1.1.2"
       }
     }

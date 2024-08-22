@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19825321,
   "configHash": "0x847ede6a024e5b92079594fdc9dc23cdb1b71bfe3a16bd0235f77ffed4ab6ecb",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "MerkleDistributor",
@@ -75,6 +75,7 @@
         "REWARDS_TREASURY": "0x639192D54431F8c816368D3FB4107Bc168d0E871",
         "TRADER_SCORE_ALPHA_BASE": "1000000000000000000",
         "UNPAUSER_ROLE": "0x427da25fe773164f88948d3e215c94b6554e2ed5e5f203a821c9f2f6131cf75a",
+        "upgradeCount": 0,
         "WAITING_PERIOD": 604800
       },
       "derivedName": "MerkleDistributorV1"
@@ -536,7 +537,8 @@
         "STAKED_TOKEN": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "symbol": "stkUSDC",
         "TOTAL_ALLOCATION": 10000,
-        "totalSupply": 270083688372
+        "totalSupply": 270083688372,
+        "upgradeCount": 0
       },
       "derivedName": "LiquidityStakingV1"
     },
@@ -569,7 +571,8 @@
         "BURN_ADDRESS": "0x0000000000000000000000000000000000000001",
         "owner": "0x64c7d40c07EFAbec2AafdC243bF59eaF2195c6dc",
         "REVISION": 1,
-        "TREASURY_VESTER": "0xb9431E19B29B952d9358025f680077C3Fd37292f"
+        "TREASURY_VESTER": "0xb9431E19B29B952d9358025f680077C3Fd37292f",
+        "upgradeCount": 1
       }
     },
     {
@@ -671,7 +674,8 @@
         "STAKE_OPERATOR_ROLE": "0xa6fbd0d4ef0ac50b4de984ab8f303863596293cce6d67dd6111979bcf56abe74",
         "STAKED_TOKEN": "0x92D6C1e31e14520e676a687F0a93788B716BEff5",
         "symbol": "stkDYDX",
-        "totalSupply": "1827634802704420387010700"
+        "totalSupply": "1827634802704420387010700",
+        "upgradeCount": 2
       },
       "derivedName": "SafetyModuleV2"
     },

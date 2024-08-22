@@ -3,7 +3,7 @@
   "chain": "base",
   "blockNumber": 17827903,
   "configHash": "0x6dbcd0a3ed37a0123922561e52e68fa8df142159233f463e8c4494e33312fbb5",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "HamMultisig1",
@@ -83,6 +83,7 @@
         "startingTimestamp": 1716590733,
         "SUBMISSION_INTERVAL": 3600,
         "submissionInterval": 3600,
+        "upgradeCount": 1,
         "version": "1.8.0"
       }
     },
@@ -107,6 +108,7 @@
         "$implementation": "0x39Aea2Dd53f2d01c15877aCc2791af6BDD7aD567",
         "bridge": "0x936c137699230c4732d534c7E968cC7cEAa6Cf45",
         "BRIDGE": "0x936c137699230c4732d534c7E968cC7cEAa6Cf45",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     },
@@ -233,6 +235,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0xFC57b0947C079073A1C5Fe61887Eb3495972EE72",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -300,6 +303,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0xFC57b0947C079073A1C5Fe61887Eb3495972EE72",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     },
@@ -365,6 +369,7 @@
         "startBlock": 14901392,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xa620962E8Ea00aeE66ACea179CdAb8Dc1BbD641B",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -423,6 +428,7 @@
         "paused": false,
         "superchainConfig": "0xFC57b0947C079073A1C5Fe61887Eb3495972EE72",
         "systemConfig": "0xad22377De22537e4e6bd192AeBCa524a79B0d3Fd",
+        "upgradeCount": 1,
         "version": "2.6.0"
       }
     },
@@ -450,6 +456,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       }
     }

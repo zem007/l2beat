@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20016201,
   "configHash": "0xa703089081ef30a3fd1b4acef291868581ef007690cb07321cd53ee16bfb795b",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "L1ERC20TokenBridge",
@@ -26,6 +26,7 @@
         "proxy__getAdmin": "0x3e40D73EB977Dc6a537aF587D48316feE66E9C8c",
         "proxy__getImplementation": "0xB531445401926029B1647669cFAc8b4e5d8C7777",
         "proxy__getIsOssified": false,
+        "upgradeCount": 1,
         "WITHDRAWALS_DISABLER_ROLE": "0x94a954c0bc99227eddbc0715a62a7e1056ed8784cd719c2303b685683908857c",
         "WITHDRAWALS_ENABLER_ROLE": "0x9ab8816a3dc0b3849ec1ac00483f6ec815b07eee2fd766a353311c823ad59d0d"
       },
@@ -97,6 +98,7 @@
         "messenger": "0xE3d981643b806FB8030CDB677D6E60892E547EdA",
         "MESSENGER": "0xE3d981643b806FB8030CDB677D6E60892E547EdA",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.1"
       },
       "derivedName": "L1StandardBridge"
@@ -126,6 +128,7 @@
         "otherBridge": "0xe497788F8Fcc30B773C9A181a0FFE2e60645cE90",
         "owner": "0xC73b6E6ec346f9f1A07D2e7A4380858D7BEa0194",
         "paused": false,
+        "upgradeCount": 0,
         "version": "2.1.0"
       },
       "derivedName": "L1UsdcBridge"
@@ -176,6 +179,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0xACB886b75D76d1c8d9248cFdDfA09b70C71c5393",
+        "upgradeCount": 1,
         "version": "1.7.2"
       },
       "derivedName": "OptimismPortal"
@@ -217,6 +221,7 @@
         "sequencerInbox": "0x3A75346f81302aAc0333FB5DCDD407e12A6CfA83",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xB18AD28cB78fD2eAfAc6941c24c5135515B796f0",
+        "upgradeCount": 1,
         "version": "1.3.1",
         "VERSION": 0
       },
@@ -327,6 +332,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1712861987,
         "SUBMISSION_INTERVAL": 21600,
+        "upgradeCount": 1,
         "version": "1.3.1"
       },
       "derivedName": "L2OutputOracle"

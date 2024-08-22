@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20317887,
   "configHash": "0x223c7ca358ed369b6d2c0b6cca7a4dcf0b87d48d45c08a6e5760c503f1b5c50b",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "DSRYieldProvider",
@@ -50,6 +50,7 @@
         "paused": false,
         "SYSTEM_CONFIG": "0x5531DcfF39EC1ec727C4c5D2fc49835368F805a9",
         "systemConfig": "0x5531DcfF39EC1ec727C4c5D2fc49835368F805a9",
+        "upgradeCount": 2,
         "version": "1.10.0",
         "yieldManager": "0x98078db053902644191f93988341E31289E1C8FE"
       },
@@ -151,6 +152,7 @@
         "OTHER_BRIDGE": "0x4300000000000000000000000000000000000005",
         "otherBridge": "0x4300000000000000000000000000000000000005",
         "portal": "0x0Ec68c5B10F21EFFb74f2A5C61DFe6b08C0Db6Cb",
+        "upgradeCount": 0,
         "usdYieldManager": "0xa230285d5683C74935aD14c446e137c8c8828438",
         "version": "1.0.0"
       }
@@ -251,6 +253,7 @@
         "startBlock": 19300387,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x164768144C688BF2bDa28E4072B2b30Ab705d568",
+        "upgradeCount": 1,
         "version": "1.10.0",
         "VERSION": 0
       },
@@ -325,6 +328,7 @@
         "totalETHShares": "1519234397412333627386",
         "totalUSDBalanceNoUpdate": "312712480292374162835246",
         "totalUSDShares": "297662899651819180489222",
+        "upgradeCount": 3,
         "USDC": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "USDT": "0xdAC17F958D2ee523a2206206994597C13D831ec7"
       },
@@ -384,6 +388,7 @@
         "MESSENGER": "0x5D4472f31Bd9385709ec61305AFc749F0fA8e9d0",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
         "otherBridge": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.4.1"
       },
       "derivedName": "L1StandardBridge"
@@ -405,6 +410,7 @@
         "$implementation": "0xBF21bc9AFaF817145B3886caDAF0860A2A0D782F",
         "bridge": "0x697402166Fbf2F22E970df8a6486Ef171dbfc524",
         "BRIDGE": "0x697402166Fbf2F22E970df8a6486Ef171dbfc524",
+        "upgradeCount": 1,
         "version": "1.6.1"
       }
     },
@@ -446,6 +452,7 @@
         "startingTimestamp": 1708809815,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 3,
         "version": "1.6.0"
       },
       "derivedName": "L2OutputOracle"
@@ -479,6 +486,7 @@
         "portal": "0x0Ec68c5B10F21EFFb74f2A5C61DFe6b08C0Db6Cb",
         "sharePrice": "1000000000000000000000000000",
         "TOKEN": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 0,
         "version": "1.0.0"
       },
       "fieldMeta": {
@@ -518,6 +526,7 @@
         "portal": "0x0Ec68c5B10F21EFFb74f2A5C61DFe6b08C0Db6Cb",
         "sharePrice": "1000000000000000000000000000",
         "TOKEN": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+        "upgradeCount": 0,
         "version": "1.0.0"
       },
       "fieldMeta": {
@@ -547,6 +556,7 @@
         "MESSENGER": "0x5D4472f31Bd9385709ec61305AFc749F0fA8e9d0",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000014",
         "otherBridge": "0x4200000000000000000000000000000000000014",
+        "upgradeCount": 1,
         "version": "1.4.1"
       }
     },
@@ -566,6 +576,7 @@
         "$admin": "0x364289230b8cc7d9120eF962AF37ebCFe23cE883",
         "$implementation": "0xEDeFE92e0CEF091149E1749Dd12d8F44Dd94DBb3",
         "admin": "0x4f72ee94B8ba3Be7F886565d3583A7F636c58B05",
+        "upgradeCount": 0,
         "version": "1.0.0"
       }
     },
@@ -585,6 +596,7 @@
         "$admin": "0x364289230b8cc7d9120eF962AF37ebCFe23cE883",
         "$implementation": "0x787BC7274Ba165d1dd3D89c1a9159cFf5f92B327",
         "admin": "0x4f72ee94B8ba3Be7F886565d3583A7F636c58B05",
+        "upgradeCount": 0,
         "version": "1.0.0"
       }
     },

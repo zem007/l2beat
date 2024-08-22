@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 236183206,
   "configHash": "0x4e258a6d37db579d90ca6b8795256e842346300928c347ad3abfdd97b2620488",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ArbitrumProxyAdmin",
@@ -42,6 +42,7 @@
         "ARB_SYS": "0x0000000000000000000000000000000000000064",
         "getRemoteGateway": "0x273D59aed2d793167c162E64b9162154B07583C0",
         "owner": "0xa29fFe244898CBec19DFEaAfB5cE671389FfF60F",
+        "upgradeCount": 2,
         "ZKLINK": "0xFF73a1a1d27951A005eb23276dc99CB7F8d5420A"
       },
       "derivedName": "ArbitrumL2Gateway"
@@ -105,7 +106,8 @@
         "$implementation": "0x1202e0557A23531D09015C802e993d6423685FfB",
         "l2Bridge": "0x6B7551DBbaE2fb728cF851baee5c3A52DF6F60a4",
         "l2TokenBeacon": "0x7804969714BF5Ff6356E25acF2Bcb657368c8A01",
-        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34"
+        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC20Bridge"
     },
@@ -157,7 +159,8 @@
         "totalSyncedPriorityTxs": 136822,
         "totalValidatorForwardFee": "73754541530115889243",
         "totalValidatorForwardFeeWithdrawn": "40000000000000000000",
-        "txGasPrice": 40000000000
+        "txGasPrice": 40000000000,
+        "upgradeCount": 3
       },
       "derivedName": "ZkLink"
     }

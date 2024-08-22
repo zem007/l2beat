@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20548226,
   "configHash": "0xb64cfdda9e137ec0feb6c850d9cbe01d37502ccaabf854d16d817280dea715cc",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "LivenessModule",
@@ -93,6 +93,7 @@
         "$admin": "0x543bA4AADBAb8f9025686Bd03993043599c6fB04",
         "$implementation": "0x6B7da1647Aa9684F54B2BEeB699F91F31cd35Fb9",
         "disputeGameFactory": "0xe5965Ab5962eDc7477C8520243A95517CD252fA9",
+        "upgradeCount": 1,
         "version": "1.0.0"
       }
     },
@@ -150,6 +151,7 @@
         "startBlock": 17422444,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xAAAA45d9549EDA09E70937013520214382Ffc4A2",
+        "upgradeCount": 7,
         "version": "2.2.0",
         "VERSION": 0
       },
@@ -364,6 +366,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 6,
         "version": "2.1.0"
       }
     },
@@ -447,6 +450,7 @@
         "$implementation": "0xE01efbeb1089D1d1dB9c6c8b135C934C0734c846",
         "bridge": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
         "BRIDGE": "0x99C9fc46f92E8a1c0deC1b1747d010903E884bE1",
+        "upgradeCount": 5,
         "version": "1.9.0"
       }
     },
@@ -499,6 +503,7 @@
         "proxy__getAdmin": "0x3e40D73EB977Dc6a537aF587D48316feE66E9C8c",
         "proxy__getImplementation": "0x29C5c51A031165CE62F964966A6399b81165EFA4",
         "proxy__getIsOssified": false,
+        "upgradeCount": 1,
         "WITHDRAWALS_DISABLER_ROLE": "0x94a954c0bc99227eddbc0715a62a7e1056ed8784cd719c2303b685683908857c",
         "WITHDRAWALS_ENABLER_ROLE": "0x9ab8816a3dc0b3849ec1ac00483f6ec815b07eee2fd766a353311c823ad59d0d"
       },
@@ -570,6 +575,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 3,
         "version": "1.1.0"
       },
       "derivedName": "SuperchainConfig"
@@ -601,6 +607,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 0,
         "version": "2.1.0"
       },
       "derivedName": "L1StandardBridge"
@@ -717,6 +724,7 @@
         "respectedGameTypeUpdatedAt": 1723833359,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
         "systemConfig": "0x229047fed2591dbec1eF1118d64F7aF3dB9EB290",
+        "upgradeCount": 7,
         "version": "3.10.0"
       },
       "fieldMeta": {
@@ -892,6 +900,7 @@
         "owner": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
         "symbol": "WETH",
         "totalSupply": "22015188000000000000",
+        "upgradeCount": 1,
         "version": "1.0.0"
       },
       "derivedName": "DelayedWETH"
@@ -923,6 +932,7 @@
         "initBonds": ["80000000000000000", "80000000000000000", 0, 0, 0],
         "owner": "0x5a0Aae59D09fccBdDb6C6CcEB07B7279367C3d2A",
         "permissionedGamesTotal": 17,
+        "upgradeCount": 1,
         "version": "1.0.0"
       },
       "derivedName": "DisputeGameFactory"

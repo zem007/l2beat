@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19876012,
   "configHash": "0xc5323f647a9ea9322c162facb56fb967aeeda5e72064249d3a787e7cde4d646a",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "SynapseBridge",
@@ -41,6 +41,7 @@
         "chainGasAmount": 0,
         "paused": false,
         "startBlockNumber": 0,
+        "upgradeCount": 11,
         "WETH_ADDRESS": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
       },
       "derivedName": "SynapseBridge"

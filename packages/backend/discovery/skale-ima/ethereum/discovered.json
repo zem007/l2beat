@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19719123,
   "configHash": "0x0dd5bab61ec77857fe1c60af951691b7e98a6e3c42494d257ff554f15a42c5e8",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ProxyAdminOwner",
@@ -52,7 +52,8 @@
         "DEPOSIT_BOX_MANAGER_ROLE": "0xadc0611617a946881d948c7506bdf0975adbe0cfb172896a62eb6a75f21f2ff9",
         "linker": "0x6ef406953bac772C2146389ED37846BA3b6086D1",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 8
       },
       "derivedName": "DepositBoxERC1155"
     },
@@ -76,7 +77,8 @@
         "DEPOSIT_BOX_MANAGER_ROLE": "0xadc0611617a946881d948c7506bdf0975adbe0cfb172896a62eb6a75f21f2ff9",
         "linker": "0x6ef406953bac772C2146389ED37846BA3b6086D1",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 8
       },
       "derivedName": "DepositBoxEth"
     },
@@ -107,7 +109,8 @@
         "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
         "minTransactionGas": 1000000,
         "multiplierDivider": 2,
-        "multiplierNumerator": 3
+        "multiplierNumerator": 3,
+        "upgradeCount": 7
       },
       "derivedName": "CommunityPool"
     },
@@ -129,7 +132,8 @@
         "contractManagerOfSkaleManager": "0xC04A10Fd5e6513242558f47331568aBD6185a310",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 6
       },
       "derivedName": "Linker"
     },
@@ -153,7 +157,8 @@
         "DEPOSIT_BOX_MANAGER_ROLE": "0xadc0611617a946881d948c7506bdf0975adbe0cfb172896a62eb6a75f21f2ff9",
         "linker": "0x6ef406953bac772C2146389ED37846BA3b6086D1",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 8
       },
       "derivedName": "DepositBoxERC721"
     },
@@ -194,6 +199,7 @@
         "MESSAGES_LENGTH": 10,
         "PAUSABLE_ROLE": "0x09b6fca8f5f3ab2900d9586d1d15872611c1bd42b268b973ad886d4f2646b560",
         "REVERT_REASON_LENGTH": 64,
+        "upgradeCount": 9,
         "version": "2.1.0"
       },
       "derivedName": "MessageProxyForMainnet"
@@ -219,7 +225,8 @@
         "DEPOSIT_BOX_MANAGER_ROLE": "0xadc0611617a946881d948c7506bdf0975adbe0cfb172896a62eb6a75f21f2ff9",
         "linker": "0x6ef406953bac772C2146389ED37846BA3b6086D1",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 9
       },
       "derivedName": "DepositBoxERC20"
     },
@@ -243,7 +250,8 @@
         "DEPOSIT_BOX_MANAGER_ROLE": "0xadc0611617a946881d948c7506bdf0975adbe0cfb172896a62eb6a75f21f2ff9",
         "linker": "0x6ef406953bac772C2146389ED37846BA3b6086D1",
         "LINKER_ROLE": "0x733bac3dca102687aa08c854c5f9067fc424f98fd8e90e41ad6b73aecc59a4fd",
-        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404"
+        "messageProxy": "0x8629703a9903515818C2FeB45a6f6fA5df8Da404",
+        "upgradeCount": 4
       },
       "derivedName": "DepositBoxERC721WithMetadata"
     },

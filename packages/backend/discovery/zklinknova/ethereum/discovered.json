@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20389275,
   "configHash": "0x926c1d4f92efc3c362c193fa5a34b633e505eab448e99c54080049146daa7591",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Arbitrator",
@@ -22,7 +22,8 @@
         "$implementation": "0x7a0Bb4805EcB7fD3C8DAbbE4AFa0E91cB1761E34",
         "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
         "primaryChainGateway": "0x803460416C2682Ac54FccF03eF77b10A12f2809b",
-        "primaryChainMessageHashQueue": { "_begin": 80, "_end": 80 }
+        "primaryChainMessageHashQueue": { "_begin": 80, "_end": 80 },
+        "upgradeCount": 3
       },
       "derivedName": "Arbitrator"
     },
@@ -45,7 +46,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0x7bd79DEd935B542fb22c74305a4d2A293C18483a",
         "INBOX": "0x4Dbd4fc535Ac27206064B68FfCf827b0A60BAB3f",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 2
       },
       "derivedName": "ArbitrumL1Gateway"
     },
@@ -86,7 +88,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0x3f64e2e09732969813904a8473074CFADeE66AF1",
         "MESSAGE_SERVICE": "0x5D4472f31Bd9385709ec61305AFc749F0fA8e9d0",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 2
       },
       "derivedName": "OptimismL1Gateway"
     },
@@ -109,7 +112,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0x1054Ff8B3B7B9F68d2e55C4A42E8952332c69011",
         "MESSAGE_SERVICE": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
-        "owner": "0x344A908d1a7b7d06B7AD7169C1db81fc9d496dE9"
+        "owner": "0x344A908d1a7b7d06B7AD7169C1db81fc9d496dE9",
+        "upgradeCount": 1
       },
       "derivedName": "OptimismL1Gateway"
     },
@@ -161,7 +165,8 @@
         "totalSyncedPriorityTxs": 26834,
         "totalValidatorForwardFee": "14768726045147001496",
         "totalValidatorForwardFeeWithdrawn": 0,
-        "txGasPrice": 40000000000
+        "txGasPrice": 40000000000,
+        "upgradeCount": 3
       },
       "derivedName": "ZkLink"
     },
@@ -184,7 +189,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0xe946aBB40928326ce5bFF303E7B8f0f253EA39D0",
         "MESSAGE_SERVICE": "0x635ba609680c55C3bDd0B3627b4c5dB21b13c310",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 2
       },
       "derivedName": "OptimismL1Gateway"
     },
@@ -207,7 +213,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0xaD5d729291C0d6A299E370814CA6Ce1c8C25b51c",
         "MESSAGE_SERVICE": "0x25ace71c97B33Cc4729CF772ae268934F7ab5fA1",
-        "owner": "0x344A908d1a7b7d06B7AD7169C1db81fc9d496dE9"
+        "owner": "0x344A908d1a7b7d06B7AD7169C1db81fc9d496dE9",
+        "upgradeCount": 1
       },
       "derivedName": "OptimismL1Gateway"
     },
@@ -230,7 +237,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0x7b5780d6df85A7dF96a3e1A019639a1dbDe937dB",
         "MESSAGE_SERVICE": "0xd19d4B5d358258f05D7B411E21A1460D11B0876F",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 2
       },
       "derivedName": "LineaL1Gateway"
     },
@@ -253,6 +261,7 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0x83Bc7394738A7A084081aF22EEC0051908c0055c",
         "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 3,
         "ZKLINK": "0x5fD9F73286b7E8683Bab45019C94553b93e015Cf"
       },
       "derivedName": "EthereumGateway"
@@ -276,7 +285,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0xd8428A59B60Df2d81514D429D57DF23293f1bCe7",
         "MESSAGE_SERVICE": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 1
       },
       "derivedName": "ScrollL1Gateway"
     },
@@ -297,7 +307,8 @@
         "$implementation": "0x3203E813930bD710043c1d899fE38dD359307352",
         "l2Bridge": "0x36CaABbAbfB9C09B722d9C3697C3Cb4A93650ea7",
         "l2TokenBeacon": "0x3b9dCbfD8Dab466A700B4d247e30D56C37d8D08d",
-        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34"
+        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC20Bridge"
     },
@@ -402,7 +413,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0xe946aBB40928326ce5bFF303E7B8f0f253EA39D0",
         "MESSAGE_SERVICE": "0x676A795fe6E43C17c668de16730c3F690FEB7120",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 2
       },
       "derivedName": "OptimismL1Gateway"
     },
@@ -425,7 +437,8 @@
         "ARBITRATOR": "0x1Ee09A2cAa0813A5183f90F5a6d0E4871f4C6002",
         "getRemoteGateway": "0xC203a2DF4DDFF9eDE2200F1F02054fD721182535",
         "MESSAGE_SERVICE": "0x32400084C286CF3E17e7B677ea9583e60a000324",
-        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D"
+        "owner": "0xdb4D755E3b8735314147b9bB146327C269701E2D",
+        "upgradeCount": 4
       },
       "derivedName": "ZkSyncL1Gateway"
     }

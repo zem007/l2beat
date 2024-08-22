@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 225981159,
   "configHash": "0x4bcc4ab1c1d8dceb270855fb93c856f1a041e875b0b0614026083a0039ba110a",
-  "version": 12,
+  "version": 13,
   "contracts": [
     {
       "name": "OneStepProverMemory",
@@ -133,7 +133,8 @@
         "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0",
         "sequencerVersion": "0x88",
         "setIsBatchPosterCount": 1,
-        "totalDelayedMessagesRead": 4631
+        "totalDelayedMessagesRead": 4631,
+        "upgradeCount": 1
       },
       "derivedName": "SequencerInbox"
     },
@@ -157,7 +158,8 @@
         "getProxyAdmin": "0x8Ab2f49A085490c1592325eE32B6e6a4DA35D238",
         "maxDataSize": 104857,
         "paused": false,
-        "sequencerInbox": "0x0fFe9ACC296ddd4De5F616Aa482C99fA4b41A3E2"
+        "sequencerInbox": "0x0fFe9ACC296ddd4De5F616Aa482C99fA4b41A3E2",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Inbox"
     },
@@ -188,6 +190,7 @@
         "inbox": "0x235000876bd58336C802B3546Fc0250f285fCc79",
         "l2BeaconProxyFactory": "0x7FF1C308306d60205CE1331fD63D0B446FF92e5f",
         "router": "0xAeAe9616A02dA527FceA2AC444EC918C7BfB9CdF",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1OrbitERC20Gateway"
@@ -264,7 +267,8 @@
         "osp": "0xD16048EC58016FAbaC4d4E4C1203e49c0d9090E4",
         "resultReceiver": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0",
         "sequencerInbox": "0x0fFe9ACC296ddd4De5F616Aa482C99fA4b41A3E2",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 1
       },
       "derivedName": "ChallengeManager"
     },
@@ -368,7 +372,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -388,7 +393,8 @@
         "$admin": "0x8Ab2f49A085490c1592325eE32B6e6a4DA35D238",
         "$implementation": "0xf2bCB26dbb571EBC82CFAe6453AeF0DE90d93421",
         "bridge": "0xE1d32C985825562edAa906fAC39295370Db72195",
-        "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0"
+        "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0",
+        "upgradeCount": 1
       }
     },
     {
@@ -417,6 +423,7 @@
         "inbox": "0x235000876bd58336C802B3546Fc0250f285fCc79",
         "owner": "0x92ff91308F5f1036435f23c2F4F136Bb7475425d",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -444,7 +451,8 @@
         "l2ToL1Timestamp": 0,
         "l2ToL1WithdrawalAmount": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0"
+        "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Outbox"
     },
@@ -497,7 +505,8 @@
         "rollup": "0x0f28D76Ec5c62b502625351726b4A3E3F54FF5F0",
         "sequencerInbox": "0x0fFe9ACC296ddd4De5F616Aa482C99fA4b41A3E2",
         "sequencerMessageCount": 4547,
-        "sequencerReportedSubMessageCount": 3789445
+        "sequencerReportedSubMessageCount": 3789445,
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Bridge"
     },

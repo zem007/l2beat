@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20563605,
   "configHash": "0xad6d5e3bcf485d6dfca75ad1d5d919010760a5a1e78e71ba496385b903defcd7",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "OptimismPortal",
@@ -49,6 +49,7 @@
         "paused": false,
         "superchainConfig": "0x745393Cc03b5fE668ECd52c0E625f59aAD6D3Da0",
         "systemConfig": "0x30F82a1Ca89226E8b8815d6EbB728e3b18a428ff",
+        "upgradeCount": 3,
         "version": "1.8.0"
       },
       "derivedName": "OptimismPortal"
@@ -89,6 +90,7 @@
         "RELAY_GAS_CHECK_BUFFER": 5000,
         "RELAY_RESERVED_GAS": 40000,
         "superchainConfig": "0x745393Cc03b5fE668ECd52c0E625f59aAD6D3Da0",
+        "upgradeCount": 1,
         "version": "2.3.0"
       },
       "derivedName": "L1CrossDomainMessenger"
@@ -180,6 +182,7 @@
         "startBlock": 20219939,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xAE8f771E297AAbfDE7ff35a33FB6D558f4E0a679",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -222,6 +225,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x745393Cc03b5fE668ECd52c0E625f59aAD6D3Da0",
+        "upgradeCount": 4,
         "version": "2.1.0"
       },
       "derivedName": "L1StandardBridge"
@@ -300,6 +304,7 @@
       "values": {
         "$admin": "0x5B1Ef673d9c316b3eE9Ed3B4E3cC84952bfC5257",
         "$implementation": "0x13A06FF21E46BCCd4B03E5Cb04372bB7aE7f2168",
+        "upgradeCount": 3,
         "version": "0c13cfbb19b823f524a346e7ff5b352e24b8d79b"
       },
       "derivedName": "Verifier"
@@ -345,6 +350,7 @@
           "schedule": 0
         },
         "pendingDefaultAdminDelay": { "newDelay": 0, "schedule": 0 },
+        "upgradeCount": 1,
         "version": "1.1.0"
       },
       "derivedName": "SuperchainConfig"
@@ -392,6 +398,7 @@
         "SUBMISSION_INTERVAL": 1,
         "submissionInterval": 1,
         "systemOwner": "0xC463EaC02572CC964D43D2414023E2c6B62bAF38",
+        "upgradeCount": 1,
         "verifier": "0x6BCe7408c0781dcE7b71494274302D4b75a1447c",
         "VERIFIER": "0x6BCe7408c0781dcE7b71494274302D4b75a1447c",
         "version": "1.4.0"
@@ -423,6 +430,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x745393Cc03b5fE668ECd52c0E625f59aAD6D3Da0",
+        "upgradeCount": 1,
         "version": "2.1.0"
       },
       "derivedName": "L1ERC721Bridge"
@@ -480,6 +488,7 @@
         "$implementation": "0xf885DA6A3B4c93905b02f36f9a13680922A554b0",
         "bridge": "0x386B76D9cA5F5Fb150B6BFB35CF5379B22B26dd8",
         "BRIDGE": "0x386B76D9cA5F5Fb150B6BFB35CF5379B22B26dd8",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     }

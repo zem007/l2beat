@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20532552,
   "configHash": "0xf486b63f8ed759517c43e689f34697eacc9d82deefc356f0c99a4c61f56a36bd",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Zora_Adapter",
@@ -177,6 +177,7 @@
         "pausedFills": false,
         "proxiableUUID": "EXPECT_REVERT",
         "UPDATE_V3_DEPOSIT_DETAILS_HASH": "0x152eb71524aef34d838ab76573c14b1ebfa5e385d9ab29d7cf5398daa2438bd9",
+        "upgradeCount": 6,
         "wrappedNativeToken": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
       },
       "derivedName": "Ethereum_SpokePool"

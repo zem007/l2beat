@@ -1,3 +1,29 @@
+Generated with discovered.json: 0x9b0d5509ba062e000d7a1735989fb7228c3f521c
+
+# Diff at Thu, 22 Aug 2024 11:19:51 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20432514
+- current block number: 20432514
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20432514 (main branch discovery), not current.
+
+```diff
+    contract WorldIdIdentityManager2 (0xf7134CE138832c1456F2a91D64621eE90c2bddEa) {
+    +++ description: None
+      values.upgradeCount:
++        3
+    }
+```
+
 Generated with discovered.json: 0x3a4b62d77db367c176ad873c3200e8296ef4b785
 
 # Diff at Wed, 21 Aug 2024 10:06:33 GMT:

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20512741,
   "configHash": "0x5eadf9aa619337518b920086c1bf5de662fa19fa8d3cdd00051e2b9d178534f5",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PeggedTokenBridge",
@@ -42,7 +42,8 @@
         "pegVault": "0xB37D31b2A74029B5951a2778F959282E2D518595",
         "pegVaultV2": "0x7510792A3B1969F9307F3845CE88e39578f2bAE1",
         "preExecuteMessageGasUsage": 0,
-        "sigsVerifier": "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820"
+        "sigsVerifier": "0x5427FEFA711Eff984124bFBB1AB6fbf5E3DA1820",
+        "upgradeCount": 2
       }
     },
     {
@@ -240,7 +241,8 @@
           "0xE45CB56CEe56Dd1A94F7E5fBDFaa5BaFB3C053d3"
         ],
         "relaxed": true,
-        "relaxThreshold": 2
+        "relaxThreshold": 2,
+        "upgradeCount": 1
       },
       "fieldMeta": {
         "numRelaxedGuards": {

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19532236,
   "configHash": "0x6f289441b363ced9d2f5f1500c425c462ed7923c113afec9d7de7b772d896e22",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ProxyAdminBridgeV2",
@@ -92,7 +92,8 @@
         "newMPC": "0x4Bb117e73b7e50D063C146b94bD291688D9f5658",
         "newMPCEffectiveTime": 1701676415,
         "oldMPC": "0xA8E11F769BB3b97Dc615b9833615159436a9c1Fb",
-        "owner": "0x5112EbA9bc2468Bb5134CBfbEAb9334EdaE7106a"
+        "owner": "0x5112EbA9bc2468Bb5134CBfbEAb9334EdaE7106a",
+        "upgradeCount": 1
       },
       "derivedName": "BridgeV2"
     },
@@ -117,6 +118,7 @@
         "owner": "0x5112EbA9bc2468Bb5134CBfbEAb9334EdaE7106a",
         "paused": false,
         "requestCount": 9853,
+        "upgradeCount": 6,
         "versionRecipient": "2.0.1",
         "wrapper": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
       },
@@ -137,7 +139,8 @@
       "sinceTimestamp": 1643968081,
       "values": {
         "$admin": "0x3901611dfDA3Aed75C37Ba59f2c76E8309dc98FA",
-        "$implementation": "0x61608F9520C311052D88Bc7d0c2c4Cba1c964662"
+        "$implementation": "0x61608F9520C311052D88Bc7d0c2c4Cba1c964662",
+        "upgradeCount": 5
       },
       "derivedName": ""
     },

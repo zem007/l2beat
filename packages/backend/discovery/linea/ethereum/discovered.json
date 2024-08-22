@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20389671,
   "configHash": "0x311143ae4848e97520f64a30bb9922830c881232fba2b4ba5205492f3e5e951e",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ERC20Bridge",
@@ -27,7 +27,8 @@
         "remoteSender": "0x353012dc4a9A6cF55c941bADC267f82004A8ceB9",
         "sourceChainId": 1,
         "targetChainId": 59144,
-        "tokenBeacon": "0x971f46a2852d11D59dbF0909e837cfd06f357DeB"
+        "tokenBeacon": "0x971f46a2852d11D59dbF0909e837cfd06f357DeB",
+        "upgradeCount": 2
       },
       "derivedName": "TokenBridge"
     },
@@ -93,7 +94,8 @@
         "owner": "0x892bb7EeD71efB060ab90140e7825d8127991DD3",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "remoteUSDCBridge": "0xA2Ee6Fce4ACB62D95448729cDb781e3BEb62504A"
+        "remoteUSDCBridge": "0xA2Ee6Fce4ACB62D95448729cDb781e3BEb62504A",
+        "upgradeCount": 2
       },
       "derivedName": "L1USDCBridge"
     },
@@ -226,6 +228,7 @@
         "RATE_LIMIT_SETTER_ROLE": "0x1185e52d62bfbbea270e57d3d09733d221b53ab7a18bae82bb3c6c74bab16d82",
         "sender": "0x0000000000000000000000000000000000000000",
         "systemMigrationBlock": 19219000,
+        "upgradeCount": 7,
         "VERIFIER_SETTER_ROLE": "0x32937fd5162e282df7e9a14a5073a2425321c7966eaf70ed6c838a1006d84c4c",
         "verifiers": [
           "0x1111111111111111111111111111111111111111",

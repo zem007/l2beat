@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19976289,
   "configHash": "0x8660573ec3e06fd6350670ae40ed0bd1067e4751b1b00a633cbc91f86ec05fde",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PolygonzkEVMVerifier",
@@ -46,6 +46,7 @@
         "sdai": "0x83F20F44975D03b1b09e64809B757c47f942BEeA",
         "totalBridgedDAI": "254032905626934742210448",
         "totalProtocolDAI": "1000000000000000000",
+        "upgradeCount": 1,
         "zkEvmBridge": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe"
       },
       "derivedName": "L1Escrow"
@@ -88,7 +89,8 @@
         "SIGNATURE_INITIALIZE_TX_V": 27,
         "TIMESTAMP_RANGE": 36,
         "trustedSequencer": "0x148Ee7dAF16574cD020aFa34CC658f8F3fbd2800",
-        "trustedSequencerURL": "https://zkevm-rpc.com/"
+        "trustedSequencerURL": "https://zkevm-rpc.com/",
+        "upgradeCount": 3
       },
       "derivedName": "PolygonZkEVMEtrog"
     },
@@ -111,6 +113,7 @@
         "l1USDC": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "owner": "0xf694C9e3a34f5Fa48b6f3a0Ff186C1c6c4FcE904",
         "paused": false,
+        "upgradeCount": 1,
         "zkMinterBurner": "0xBDa0B27f93B2FD3f076725b89cf02e48609bC189",
         "zkNetworkId": 1
       },
@@ -148,6 +151,7 @@
         },
         "pendingDefaultAdminDelay": { "newDelay": 0, "schedule": 0 },
         "polygonZkEVMBridge": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
+        "upgradeCount": 1,
         "wrappedTokenAddress": "0xbf6De60Ccd9D22a5820A658fbE9fc87975EA204f"
       },
       "derivedName": "WstETHBridgeL1"

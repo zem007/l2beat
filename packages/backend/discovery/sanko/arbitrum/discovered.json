@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 225981699,
   "configHash": "0xb974ca9ada4cf2d732f704a23606bcacee4f4bf166056eb445ad66f9a8c6c6e5",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "OneStepProverMemory",
@@ -40,7 +40,8 @@
         "osp": "0xD16048EC58016FAbaC4d4E4C1203e49c0d9090E4",
         "resultReceiver": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4",
         "sequencerInbox": "0x24B68936C13A414cd91437aE7AA730321B9ff159",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 1
       },
       "derivedName": "ChallengeManager"
     },
@@ -65,7 +66,13 @@
         "batchCount": 1415,
         "batchPosters": ["0x2f4dDaD3aB0AC4225fd8023EE07d04e2A758017a"],
         "bridge": "0x2f285781B8d58678a3483de52D618198E4d27532",
-        "dacKeyset": { "requiredSignatures": 1, "membersCount": 1 },
+        "dacKeyset": {
+          "requiredSignatures": 1,
+          "membersCount": 1,
+          "blsSignatures": [
+            "YBM8WH8fzFQs+IXcFMBei3c0fIp6lNYHAw/kaFJEygDiksyqeAE8rWf9HA5OoHsDVwOYrnfZkCSfRjlLEtBaTLPJaU4OfE2N0XzEuRdxmwEVPRO8Ju8IlyFtNyIBAKq3DwF4EqTAXqxCxd05xmmFGkPNkmF6206kv7VGp0cXmEinXf5so12V3pnb+pePP3e3pRhRfu19/rZzXtMJNE55U37hH3VFCC+y13NNoeNqQztRRsroRtQQ9czMa042Zwd0BRluNTa40csEMom/D0Y6o/4cMf7At3G6VYIGy7z/0twDSmhRVXe2xpVJqbxEsTkdyxRPFelDCvZeylRxtN9NHo+BXbvoBUToQDeizLpx2f1hdlggZUI4y+QIN/VJ6h0x3A=="
+          ]
+        },
         "DATA_AUTHENTICATED_FLAG": "0x40",
         "HEADER_LENGTH": 40,
         "keySetUpdates": 1,
@@ -79,7 +86,8 @@
         "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4",
         "sequencerVersion": "0x88",
         "setIsBatchPosterCount": 1,
-        "totalDelayedMessagesRead": 7540
+        "totalDelayedMessagesRead": 7540,
+        "upgradeCount": 1
       },
       "fieldMeta": {
         "maxTimeVariation": {
@@ -119,7 +127,8 @@
         "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4",
         "sequencerInbox": "0x24B68936C13A414cd91437aE7AA730321B9ff159",
         "sequencerMessageCount": 1415,
-        "sequencerReportedSubMessageCount": 489660
+        "sequencerReportedSubMessageCount": 489660,
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Bridge"
     },
@@ -139,7 +148,8 @@
         "$admin": "0xd18b1C6376633000c85541F7c15c591Ffe5f9556",
         "$implementation": "0xf2bCB26dbb571EBC82CFAe6453AeF0DE90d93421",
         "bridge": "0x2f285781B8d58678a3483de52D618198E4d27532",
-        "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4"
+        "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4",
+        "upgradeCount": 1
       }
     },
     {
@@ -173,7 +183,8 @@
         "l2ToL1Timestamp": 0,
         "l2ToL1WithdrawalAmount": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4"
+        "rollup": "0x9A59EdF7080fdA05396373a85DdBf2cEBDB81Cd4",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Outbox"
     },
@@ -223,7 +234,8 @@
         "getProxyAdmin": "0xd18b1C6376633000c85541F7c15c591Ffe5f9556",
         "maxDataSize": 104857,
         "paused": false,
-        "sequencerInbox": "0x24B68936C13A414cd91437aE7AA730321B9ff159"
+        "sequencerInbox": "0x24B68936C13A414cd91437aE7AA730321B9ff159",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Inbox"
     },
@@ -265,7 +277,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -289,6 +302,7 @@
         "inbox": "0x718E2a83775343d5c0B1eE0676703cBAF30CaFCD",
         "owner": "0x82d980E3f30E7c6EbD523AEdff2c0FaD3751b276",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -397,6 +411,7 @@
         "inbox": "0x718E2a83775343d5c0B1eE0676703cBAF30CaFCD",
         "l2BeaconProxyFactory": "0xE1D7b68b36f14c9c86683d295f1C403008ecc943",
         "router": "0x847186fbeEBf41eEe9c230360D0bF8585c0Db57B",
+        "upgradeCount": 2,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },

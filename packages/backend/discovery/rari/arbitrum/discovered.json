@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 225981507,
   "configHash": "0x8d70818d7b11955d77c1a6c59ddc6cba943e05f393dcc429d7a2525cf3cb77c8",
-  "version": 12,
+  "version": 13,
   "contracts": [
     {
       "name": "ProxyAdmin",
@@ -120,7 +120,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -154,7 +155,8 @@
         "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89",
         "sequencerInbox": "0xA436f1867adD490BF1530c636f2FB090758bB6B3",
         "sequencerMessageCount": 3922,
-        "sequencerReportedSubMessageCount": 367433
+        "sequencerReportedSubMessageCount": 367433,
+        "upgradeCount": 1
       },
       "derivedName": "Bridge"
     },
@@ -178,6 +180,7 @@
         "inbox": "0x37e60F80d921dc5E7f501a7130F31f6548dBa564",
         "owner": "0x139C5A235632EDdad741ff380112B3161d31a21C",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -274,7 +277,8 @@
         "getProxyAdmin": "0x003e70B041abb993006C03E56c8515622a02928C",
         "maxDataSize": 104857,
         "paused": false,
-        "sequencerInbox": "0xA436f1867adD490BF1530c636f2FB090758bB6B3"
+        "sequencerInbox": "0xA436f1867adD490BF1530c636f2FB090758bB6B3",
+        "upgradeCount": 1
       },
       "derivedName": "Inbox"
     },
@@ -294,7 +298,8 @@
         "$admin": "0x003e70B041abb993006C03E56c8515622a02928C",
         "$implementation": "0x73D3a5E535cBF98B9b5Ff7fEb8EC26e61FCEC4b7",
         "bridge": "0x255f80Ef2F09FCE0944faBb292b8510F01316Cf0",
-        "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89"
+        "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89",
+        "upgradeCount": 1
       }
     },
     {
@@ -317,6 +322,7 @@
         "inbox": "0x37e60F80d921dc5E7f501a7130F31f6548dBa564",
         "l2BeaconProxyFactory": "0xaCB337daF123938A337B125f680C9A78F88e21E0",
         "router": "0x2623C144B4d167f70893f6A8968B98c89a6C5F97",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1ERC20Gateway"
@@ -373,6 +379,7 @@
         "inbox": "0x37e60F80d921dc5E7f501a7130F31f6548dBa564",
         "owner": "0x139C5A235632EDdad741ff380112B3161d31a21C",
         "router": "0x2623C144B4d167f70893f6A8968B98c89a6C5F97",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1CustomGateway"
@@ -406,7 +413,8 @@
         "l2ToL1Sender": "0x0000000000000000000000000000000000000000",
         "l2ToL1Timestamp": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89"
+        "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89",
+        "upgradeCount": 1
       },
       "derivedName": "Outbox"
     },
@@ -455,7 +463,8 @@
         "rollup": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89",
         "sequencerVersion": "0x88",
         "setIsBatchPosterCount": 1,
-        "totalDelayedMessagesRead": 53530
+        "totalDelayedMessagesRead": 53530,
+        "upgradeCount": 1
       },
       "derivedName": "SequencerInbox"
     },
@@ -478,7 +487,8 @@
         "osp": "0xD16048EC58016FAbaC4d4E4C1203e49c0d9090E4",
         "resultReceiver": "0x2e988Ea0873C9d712628F0bf38DAFdE754927C89",
         "sequencerInbox": "0xA436f1867adD490BF1530c636f2FB090758bB6B3",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 1
       },
       "derivedName": "ChallengeManager"
     },

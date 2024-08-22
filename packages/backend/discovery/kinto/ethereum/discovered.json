@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20484220,
   "configHash": "0xfda975ff4d7fb1537d006da87a93d93959da79d210f4c6881c3bee7f322439bb",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Bridger",
@@ -33,6 +33,7 @@
         "stUSD": "0x0022228a2cc5E7eF0274A7Baa600d44da5aB5776",
         "sUSDe": "0x9D39A5DE30e57443BfF2A8307A4256c8797A3497",
         "swapRouter": "0x0000000000001fF3684f28c67538d4D072C22734",
+        "upgradeCount": 10,
         "USDA": "0x0000206329b97DB379d5E1Bf586BbDB969C63274",
         "USDC": "0x0000000000000000000000000000000000000000",
         "USDe": "0x4c9EDD5852cd905f086C759E8383e09bff1E68B3",
@@ -181,7 +182,8 @@
         "$admin": "0x74C717C01425eb475A5fC55d2A4a9045fC9800df",
         "$implementation": "0x13BE515E44Eefaf3eBEFAD684F1FBB574Ac0A494",
         "bridge": "0x859a53Fe2C8DA961387030E7CB498D6D20d0B2DB",
-        "rollup": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11"
+        "rollup": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11",
+        "upgradeCount": 1
       }
     },
     {
@@ -222,7 +224,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -245,7 +248,8 @@
         "osp": "0x8B02a8B985a81f96e49B8289FF60847FC6020e51",
         "resultReceiver": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11",
         "sequencerInbox": "0xF4Ef823D57819AC7202a081A5B49376BD28E7b3a",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 2
       },
       "derivedName": "ChallengeManager"
     },
@@ -272,7 +276,8 @@
         "l2ToL1Sender": "0x0000000000000000000000000000000000000000",
         "l2ToL1Timestamp": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11"
+        "rollup": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11",
+        "upgradeCount": 1
       },
       "derivedName": "Outbox"
     },
@@ -365,6 +370,7 @@
         "inbox": "0xBFfaA85c1756472fFC37e6D172A7eC0538C14474",
         "l2BeaconProxyFactory": "0xA07eeCA8dc436Be2DfBCb4F0C3aD1424c1876185",
         "router": "0xD9041DeCaDcBA88844b373e7053B4AC7A3390D60",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -398,7 +404,8 @@
         "rollup": "0x5073dA9cA4810f3E0aA01c20c7d9d02C3f522e11",
         "sequencerInbox": "0xF4Ef823D57819AC7202a081A5B49376BD28E7b3a",
         "sequencerMessageCount": 2973,
-        "sequencerReportedSubMessageCount": 215908
+        "sequencerReportedSubMessageCount": 215908,
+        "upgradeCount": 1
       },
       "derivedName": "Bridge"
     },
@@ -450,7 +457,8 @@
         "getProxyAdmin": "0x74C717C01425eb475A5fC55d2A4a9045fC9800df",
         "maxDataSize": 117964,
         "paused": false,
-        "sequencerInbox": "0xF4Ef823D57819AC7202a081A5B49376BD28E7b3a"
+        "sequencerInbox": "0xF4Ef823D57819AC7202a081A5B49376BD28E7b3a",
+        "upgradeCount": 3
       }
     },
     {
@@ -473,6 +481,7 @@
         "inbox": "0xBFfaA85c1756472fFC37e6D172A7eC0538C14474",
         "owner": "0x59B851c8b1643e0735Ec3F2f0e528f3d89c3408a",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -559,6 +568,7 @@
         "setIsBatchPosterCount": 1,
         "totalDelayedMessagesRead": 3644,
         "TREE_DAS_MESSAGE_HEADER_FLAG": "0x08",
+        "upgradeCount": 2,
         "ZERO_HEAVY_MESSAGE_HEADER_FLAG": "0x20"
       },
       "derivedName": "SequencerInbox"

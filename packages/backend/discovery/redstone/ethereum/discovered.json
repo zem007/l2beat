@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19831040,
   "configHash": "0xf21cabf6fde3846caa3739fbbe003663cfc4f5a273048ba20d6aa18b0042218b",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "SuperchainConfig",
@@ -29,6 +29,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       }
     },
@@ -57,6 +58,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x4b5b41c240173191425F5928bc6bdd0d439331BB",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -154,6 +156,7 @@
         "$implementation": "0x9a3292E64C7b7bf6E04c1ebC7D6671bD82dAbf8B",
         "bridge": "0xc473ca7E02af24c129c2eEf51F2aDf0411c1Df69",
         "BRIDGE": "0xc473ca7E02af24c129c2eEf51F2aDf0411c1Df69",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     },
@@ -250,6 +253,7 @@
         "startBlock": 19578354,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xA5bdf717af725a47Fd7378d3D9C833776951efa0",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -286,6 +290,7 @@
         ],
         "initBonds": [0, 0, 0, 0, 0],
         "owner": "0x70FdbCb066eD3621647Ddf61A1f40aaC6058Bc89",
+        "upgradeCount": 1,
         "version": "0.2.0"
       },
       "derivedName": "DisputeGameFactory"
@@ -311,6 +316,7 @@
         "owner": "0xb356B146F1629c49C44344464F69BCDAfb4bb664",
         "resolverRefundPercentage": 0,
         "resolveWindow": 3600,
+        "upgradeCount": 1,
         "variableResolutionCost": 16640,
         "variableResolutionCostPrecision": 1000,
         "version": "1.0.0"
@@ -339,6 +345,7 @@
         "owner": "0x70FdbCb066eD3621647Ddf61A1f40aaC6058Bc89",
         "symbol": "WETH",
         "totalSupply": 0,
+        "upgradeCount": 1,
         "version": "0.2.0"
       }
     },
@@ -384,6 +391,7 @@
         "startingTimestamp": 0,
         "SUBMISSION_INTERVAL": 21600,
         "submissionInterval": 21600,
+        "upgradeCount": 1,
         "version": "1.8.0"
       },
       "derivedName": "L2OutputOracle"
@@ -415,6 +423,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x4b5b41c240173191425F5928bc6bdd0d439331BB",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     },
@@ -490,6 +499,7 @@
         "superchainConfig": "0x4b5b41c240173191425F5928bc6bdd0d439331BB",
         "SYSTEM_CONFIG": "0x8f2428F7189c0d92D1c4a5358903A8c80Ec6a69D",
         "systemConfig": "0x8f2428F7189c0d92D1c4a5358903A8c80Ec6a69D",
+        "upgradeCount": 1,
         "version": "2.5.0"
       },
       "derivedName": "OptimismPortal"

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 16767881,
   "configHash": "0xb33bb13da4f7489364453f4b54700cdb74c636e6841d42f3d517f17c181225ad",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "UpgradeGatekeeper",
@@ -67,7 +67,8 @@
         "$admin": "0x0DCCe462ddEA102D3ecf84A991d3ecFC251e02C7",
         "$implementation": "0x94b9401945a9bc06CE5B69e6dB3c6B671aABc829",
         "getMaster": "0x0DCCe462ddEA102D3ecf84A991d3ecFC251e02C7",
-        "getTarget": "0x94b9401945a9bc06CE5B69e6dB3c6B671aABc829"
+        "getTarget": "0x94b9401945a9bc06CE5B69e6dB3c6B671aABc829",
+        "upgradeCount": 0
       }
     },
     {
@@ -111,6 +112,7 @@
         "totalCommittedPriorityRequests": 0,
         "totalOpenPriorityRequests": 0,
         "totalPairTokens": 72,
+        "upgradeCount": 0,
         "upgradePreparationActivationTime": 0,
         "upgradePreparationActive": false,
         "verifier": "0x42F15EFE22993C88441EF3467f2E6Fa8FFA9ADef",
@@ -141,6 +143,7 @@
         "tokenLister": "0xb3BFC153d60f51Fb10E69B04f5f7D2735fA0619E",
         "totalFeeTokens": 10,
         "totalUserTokens": 45,
+        "upgradeCount": 0,
         "validators": ["0x38101ae98196C8BCf7dF1835Bf3983B384272ae4"]
       }
     },
@@ -179,7 +182,8 @@
         "$admin": "0x0DCCe462ddEA102D3ecf84A991d3ecFC251e02C7",
         "$implementation": "0x17e51B3659884d70a306906B5BDD73D1c64a3892",
         "getMaster": "0x0DCCe462ddEA102D3ecf84A991d3ecFC251e02C7",
-        "getTarget": "0x17e51B3659884d70a306906B5BDD73D1c64a3892"
+        "getTarget": "0x17e51B3659884d70a306906B5BDD73D1c64a3892",
+        "upgradeCount": 0
       },
       "derivedName": ""
     },
@@ -209,6 +213,7 @@
         "allPairsLength": 72,
         "getMaster": "0x0DCCe462ddEA102D3ecf84A991d3ecFC251e02C7",
         "getTarget": "0xB2639bA16c7A5b0C55cA22D77CdA3D7ED88A5c89",
+        "upgradeCount": 0,
         "zkSyncAddress": "0x6dE5bDC580f55Bc9dAcaFCB67b91674040A247e3"
       }
     },

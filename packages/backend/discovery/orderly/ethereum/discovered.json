@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20389626,
   "configHash": "0x8c1fe2ea35e3e9d3ce2b472c13c894127ac3703d838d0c97bbbe56232de0804b",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ConduitMultisig",
@@ -77,6 +77,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1696608227,
         "SUBMISSION_INTERVAL": 1800,
+        "upgradeCount": 1,
         "version": "1.3.1"
       },
       "derivedName": "L2OutputOracle"
@@ -136,6 +137,7 @@
         "sequencerInbox": "0x08aA34cC843CeEBcC88A627F18430294aA9780be",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xceED24B1Fd4A4393f6A9D2B137D9597dd5482569",
+        "upgradeCount": 1,
         "version": "1.3.1",
         "VERSION": 0
       },
@@ -173,6 +175,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0x886B187C3D293B1449A3A0F23Ca9e2269E0f2664",
+        "upgradeCount": 1,
         "version": "1.7.2"
       },
       "derivedName": "OptimismPortal"
@@ -196,6 +199,7 @@
         "MESSENGER": "0xc76543A64666d9a073FaEF4e75F651c88e7DBC08",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000014",
         "otherBridge": "0x4200000000000000000000000000000000000014",
+        "upgradeCount": 1,
         "version": "1.1.2"
       }
     },
@@ -323,6 +327,7 @@
         "messenger": "0xc76543A64666d9a073FaEF4e75F651c88e7DBC08",
         "MESSENGER": "0xc76543A64666d9a073FaEF4e75F651c88e7DBC08",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.1"
       },
       "derivedName": "L1StandardBridge"

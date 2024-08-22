@@ -3,7 +3,7 @@
   "chain": "base",
   "blockNumber": 16561766,
   "configHash": "0x70ed7eed88e27304ac55e4b99893ad867e55a5cd4973f10754619dd8d3bf116f",
-  "version": 12,
+  "version": 13,
   "contracts": [
     {
       "name": "Inbox",
@@ -25,7 +25,8 @@
         "getProxyAdmin": "0xFB48D385Fa3da33762B350e1d705b9E46054E677",
         "maxDataSize": 104857,
         "paused": false,
-        "sequencerInbox": "0x6216dD1EE27C5aCEC7427052d3eCDc98E2bc2221"
+        "sequencerInbox": "0x6216dD1EE27C5aCEC7427052d3eCDc98E2bc2221",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Inbox"
     },
@@ -105,6 +106,7 @@
         "setIsBatchPosterCount": 1,
         "totalDelayedMessagesRead": 132437,
         "TREE_DAS_MESSAGE_HEADER_FLAG": "0x08",
+        "upgradeCount": 2,
         "ZERO_HEAVY_MESSAGE_HEADER_FLAG": "0x20"
       },
       "fieldMeta": {
@@ -133,7 +135,8 @@
         "osp": "0xC17A41629Cd100c74B1Bed7b49D2E0517EfDeaeb",
         "resultReceiver": "0xD34F3a11F10DB069173b32d84F02eDA578709143",
         "sequencerInbox": "0x6216dD1EE27C5aCEC7427052d3eCDc98E2bc2221",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 2
       },
       "derivedName": "ChallengeManager"
     },
@@ -159,7 +162,8 @@
         "$admin": "0xFB48D385Fa3da33762B350e1d705b9E46054E677",
         "$implementation": "0x4326B3755539d35b0A8846bF9b33982A8eA42c93",
         "bridge": "0xEfEf4558802bF373Ce3307189C79a9cAb0a4Cb9C",
-        "rollup": "0xD34F3a11F10DB069173b32d84F02eDA578709143"
+        "rollup": "0xD34F3a11F10DB069173b32d84F02eDA578709143",
+        "upgradeCount": 1
       }
     },
     {
@@ -227,7 +231,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -370,7 +375,8 @@
         "l2ToL1Timestamp": 0,
         "l2ToL1WithdrawalAmount": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0xD34F3a11F10DB069173b32d84F02eDA578709143"
+        "rollup": "0xD34F3a11F10DB069173b32d84F02eDA578709143",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Outbox"
     },
@@ -405,7 +411,8 @@
         "rollup": "0xD34F3a11F10DB069173b32d84F02eDA578709143",
         "sequencerInbox": "0x6216dD1EE27C5aCEC7427052d3eCDc98E2bc2221",
         "sequencerMessageCount": 31433,
-        "sequencerReportedSubMessageCount": 23373816
+        "sequencerReportedSubMessageCount": 23373816,
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Bridge"
     },

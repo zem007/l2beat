@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20089055,
   "configHash": "0x195ddce914e9f413f3a0b36e6718ae330961a2e3419eab147ab0fb6cec090d8b",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "TokenImplementation",
@@ -46,7 +46,8 @@
       "values": {
         "$admin": "0x0000000000000000000000000000000000000000",
         "$implementation": "0x90995DBd1aae85872451b50A569dE947D34ac4ee",
-        "getDefaultDeliveryProvider": "0x7A0a53847776f7e94Cc35742971aCb2217b0Db81"
+        "getDefaultDeliveryProvider": "0x7A0a53847776f7e94Cc35742971aCb2217b0Db81",
+        "upgradeCount": 3
       }
     },
     {
@@ -72,6 +73,7 @@
         "implementation": "0x0fD04a68d3c3A692d6Fa30384D1A87Ef93554eE6",
         "isFork": false,
         "tokenImplementation": "0x0fD04a68d3c3A692d6Fa30384D1A87Ef93554eE6",
+        "upgradeCount": 10,
         "WETH": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "wormhole": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B"
       },
@@ -100,6 +102,7 @@
         "implementation": "0xEc4d807Cd33a48A7C8Cd73D09B41Aa5160B3a7fc",
         "isFork": false,
         "tokenImplementation": "0xEc4d807Cd33a48A7C8Cd73D09B41Aa5160B3a7fc",
+        "upgradeCount": 5,
         "wormhole": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B"
       },
       "derivedName": "NFTBridgeImplementation"
@@ -126,7 +129,8 @@
         "owner": "0x59278F587D4cFcDCbbc08019060be7231c37ddc2",
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "pricingWallet": "0xE8af07A8Eff87B99B7C8C2c18ea95a1FE86D0ACD",
-        "rewardAddress": "0x53207E216540125e322CdA8A693b0b89576DEb46"
+        "rewardAddress": "0x53207E216540125e322CdA8A693b0b89576DEb46",
+        "upgradeCount": 3
       }
     },
     {
@@ -179,7 +183,8 @@
         "quorum": [
           1, 1, 2, 3, 3, 4, 5, 5, 6, 7, 7, 8, 9, 9, 10, 11, 11, 12, 13, 13, 14,
           15, 15, 16, 17, 17, 18, 19, 19, 20
-        ]
+        ],
+        "upgradeCount": 3
       },
       "derivedName": "Implementation"
     },
@@ -207,6 +212,7 @@
         "governanceChainId": 1,
         "governanceContract": "0x0000000000000000000000000000000000000000000000000000000000000004",
         "localDomain": 0,
+        "upgradeCount": 2,
         "wormhole": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B",
         "wormholeFinality": 1
       },

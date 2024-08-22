@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20117905,
   "configHash": "0xbd532d50aee921cf92fede7bc5de97f9045a0e13b17f1abb4df7a6affca962a8",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Challenge",
@@ -38,7 +38,8 @@
         "maxBundleSize": 42000,
         "owner": "0xcc90c738acfc1695D19336Bc3E392a46234112BF",
         "proxiableUUID": "EXPECT_REVERT",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "Challenge"
     },
@@ -62,7 +63,8 @@
         "owner": "0xcc90c738acfc1695D19336Bc3E392a46234112BF",
         "proxiableUUID": "EXPECT_REVERT",
         "rlpReader": "0xEe055Dddc462e35521005e1b00FcEFd78E1fc9E2",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "ChainOracle"
     },
@@ -230,7 +232,8 @@
         "owner": "0xcc90c738acfc1695D19336Bc3E392a46234112BF",
         "proxiableUUID": "EXPECT_REVERT",
         "publisher": "0x514F8211B64f0620349659DeaDB5911a9896E7EC",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "CanonicalStateChain"
     },

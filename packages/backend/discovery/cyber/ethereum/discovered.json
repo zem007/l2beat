@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20032828,
   "configHash": "0xebe0f0cb6387d9421fe6b57702689f36f872724a4106dd03177b3b84447f0ecb",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "DataAvailabilityChallenge",
@@ -26,6 +26,7 @@
         "owner": "0xc76C563185d01284AdbC9cF5bb909162dD2F15e7",
         "resolverRefundPercentage": 100,
         "resolveWindow": 3600,
+        "upgradeCount": 3,
         "variableResolutionCost": 16640,
         "variableResolutionCostPrecision": 1000,
         "version": "1.0.0"
@@ -58,6 +59,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x1aeC4c3BE47C30d0BEfa7514Cf9D99EaC596959D",
+        "upgradeCount": 0,
         "version": "2.1.0"
       },
       "derivedName": "L1StandardBridge"
@@ -103,6 +105,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       },
       "derivedName": "SuperchainConfig"
@@ -141,6 +144,7 @@
         "superchainConfig": "0x1aeC4c3BE47C30d0BEfa7514Cf9D99EaC596959D",
         "SYSTEM_CONFIG": "0x5D1F4bbaF6D484fA9D5D9705f92dE6063bff6055",
         "systemConfig": "0x5D1F4bbaF6D484fA9D5D9705f92dE6063bff6055",
+        "upgradeCount": 1,
         "version": "2.5.0"
       },
       "derivedName": "OptimismPortal"
@@ -205,6 +209,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x1aeC4c3BE47C30d0BEfa7514Cf9D99EaC596959D",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -229,6 +234,7 @@
         "$implementation": "0x985F187489954435ddf9571D45500184566e4B46",
         "bridge": "0x12a580c05466eefb2c467C6b115844cDaF55B255",
         "BRIDGE": "0x12a580c05466eefb2c467C6b115844cDaF55B255",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     },
@@ -289,6 +295,7 @@
         "startBlock": 19681300,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xa7A4D6d5920b93D0FE590f9524Ef17f24EE1F5B8",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -411,6 +418,7 @@
         "startingTimestamp": 1713428567,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 1,
         "version": "1.8.0"
       },
       "derivedName": "L2OutputOracle"

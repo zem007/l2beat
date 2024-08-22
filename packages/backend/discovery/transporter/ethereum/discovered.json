@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20576820,
   "configHash": "0xf391f2cbf95d4fb92da983d6f036a5b740c4de59baec4f13d9f56f06a92b5685",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PriceRegistry",
@@ -2251,7 +2251,8 @@
         "getSupportedChains": ["4949039107694359620"],
         "getToken": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
         "owner": "0x5300A1a15135EA4dc7aD5a167152C01EFc9b192A",
-        "typeAndVersion": "LockReleaseTokenPool 1.4.0"
+        "typeAndVersion": "LockReleaseTokenPool 1.4.0",
+        "upgradeCount": 1
       }
     },
     {

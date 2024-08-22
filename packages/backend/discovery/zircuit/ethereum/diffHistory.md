@@ -1,3 +1,93 @@
+Generated with discovered.json: 0xdca4ceb04eec2fb78c7847bdcd1791c9367e1f2d
+
+# Diff at Thu, 22 Aug 2024 11:19:57 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20563605
+- current block number: 20563605
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20563605 (main branch discovery), not current.
+
+```diff
+    contract OptimismPortal (0x17bfAfA932d2e23Bd9B909Fd5B4D2e2a27043fb1) {
+    +++ description: The main entry point to deposit funds from host chain to this chain. It also allows to prove and finalize withdrawals.
+      values.upgradeCount:
++        3
+    }
+```
+
+```diff
+    contract L1CrossDomainMessenger (0x2a721cBE81a128be0F01040e3353c3805A5EA091) {
+    +++ description: Sends messages from host chain to this chain, and relays messages back onto host chain. In the event that a message sent from host chain to this chain is rejected for exceeding this chain's epoch gas limit, it can be resubmitted via this contract's replay function.
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract SystemConfig (0x30F82a1Ca89226E8b8815d6EbB728e3b18a428ff) {
+    +++ description: Contains configuration parameters such as the Sequencer address, gas limit on this chain and the unsafe block signer address.
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract L1StandardBridge (0x386B76D9cA5F5Fb150B6BFB35CF5379B22B26dd8) {
+    +++ description: The main entry point to deposit ERC20 tokens from host chain to this chain. This contract can store any token.
+      values.upgradeCount:
++        4
+    }
+```
+
+```diff
+    contract Verifier (0x6BCe7408c0781dcE7b71494274302D4b75a1447c) {
+    +++ description: None
+      values.upgradeCount:
++        3
+    }
+```
+
+```diff
+    contract ZircuitSuperchainConfig (0x745393Cc03b5fE668ECd52c0E625f59aAD6D3Da0) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract L2OutputOracle (0x92Ef6Af472b39F1b363da45E35530c24619245A4) {
+    +++ description: Contains a list of proposed state roots which Proposers assert to be a result of block execution. Currently only the PROPOSER address can submit new state roots.
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract L1ERC721Bridge (0x994eEb321F9cD79B077a5455fC248c77f30Dd244) {
+    +++ description: Used to bridge ERC-721 tokens from host chain to this chain.
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract OptimismMintableERC20Factory (0xc77ece87C91C44AFb5f19638f9a0F75b5d90E932) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0x3c39cd542517a443c87cfb7c168f96b603f1cd96
 
 # Diff at Wed, 21 Aug 2024 10:06:39 GMT:

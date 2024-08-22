@@ -1,3 +1,29 @@
+Generated with discovered.json: 0x3e309c9371139cea7c9cad08540b99cd92225c2c
+
+# Diff at Thu, 22 Aug 2024 11:15:24 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20218838
+- current block number: 20218838
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20218838 (main branch discovery), not current.
+
+```diff
+    contract BlobstreamX (0x7Cf3876F681Dbb6EdA8f6FfC45D66B996Df08fAe) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0x6eebfbd59cd1ce9f75fa84ec38c1fc51dbc81fee
 
 # Diff at Wed, 21 Aug 2024 10:02:15 GMT:

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20017695,
   "configHash": "0x17d2f88caa79b904561d5c3444555097dbf22c906defb717b2e8eaf887ea96fd",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "AxelarGasService",
@@ -24,7 +24,8 @@
         "gasCollector": "0x7DdB2d76b80B0AA19bDEa48EB1301182F4CeefbC",
         "implementation": "0xcb5C784DCf8FF342625DbC53B356ed0Cbb0EBB9b",
         "owner": "0x6f24A47Fc8AE5441Eb47EFfC3665e70e69Ac3F05",
-        "pendingOwner": "0x0000000000000000000000000000000000000000"
+        "pendingOwner": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 2
       },
       "derivedName": "AxelarGasService"
     },

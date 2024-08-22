@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20460352,
   "configHash": "0xf2c4aa1cfc3e0f620dabd0fae68d003fff9a68fe04f9e95de984ce1c17e7fcc6",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "DepositContract",
@@ -34,6 +34,7 @@
         "$implementation": "0x6cA98f43719231d38F6426DB64C7F3D5C7CE7876",
         "bridge": "0x34C0bD5877A5Ee7099D0f5688D65F4bB9158BDE2",
         "BRIDGE": "0x34C0bD5877A5Ee7099D0f5688D65F4bB9158BDE2",
+        "upgradeCount": 2,
         "version": "1.9.0"
       },
       "derivedName": "OptimismMintablePermitERC20Factory"
@@ -192,6 +193,7 @@
         "startBlock": 19135324,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xc88138f5c82DD1bD327708C7F1c15E44Ce7FdA0C",
+        "upgradeCount": 3,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -229,6 +231,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x61ca43CB037aC9181d8Fa5CD0073dC314065Ccc4",
+        "upgradeCount": 0,
         "version": "2.1.0"
       },
       "derivedName": "L1StandardBridge"
@@ -265,6 +268,7 @@
         "superchainConfig": "0x61ca43CB037aC9181d8Fa5CD0073dC314065Ccc4",
         "SYSTEM_CONFIG": "0x34a9f273cbD847d49c3De015FC26c3E66825f8b2",
         "systemConfig": "0x34a9f273cbD847d49c3De015FC26c3E66825f8b2",
+        "upgradeCount": 3,
         "version": "2.5.0"
       },
       "derivedName": "FraxchainPortal"
@@ -315,6 +319,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 3,
         "version": "1.1.0"
       },
       "derivedName": "SuperchainConfig"
@@ -361,6 +366,7 @@
         "startingTimestamp": 1706810711,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 4,
         "version": "1.8.0"
       },
       "derivedName": "L2OutputOracle"
@@ -452,6 +458,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x61ca43CB037aC9181d8Fa5CD0073dC314065Ccc4",
+        "upgradeCount": 3,
         "version": "2.1.0"
       },
       "derivedName": "L1ERC721Bridge"

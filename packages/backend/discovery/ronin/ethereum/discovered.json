@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20475186,
   "configHash": "0x24d40701ac57a1ca7d34bbfc1580f7dd67c0366e4e570f9fa3f302e7ad9b48be",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "MainchainBridgeManager",
@@ -87,7 +87,8 @@
         "getThreshold": { "num": 7, "denom": 10 },
         "getTotalWeight": 2200,
         "minimumVoteWeight": 1540,
-        "totalBridgeOperator": 22
+        "totalBridgeOperator": 22,
+        "upgradeCount": 3
       },
       "derivedName": "MainchainBridgeManager"
     },
@@ -192,6 +193,7 @@
         "nonce": 2,
         "paused": true,
         "roninChainId": 2020,
+        "upgradeCount": 5,
         "wethUnwrapper": "0x8048b12511d9BE6e4e094089b12f54923C4E2F83",
         "WITHDRAWAL_UNLOCKER_ROLE": "0x5e5712e902fff5e704bc4d506ad976718319e019e9d2a872528a01a85db433e4",
         "wrappedNativeToken": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"

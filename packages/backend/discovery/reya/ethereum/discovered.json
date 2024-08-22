@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20177364,
   "configHash": "0x173054a778ca1e3aff72a367f1fd26191bb31e85d3bb380cda8e3f4ca1dfeca1",
-  "version": 12,
+  "version": 13,
   "contracts": [
     {
       "name": "UpgradeExecutor",
@@ -43,7 +43,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -106,7 +107,8 @@
         "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A",
         "sequencerInbox": "0x6CA2A628fb690Bd431F4aA608655ce37c66aff9d",
         "sequencerMessageCount": 8051,
-        "sequencerReportedSubMessageCount": 3171293
+        "sequencerReportedSubMessageCount": 3171293,
+        "upgradeCount": 1
       },
       "derivedName": "Bridge"
     },
@@ -133,7 +135,8 @@
         "l2ToL1Sender": "0x0000000000000000000000000000000000000000",
         "l2ToL1Timestamp": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A"
+        "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A",
+        "upgradeCount": 1
       },
       "derivedName": "Outbox"
     },
@@ -236,7 +239,8 @@
         "getProxyAdmin": "0x74627dd54FA6E94c87F12DBAdAEc275758f51dF9",
         "maxDataSize": 117964,
         "paused": false,
-        "sequencerInbox": "0x6CA2A628fb690Bd431F4aA608655ce37c66aff9d"
+        "sequencerInbox": "0x6CA2A628fb690Bd431F4aA608655ce37c66aff9d",
+        "upgradeCount": 1
       }
     },
     {
@@ -279,7 +283,8 @@
         "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A",
         "sequencerVersion": "0x88",
         "setIsBatchPosterCount": 1,
-        "totalDelayedMessagesRead": 8732
+        "totalDelayedMessagesRead": 8732,
+        "upgradeCount": 1
       },
       "derivedName": "SequencerInbox"
     },
@@ -302,7 +307,8 @@
         "osp": "0x09824fe72BFF474d16D9c2774432E381BBD60662",
         "resultReceiver": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A",
         "sequencerInbox": "0x6CA2A628fb690Bd431F4aA608655ce37c66aff9d",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 1
       },
       "derivedName": "ChallengeManager"
     },
@@ -440,7 +446,8 @@
         "$admin": "0x74627dd54FA6E94c87F12DBAdAEc275758f51dF9",
         "$implementation": "0x13BE515E44Eefaf3eBEFAD684F1FBB574Ac0A494",
         "bridge": "0x383c03c4EfF819E73409DbC690755a9992393814",
-        "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A"
+        "rollup": "0x448Bbd134dE1B23976073aB4F2915849b2dcD73A",
+        "upgradeCount": 1
       }
     }
   ],

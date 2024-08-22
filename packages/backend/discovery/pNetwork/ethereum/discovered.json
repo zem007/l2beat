@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20420398,
   "configHash": "0xacfacf9c84c23dfb644b1f84136823f08cbe72513fc45dcf9218995c9c893637",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ERC20 Vault V1",
@@ -277,7 +277,8 @@
         "ETHPNT_TOKEN_ADDRESS": "0xf4eA6B892853413bD9d9f1a5D3a620A0ba39c5b2",
         "ORIGIN_CHAIN_ID": "0x005fe7f9",
         "PNETWORK": "0x341aA660fD5c280F5a9501E3822bB4a98E816D1b",
-        "PNT_TOKEN_ADDRESS": "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD"
+        "PNT_TOKEN_ADDRESS": "0x89Ab32156e46F46D02ade3FEcbe5Fc4243B9AAeD",
+        "upgradeCount": 6
       },
       "derivedName": "Erc20Vault"
     },
@@ -344,6 +345,7 @@
         "RATE_DIVISOR": 10000,
         "symbol": "ethPNT",
         "totalSupply": "14960000000000000000000000",
+        "upgradeCount": 2,
         "yearlyRateCap": 2000,
         "yearlyWithdrawableLimit": "19355045741928169125886545"
       },

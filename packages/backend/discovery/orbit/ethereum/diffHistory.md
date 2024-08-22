@@ -1,3 +1,61 @@
+Generated with discovered.json: 0xda3414c73db4f1d3964dc24bb073a3c142715742
+
+# Diff at Thu, 22 Aug 2024 11:17:52 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20362600
+- current block number: 20362600
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20362600 (main branch discovery), not current.
+
+```diff
+    contract  (0x09F3320e8d2dBD8913659bAb28940bb4f041eaD8) {
+    +++ description: None
+      values.upgradeCount:
++        3
+    }
+```
+
+```diff
+    contract USDT Farm (0x378F1CD69e1012cfe8FbeAfFeC02630190fda4d9) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract USDC Farm (0x830433dE03ABedE062660CC629e1A2c714272474) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract DAI Farm (0xBe03a2569d10fd10bDbfE84f5f2E22D9cec4aCd0) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract WBTC Farm (0xd910f6F23889919fAd9C8cE3171dd557cE0308Da) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
 Generated with discovered.json: 0xe49277c1844eb9f39a95047cb7196773f0cf9796
 
 # Diff at Wed, 21 Aug 2024 10:04:47 GMT:

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20491123,
   "configHash": "0x6b6dab3cd65839582c4908c86c7f3aa050e752f18bffbf700efbcfad069ade2e",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "AxelarGatewayProxyMultisig",
@@ -53,7 +53,8 @@
         "gateway": "0x4F4495243837681061C4743b74B3eEdf548D56A5",
         "initializerAddress": "0xdDA0d9448Ebe3eA43aFecE5Fa6401F5795c19333",
         "rootBridge": "0xBa5E35E26Ae59c7aea6F029B68c6460De2d13eB6",
-        "TARGET_MANAGER_ROLE": "0x28a0840e09502c63ed1e83b95421995a3ea654657390bb15ac27b2b85aef53b2"
+        "TARGET_MANAGER_ROLE": "0x28a0840e09502c63ed1e83b95421995a3ea654657390bb15ac27b2b85aef53b2",
+        "upgradeCount": 1
       },
       "derivedName": "RootAxelarBridgeAdaptor"
     },
@@ -105,6 +106,7 @@
         "rootWETHToken": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "UNLIMITED_DEPOSIT": 0,
         "UNPAUSER_ROLE": "0x82b32d9ab5100db08aeb9a0e08b422d14851ec118736590462bf9c085a6e9448",
+        "upgradeCount": 1,
         "VARIABLE_MANAGER_ROLE": "0x5b94a8cd68affa84315f488cc2e6e456f761d334859cae8a073ef8fe13fb0ee6",
         "WITHDRAW_SIG": "0x7a8dc26796a1e50e6e190b70259f58f6a4edd5b22280ceecc82b687b8e982869",
         "withdrawalDelay": 86400,

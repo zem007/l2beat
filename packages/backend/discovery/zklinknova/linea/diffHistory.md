@@ -1,3 +1,37 @@
+Generated with discovered.json: 0xfbf3f2cfdf05765116749294c96432dfa9ff8392
+
+# Diff at Thu, 22 Aug 2024 11:21:25 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 7681920
+- current block number: 7681920
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 7681920 (main branch discovery), not current.
+
+```diff
+    contract L1ERC20Bridge (0x62cE247f34dc316f93D3830e4Bf10959FCe630f8) {
+    +++ description: None
+      values.upgradeCount:
++        2
+    }
+```
+
+```diff
+    contract LineaL2Gateway (0x7b5780d6df85A7dF96a3e1A019639a1dbDe937dB) {
+    +++ description: None
+      values.upgradeCount:
++        2
+    }
+```
+
 Generated with discovered.json: 0x2f5a06fc86d39de1707c614e8f662e8aedfd57b6
 
 # Diff at Wed, 21 Aug 2024 10:08:19 GMT:

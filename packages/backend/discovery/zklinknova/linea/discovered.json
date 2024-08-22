@@ -3,7 +3,7 @@
   "chain": "linea",
   "blockNumber": 7681920,
   "configHash": "0x6c55b858b842e046139e5aa87fd8f201e2b06d85311095d9aec21c8711b5ab0e",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "LineaOwner",
@@ -241,7 +241,8 @@
         "$implementation": "0xDe1d7311d3eb7bc94f7EBAEd86978d3a82d5328A",
         "l2Bridge": "0x01c3f51294494e350AD69B999Db6B382b3B510b9",
         "l2TokenBeacon": "0x45A4e87354154EB95c2896A43B65bf1148F34908",
-        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34"
+        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC20Bridge"
     },
@@ -264,6 +265,7 @@
         "getRemoteGateway": "0x803460416C2682Ac54FccF03eF77b10A12f2809b",
         "MESSAGE_SERVICE": "0x508Ca82Df566dCD1B0DE8296e70a96332cD644ec",
         "owner": "0x0Bff4B38792a95314b3463E1Bf9831BDa1995391",
+        "upgradeCount": 2,
         "ZKLINK": "0x5Cb18b6e4e6F3b46Ce646b0f4704D53724C5Df05"
       },
       "derivedName": "LineaL2Gateway"

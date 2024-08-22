@@ -1,3 +1,77 @@
+Generated with discovered.json: 0x1816be534195e33bda64a6407469b1a3e6569722
+
+# Diff at Thu, 22 Aug 2024 11:19:30 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20575837
+- current block number: 20575837
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20575837 (main branch discovery), not current.
+
+```diff
+    contract UpgradeExecutor (0x44Ec40D86b4643Bd5110ED07BE188F8473Ad2d3a) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract ChallengeManager (0x73cfa0F6ae141212115657ad91Ad918E5d34d882) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract ERC20RollupEventInbox (0x9f1045201f8b9D0b12f6d1e40e8B8e6c047A81E3) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Bridge (0xa104C0426e95a5538e89131DbB4163d230C35f86) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Outbox (0xB360b2f57c645E847148d7C479b7468AbF6F707d) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract SequencerInbox (0xD80a805c86C14c879420eC6acb366D04D318fC0C) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Inbox (0xEa83E8907C89Bc0D9517632f0ba081972E328631) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0xda775f3da176d73f47a0378b875b6b8cfedacfbd
 
 # Diff at Wed, 21 Aug 2024 13:25:38 GMT:

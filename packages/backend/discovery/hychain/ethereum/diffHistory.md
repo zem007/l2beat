@@ -1,3 +1,79 @@
+Generated with discovered.json: 0x15dacc22504f0176c7264bf90be53eac29d4280e
+
+# Diff at Thu, 22 Aug 2024 11:16:21 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20177349
+- current block number: 20177349
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20177349 (main branch discovery), not current.
+
+```diff
+    contract Outbox (0x0389E24A4Bc96518169f83F50FCDdA442dD8eAFd) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract ERC20RollupEventInbox (0x617f70525Dc4D2BBbd6ADFd3781DbEAe5C8F0048) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Bridge (0x73C6af7029E714DFf1F1554F88b79B335011Da68) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract UpgradeExecutor (0x88d3f3F43Ecd46635bd9f546bE7C4d52eBc20881) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract SequencerInbox (0xaF5800ADF22301968613c37DA9C3C2a486eA915A) {
+    +++ description: State batches / commitments get posted here.
+      values.dacKeyset.blsSignatures:
++        ["YBW51S21zw469kP9ztjGZG61FtnLVawzRnntDkNwhMaUIo8nNAU/FcH4LgPayQ60cQtu1MiKT+Vd2p0a0czxeoy4tLpnskmTMxhtCmxYNHNoQCmPW92k7OEnUnu84140NQmLidPlrteSkBwZeQVbOkNqMRkvGw6OCb2QmMk6cmqtxVmAvUeTKdM98+TqdJXuwwxR8YtxeKR4EI5ErnhcNRXpgNUpATc1o+aRjy1TvZZgE1FhIcKmOQSSly1JdiDYAQD3sYcPPX4ywtlJgDz723s71zVCSkJ7l/uFLH6M4HJbaMFCgv+bdf+cu5ZNEKPgpRIPtNWxMLXi/rE8o3H+0JZCs1B3LZsWBbfOtc4bhvvCkxBzdJI1ddqoVxbdzdkzDg=="]
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Inbox (0xD6c596b7ca17870DD50D322393deCE6C2085a116) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract ChallengeManager (0xE8AcC0E28a82a26D498f2C66B64C56B9Ef996c2e) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0x4d122288ae295fc07f06e793fca6cfbe7e019162
 
 # Diff at Wed, 21 Aug 2024 10:03:12 GMT:

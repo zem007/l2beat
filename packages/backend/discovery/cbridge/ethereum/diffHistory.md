@@ -1,3 +1,37 @@
+Generated with discovered.json: 0x92ccfc332d6c21253fb6f7fedceb4fc422b1e129
+
+# Diff at Thu, 22 Aug 2024 11:15:34 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20512741
+- current block number: 20512741
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20512741 (main branch discovery), not current.
+
+```diff
+    contract MessageBus (0x4066D196A423b2b3B8B054f4F40efB47a74E200C) {
+    +++ description: None
+      values.upgradeCount:
++        2
+    }
+```
+
+```diff
+    contract Sentinel (0xF140024969F6c76494a78518D9a99c8776B55f70) {
+    +++ description: The Sentinel is itself a Governor and Pauser in the bridge contracts. It allows additional Sentinel-Governors to make changes in its name that can be restricted by Guards changing the Sentinel's relaxed state.
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0xeaa2970aabb1cefc8c82dc859a6fc9ebac12bd8e
 
 # Diff at Wed, 21 Aug 2024 10:02:25 GMT:

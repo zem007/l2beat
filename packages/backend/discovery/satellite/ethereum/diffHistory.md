@@ -1,3 +1,29 @@
+Generated with discovered.json: 0xcc66fac5a3e585be8bcce592d39e62c239998710
+
+# Diff at Thu, 22 Aug 2024 11:18:41 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20017695
+- current block number: 20017695
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20017695 (main branch discovery), not current.
+
+```diff
+    contract AxelarGasService (0x2d5d7d31F671F86C782533cc367F14109a082712) {
+    +++ description: None
+      values.upgradeCount:
++        2
+    }
+```
+
 Generated with discovered.json: 0x668ae87395d544cbbd7167c9cd291c389978ee71
 
 # Diff at Wed, 21 Aug 2024 10:05:32 GMT:

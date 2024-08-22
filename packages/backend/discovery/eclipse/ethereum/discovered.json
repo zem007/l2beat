@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20512023,
   "configHash": "0x0368055eaa8dded97019b19240346104a55759e075fbde28135e67760d73911d",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "EclipseMultisig",
@@ -53,7 +53,8 @@
       "sinceTimestamp": 1722141227,
       "values": {
         "$admin": "0x0000000000000000000000000000000000000000",
-        "$implementation": "0x338017E0f208b4EAF8Cd4BbDc8bdabEFd0e39bE9"
+        "$implementation": "0x338017E0f208b4EAF8Cd4BbDc8bdabEFd0e39bE9",
+        "upgradeCount": 1
       },
       "derivedName": ""
     },
@@ -72,7 +73,8 @@
       "sinceTimestamp": 1722141467,
       "values": {
         "$admin": "0x0000000000000000000000000000000000000000",
-        "$implementation": "0x4ceF0fA54dC06CE0eA198DAb2F57D28A9deE712B"
+        "$implementation": "0x4ceF0fA54dC06CE0eA198DAb2F57D28A9deE712B",
+        "upgradeCount": 1
       },
       "derivedName": ""
     },
@@ -91,7 +93,8 @@
       "sinceTimestamp": 1722140987,
       "values": {
         "$admin": "0x7B2c1CbB33c53c3C6a695e36096AD2cfCE1c0efC",
-        "$implementation": "0xa8E15d2B1bf6B0Fd3Bc9Ead06323c0730b67f8d4"
+        "$implementation": "0xa8E15d2B1bf6B0Fd3Bc9Ead06323c0730b67f8d4",
+        "upgradeCount": 1
       },
       "derivedName": ""
     }

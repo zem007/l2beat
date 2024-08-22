@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20433272,
   "configHash": "0x545581edf4a871d69dbd50020ae765821e0885a5519c3ba149b700e1bfbbc8b3",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PauserRegistry",
@@ -73,7 +73,8 @@
         "pubkeyCompendium": "0x92986cd63C3409b7dA2882624B6d6E7Cf660707a",
         "serviceManager": "0x5BD63a7ECc13b955C4F57e3F12A64c10263C14c1",
         "strategiesConsideredAndMultipliersLength": [1, 1],
-        "totalStake": ["1000000000000000000000000", 0]
+        "totalStake": ["1000000000000000000000000", 0],
+        "upgradeCount": 2
       },
       "derivedName": "BLSRegistry"
     },
@@ -99,7 +100,8 @@
         "owner": "0x4e59e778a0fb77fBb305637435C62FaeD9aED40f",
         "paused": 0,
         "pauserRegistry": "0x075a48633dc6845f92339741E9c96b88f1b2A86f",
-        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01"
+        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01",
+        "upgradeCount": 2
       },
       "derivedName": "InvestmentManager"
     },
@@ -234,6 +236,7 @@
         "startingBlockNumber": 61171946,
         "startingTimestamp": 1710474204,
         "SUBMISSION_INTERVAL": 1800,
+        "upgradeCount": 1,
         "version": "1.3.0"
       },
       "derivedName": "L2OutputOracle"
@@ -264,7 +267,8 @@
         "nextMint": 1718777795,
         "owner": "0x4e59e778a0fb77fBb305637435C62FaeD9aED40f",
         "symbol": "MNT",
-        "totalSupply": "6219316794990000000000000000"
+        "totalSupply": "6219316794990000000000000000",
+        "upgradeCount": 1
       },
       "derivedName": "L1MantleToken"
     },
@@ -305,6 +309,7 @@
         "sequencerInbox": "0x5BD63a7ECc13b955C4F57e3F12A64c10263C14c1",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xAAC979CBeE00C75C35DE9a2635d8B75940F466dc",
+        "upgradeCount": 1,
         "version": "1.3.0",
         "VERSION": 0
       },
@@ -441,7 +446,8 @@
         "reRollupIndex": 0,
         "reSubmitterAddress": "0x630E93130809c4acE55249229Ee6B043b929A9Ad",
         "rollupBatchIndex": 21045,
-        "sequencer": "0x2f40D796917ffB642bD2e2bdD2C762A5e40fd749"
+        "sequencer": "0x2f40D796917ffB642bD2e2bdD2C762A5e40fd749",
+        "upgradeCount": 1
       },
       "derivedName": "BVM_EigenDataLayrChain"
     },
@@ -494,7 +500,8 @@
         "paused": 0,
         "pauserRegistry": "0x4ca725D446EcE6e3fFd3E072A6f2A6a16Ca492D0",
         "quorumThresholdBasisPoints": 9000,
-        "registry": "0x1eD35B793d887e028493dAC4a11AA5Feb811dd67"
+        "registry": "0x1eD35B793d887e028493dAC4a11AA5Feb811dd67",
+        "upgradeCount": 2
       },
       "derivedName": "DataLayrServiceManager"
     },
@@ -630,7 +637,8 @@
         "$admin": "0x47D58744D8515d9aaEAf961bc03625118bd91EBb",
         "$implementation": "0x18Dd3cBE484f955217165FEaC6fe928D04a56a72",
         "IS_TEST": false,
-        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01"
+        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01",
+        "upgradeCount": 2
       },
       "derivedName": "BLSPublicKeyCompendium"
     },
@@ -654,6 +662,7 @@
         "messenger": "0x676A795fe6E43C17c668de16730c3F690FEB7120",
         "MESSENGER": "0x676A795fe6E43C17c668de16730c3F690FEB7120",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.0"
       },
       "derivedName": "L1StandardBridge"
@@ -680,7 +689,8 @@
         "paused": 0,
         "pauserRegistry": "0x075a48633dc6845f92339741E9c96b88f1b2A86f",
         "totalShares": 0,
-        "underlyingToken": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354"
+        "underlyingToken": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
+        "upgradeCount": 1
       },
       "derivedName": "InvestmentStrategyBase"
     },
@@ -717,7 +727,8 @@
           "0xB61298691FE0df10634A67dd83b2253E74cbF7fb",
           "0xcEb157a9bB9c80a845d5924e8CEAA591Caf705a5",
           "0x0B6F2C77C3740A5e6f88A4eCdd02C10BE8a2e323"
-        ]
+        ],
+        "upgradeCount": 2
       },
       "derivedName": "RegistryPermission"
     },
@@ -748,6 +759,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0x427Ea0710FA5252057F0D88274f7aeb308386cAf",
+        "upgradeCount": 1,
         "version": "1.7.0"
       },
       "derivedName": "OptimismPortal"
@@ -770,7 +782,8 @@
         "challengeUtils": "0xCDC78c5eaea2dE33B00a9200Ee1700937fb0f55D",
         "dataLayrServiceManager": "0x5BD63a7ECc13b955C4F57e3F12A64c10263C14c1",
         "dlRegistry": "0x1eD35B793d887e028493dAC4a11AA5Feb811dd67",
-        "pairingGasLimit": 500000
+        "pairingGasLimit": 500000,
+        "upgradeCount": 2
       }
     },
     {
@@ -837,7 +850,8 @@
         "paused": 0,
         "pauserRegistry": "0x075a48633dc6845f92339741E9c96b88f1b2A86f",
         "totalShares": "1000000000000000000000000",
-        "underlyingToken": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354"
+        "underlyingToken": "0x3c3a81e81dc49A522A592e7622A7E711c06bf354",
+        "upgradeCount": 1
       },
       "derivedName": "InvestmentStrategyBase"
     },
@@ -861,7 +875,8 @@
           "0x4843774a80fc8385b31024f5bd18b42e62de439206ab9468d42d826796d41f67",
           "0x4843774a80fc8385b31024f5bd18b42e62de439206ab9468d42d826796d41f67",
           "0x092d3e5f87f5293e7ab0cc2ca6b0b5e4adb5e0011656544915f7cea34e69e5ab"
-        ]
+        ],
+        "upgradeCount": 2
       },
       "derivedName": "DataLayrChallengeUtils"
     },
@@ -901,7 +916,8 @@
         "owner": "0x2F44BD2a54aC3fB20cd7783cF94334069641daC9",
         "paused": 0,
         "pauserRegistry": "0x075a48633dc6845f92339741E9c96b88f1b2A86f",
-        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01"
+        "permissionManager": "0xBcF6d8273DAF842b6Fc288b08E48C438Fa911D01",
+        "upgradeCount": 2
       },
       "derivedName": "EigenLayrDelegation"
     }

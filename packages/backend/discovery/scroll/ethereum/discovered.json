@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20369470,
   "configHash": "0x16d08149a3169a7f934f3c943ab8f5108b8cf15e4a7a577b5ab7e6a11ca76859",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PlonkVerifierV2",
@@ -42,6 +42,7 @@
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
         "pendingQueueIndex": 911220,
         "scrollChain": "0xa13BAF47339d63B743e7Da8741db5456DAc1E556",
+        "upgradeCount": 2,
         "whitelistChecker": "0x259204DDd2bA29bD9b1B9A5c9B093f73d7EAcf37"
       },
       "derivedName": "L1MessageQueueWithGasPriceOracle"
@@ -221,7 +222,8 @@
         "KEEPER_ROLE": "0xfc8737ab85eb45125971625a9ebdb75cc78e01d5c1fa80c4c6e5203f47bc4fab",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "queue": "0x0d7E906BD9cAFa154b048cFa766Cc1E54E39AF9B",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2
       }
     },
     {
@@ -252,7 +254,8 @@
         "counterpart": "0x7bC08E1c04fb41d75F1410363F0c5746Eae80582",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0x0000000000000000000000000000000000000000"
+        "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC721Gateway"
     },
@@ -299,6 +302,7 @@
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x3e40D73EB977Dc6a537aF587D48316feE66E9C8c",
         "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2,
         "WITHDRAWALS_DISABLER_ROLE": "0x94a954c0bc99227eddbc0715a62a7e1056ed8784cd719c2303b685683908857c",
         "WITHDRAWALS_ENABLER_ROLE": "0x9ab8816a3dc0b3849ec1ac00483f6ec815b07eee2fd766a353311c823ad59d0d"
       },
@@ -336,6 +340,7 @@
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
         "paused": false,
         "rollup": "0xa13BAF47339d63B743e7Da8741db5456DAc1E556",
+        "upgradeCount": 2,
         "xDomainMessageSender": "0x0000000000000000000000000000000000000001"
       },
       "derivedName": "L1ScrollMessenger"
@@ -388,7 +393,8 @@
         "feeVault": "0x8FA3b4570B4C96f8036C13b64971BA65867eEB48",
         "messageQueue": "0x0d7E906BD9cAFa154b048cFa766Cc1E54E39AF9B",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "paused": true
+        "paused": true,
+        "upgradeCount": 1
       },
       "fieldMeta": {
         "paused": {
@@ -572,7 +578,8 @@
         "l2WETH": "0x5300000000000000000000000000000000000004",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2
       },
       "derivedName": "L1WETHGateway"
     },
@@ -604,7 +611,8 @@
         "counterpart": "0x6EA73e05AdC79974B931123675ea8F78FfdacDF0",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2
       }
     },
     {
@@ -657,6 +665,7 @@
         },
         "l2BaseFee": 460000000,
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
+        "upgradeCount": 1,
         "whitelist": "0x259204DDd2bA29bD9b1B9A5c9B093f73d7EAcf37"
       },
       "derivedName": "L2GasPriceOracle"
@@ -695,7 +704,8 @@
         "counterpart": "0x9eBf2f33526CD571f8b2ad312492cb650870CFd6",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x9eBf2f33526CD571f8b2ad312492cb650870CFd6",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 3
       },
       "derivedName": "L1CustomERC20Gateway"
     },
@@ -786,6 +796,7 @@
           "0xcF2898225ED05Be911D3709d9417e86E0b4Cfc8f",
           "0x2ce8B4A516ebBc8B425764a867B742F76C2244c7"
         ],
+        "upgradeCount": 4,
         "verifier": "0xf94AfBD9370E25Dd6Ca557d5D67634aeFDA2416B"
       },
       "derivedName": "ScrollChain"
@@ -808,7 +819,8 @@
         "counterpart": "0x64CCBE37c9A82D85A1F2E74649b7A42923067988",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2
       },
       "derivedName": "L1CustomERC20Gateway"
     },
@@ -830,7 +842,8 @@
         "counterpart": "0x62597Cc19703aF10B58feF87B0d5D29eFE263bcc",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0x0000000000000000000000000000000000000000"
+        "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC1155Gateway"
     },
@@ -938,7 +951,8 @@
         "l2TokenImplementation": "0xC7d86908ccf644Db7C69437D5852CedBC1aD3f69",
         "messenger": "0x6774Bcbd5ceCeF1336b5300fb5186a12DDD8b367",
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
-        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6"
+        "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
+        "upgradeCount": 2
       }
     },
     {
@@ -1123,6 +1137,7 @@
         "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
         "router": "0xF8B1378579659D8F7EE5f3C929c2f3E332E41Fd6",
         "totalBridgedUSDC": 105624099784094,
+        "upgradeCount": 2,
         "withdrawPaused": false
       },
       "derivedName": "L1USDCGateway"
@@ -1145,7 +1160,8 @@
         "defaultERC20Gateway": "0xD8A791fE2bE73eb6E6cF1eb0cb3F36adC9B3F8f9",
         "ethGateway": "0x7F2b8C31F88B6006c382775eea88297Ec1e3E905",
         "gatewayInContext": "0x0000000000000000000000000000000000000000",
-        "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6"
+        "owner": "0x798576400F7D662961BA15C6b3F3d813447a26a6",
+        "upgradeCount": 1
       },
       "derivedName": "L1GatewayRouter"
     },

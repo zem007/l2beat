@@ -3,7 +3,7 @@
   "chain": "mantle",
   "blockNumber": 66927056,
   "configHash": "0xba99224e212c7eb632ba06c519a466724d98fb22fad4fc880458e49a59f4dbad",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "MantleOwner",
@@ -64,7 +64,8 @@
         "$implementation": "0x7769C18828569692Dfb65affa0856533613ea458",
         "l2Bridge": "0x321Ce902eDFC6466B224ce5D9A7Bc16858855272",
         "l2TokenBeacon": "0x21194Efd1D913Bc8D62F1ED9467aA0cA2a257FCe",
-        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34"
+        "l2TokenProxyBytecodeHash": "0x010001211b0c33353cdf7a320f768e3dc40bce1326d639fcac099bba9ecd8e34",
+        "upgradeCount": 2
       },
       "derivedName": "L1ERC20Bridge"
     },
@@ -115,7 +116,8 @@
         "totalSyncedPriorityTxs": 855,
         "totalValidatorForwardFee": "1091419113052414112870",
         "totalValidatorForwardFeeWithdrawn": 0,
-        "txGasPrice": 140000000000000
+        "txGasPrice": 140000000000000,
+        "upgradeCount": 4
       },
       "derivedName": "ZkLink"
     },
@@ -140,6 +142,7 @@
         "isEthGasToken": false,
         "MESSAGE_SERVICE": "0x4200000000000000000000000000000000000007",
         "owner": "0x1aB4D3cfcCCB28DBc8993454f461f3565281BB60",
+        "upgradeCount": 3,
         "ZKLINK": "0xD784d7128B46B60Ca7d8BdC17dCEC94917455657"
       },
       "derivedName": "MantleL2Gateway"

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20427351,
   "configHash": "0x7c506a1eabbab73ca42ccd6096a866c9aca67062c90b0931c2c938ce109ecc2e",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "AddressManager",
@@ -146,6 +146,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x5e8d351FD046Aa0b3DDA24096751996C0c397C61",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     },
@@ -218,6 +219,7 @@
         "superchainConfig": "0x5e8d351FD046Aa0b3DDA24096751996C0c397C61",
         "SYSTEM_CONFIG": "0x94118F86eE37Fa4Fdb266CDab1e55B8F0D6959D9",
         "systemConfig": "0x94118F86eE37Fa4Fdb266CDab1e55B8F0D6959D9",
+        "upgradeCount": 5,
         "version": "2.5.0"
       }
     },
@@ -245,6 +247,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       }
     },
@@ -310,6 +313,7 @@
         "startBlock": 19838884,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x91901DF65F086A3330D1C95796d66a1cF941E1B1",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -345,6 +349,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x5e8d351FD046Aa0b3DDA24096751996C0c397C61",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -363,7 +368,8 @@
       "sinceTimestamp": 1715334971,
       "values": {
         "$admin": "0x161aF05fA6BdA1c6E7Ee12839d470931bA796948",
-        "$implementation": "0xAd8890C1DF1f29f6a26B6eCcc73c299599c40F3d"
+        "$implementation": "0xAd8890C1DF1f29f6a26B6eCcc73c299599c40F3d",
+        "upgradeCount": 1
       }
     },
     {
@@ -408,6 +414,7 @@
         "startingTimestamp": 1715333975,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 1,
         "version": "1.8.0"
       }
     }

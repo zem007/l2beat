@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20475242,
   "configHash": "0x4f504880274f99c9783e5ed09c9ab707e056c1de0fa410a99b7139474a1dad7f",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "LivenessModule",
@@ -81,6 +81,7 @@
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
         "SYSTEM_CONFIG": "0xA3cAB0126d5F504B071b81a3e8A2BBBF17930d86",
         "systemConfig": "0xA3cAB0126d5F504B071b81a3e8A2BBBF17930d86",
+        "upgradeCount": 3,
         "version": "2.5.0"
       }
     },
@@ -124,6 +125,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     },
@@ -263,6 +265,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 3,
         "version": "2.1.0"
       }
     },
@@ -322,6 +325,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 3,
         "version": "1.1.0"
       }
     },
@@ -400,6 +404,7 @@
         "startingTimestamp": 1686693839,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 5,
         "version": "1.8.0"
       }
     },
@@ -465,6 +470,7 @@
         "startBlock": 17473957,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x3Dc8Dfd0709C835cAd15a6A27e089FF4cF4C9228",
+        "upgradeCount": 3,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -531,6 +537,7 @@
         "$implementation": "0xE01efbeb1089D1d1dB9c6c8b135C934C0734c846",
         "bridge": "0x3e2Ea9B92B7E48A52296fD261dc26fd995284631",
         "BRIDGE": "0x3e2Ea9B92B7E48A52296fD261dc26fd995284631",
+        "upgradeCount": 3,
         "version": "1.9.0"
       }
     },

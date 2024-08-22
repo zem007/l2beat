@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 245317770,
   "configHash": "0xe38e1d366aded9704f1e4a02d314bb4ce09bc4d1c5f07edbe0c6980f3a69a8c4",
-  "version": 12,
+  "version": 13,
   "contracts": [
     {
       "name": "GnosisSafeAdminMember",
@@ -124,7 +124,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     },
@@ -169,7 +170,8 @@
         "l2ToL1Timestamp": 0,
         "l2ToL1WithdrawalAmount": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336"
+        "rollup": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Outbox"
     },
@@ -193,6 +195,7 @@
         "inbox": "0xaE21fDA3de92dE2FDAF606233b2863782Ba046F9",
         "owner": "0x0EE7AD3Cc291343C9952fFd8844e86d294fa513F",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1OrbitGatewayRouter"
@@ -223,7 +226,8 @@
         "$admin": "0x041F85dD87c46B941dc9b15c6628B19ee5358485",
         "$implementation": "0x18FD37A4FB9E1F06d9383958aFd236771F15A8cb",
         "bridge": "0x7dd8A76bdAeBE3BBBaCD7Aa87f1D4FDa1E60f94f",
-        "rollup": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336"
+        "rollup": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336",
+        "upgradeCount": 1
       }
     },
     {
@@ -245,7 +249,8 @@
         "osp": "0xb20107bfB36D3B5AcA534aCAfbd8857b10b402a8",
         "resultReceiver": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336",
         "sequencerInbox": "0x995a9d3ca121D48d21087eDE20bc8acb2398c8B1",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 2
       },
       "derivedName": "ChallengeManager"
     },
@@ -339,7 +344,8 @@
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "esXaiBeacon": "0x6Bc4e6B2c13Ba42e933b23AFAb8a58bbbBa5D02B",
         "keyBucketBeacon": "0xfB93c2e5E41BD0ffd2E99A88e6d2A8D4F542d39a",
-        "poolBeacon": "0x5f9D168d3435747335b1B3dC7e4d42e3510087C7"
+        "poolBeacon": "0x5f9D168d3435747335b1B3dC7e4d42e3510087C7",
+        "upgradeCount": 1
       }
     },
     {
@@ -389,7 +395,8 @@
         "rollup": "0xC47DacFbAa80Bd9D8112F4e8069482c2A3221336",
         "sequencerInbox": "0x995a9d3ca121D48d21087eDE20bc8acb2398c8B1",
         "sequencerMessageCount": 65908,
-        "sequencerReportedSubMessageCount": 29829274
+        "sequencerReportedSubMessageCount": 29829274,
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Bridge"
     },
@@ -422,7 +429,8 @@
         "$admin": "0xD88c8E0aE21beA6adE41A41130Bb4cd43e6b1723",
         "$implementation": "0xF208798482F0b12c8767Bc03cC0F145D18BeCe6A",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "TRANSFER_ROLE": "0x8502233096d909befbda0999bb8ea2f3a6be3c138b9fbf003752a4c8bce86f6c"
+        "TRANSFER_ROLE": "0x8502233096d909befbda0999bb8ea2f3a6be3c138b9fbf003752a4c8bce86f6c",
+        "upgradeCount": 1
       }
     },
     {
@@ -477,6 +485,7 @@
         "setIsBatchPosterCount": 1,
         "totalDelayedMessagesRead": 84190,
         "TREE_DAS_MESSAGE_HEADER_FLAG": "0x08",
+        "upgradeCount": 2,
         "ZERO_HEAVY_MESSAGE_HEADER_FLAG": "0x20"
       },
       "fieldMeta": {
@@ -523,7 +532,8 @@
         "getProxyAdmin": "0x041F85dD87c46B941dc9b15c6628B19ee5358485",
         "maxDataSize": 104857,
         "paused": false,
-        "sequencerInbox": "0x995a9d3ca121D48d21087eDE20bc8acb2398c8B1"
+        "sequencerInbox": "0x995a9d3ca121D48d21087eDE20bc8acb2398c8B1",
+        "upgradeCount": 1
       },
       "derivedName": "ERC20Inbox"
     },
@@ -559,6 +569,7 @@
         "inbox": "0xaE21fDA3de92dE2FDAF606233b2863782Ba046F9",
         "l2BeaconProxyFactory": "0xC65de812db42Bfa8bd4E0fCf6ffcad8fe3072D44",
         "router": "0x22CCA5Dc96a4Ac1EC32c9c7C5ad4D66254a24C35",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1OrbitERC20Gateway"
@@ -588,7 +599,8 @@
         "referralDiscountPercentage": 5,
         "referralRewardPercentage": 15,
         "symbol": "SNL",
-        "totalSupply": 35178
+        "totalSupply": 35178,
+        "upgradeCount": 8
       },
       "derivedName": "NodeLicense5"
     },
@@ -741,7 +753,8 @@
         "unstakeEsXaiDelayPeriod": 604800,
         "unstakeGenesisKeyDelayPeriod": 5184000,
         "unstakeKeysDelayPeriod": 604800,
-        "updateRewardBreakdownDelayPeriod": 1209600
+        "updateRewardBreakdownDelayPeriod": 1209600,
+        "upgradeCount": 1
       },
       "derivedName": "PoolFactory"
     },
@@ -833,6 +846,7 @@
           "8000000000000000000000000"
         ],
         "stakingEnabled": true,
+        "upgradeCount": 8,
         "xaiAddress": "0x4Cb9a7AE498CEDcBb5EAe9f25736aE7d428C9D66"
       },
       "derivedName": "Referee8"

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20413034,
   "configHash": "0xa442e5c0750802e9d260f0d1d4044419dcba21e638219df1f8e1e8ad6fe8f86f",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "L1CrossDomainMessenger",
@@ -81,6 +81,7 @@
         "startingTimestamp": 1718640215,
         "SUBMISSION_INTERVAL": 8640,
         "submissionInterval": 8640,
+        "upgradeCount": 1,
         "version": "1.8.0"
       }
     },
@@ -109,6 +110,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0xadE916De67511E5C24af4174Be67143d0dA94959",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -174,6 +176,7 @@
         "startBlock": 20112981,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x05a220507e8F4c73a446DbAfC5607016A7D5Eab0",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -261,6 +264,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       }
     },
@@ -298,6 +302,7 @@
         "superchainConfig": "0xadE916De67511E5C24af4174Be67143d0dA94959",
         "SYSTEM_CONFIG": "0x504D56cf68f791B45E3A2e895B0e1562f3431328",
         "systemConfig": "0x504D56cf68f791B45E3A2e895B0e1562f3431328",
+        "upgradeCount": 1,
         "version": "2.5.0"
       }
     },
@@ -386,6 +391,7 @@
         "$implementation": "0x351ABA1B5B72E6bA8d530740f073993069e7BC69",
         "bridge": "0xed7525946A09056C6AaE29941b8323017382050e",
         "BRIDGE": "0xed7525946A09056C6AaE29941b8323017382050e",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     },
@@ -416,6 +422,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0xadE916De67511E5C24af4174Be67143d0dA94959",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     }

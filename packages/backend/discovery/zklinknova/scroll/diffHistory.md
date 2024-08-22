@@ -1,3 +1,45 @@
+Generated with discovered.json: 0x0faf51b50cda474790690bffbfd4380d8d9d36e0
+
+# Diff at Thu, 22 Aug 2024 11:22:17 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 7788134
+- current block number: 7788134
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 7788134 (main branch discovery), not current.
+
+```diff
+    contract zkLink (0x119B9459D9119D07c23aD06778AeaBec804Fd1a2) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract L1ERC20Bridge (0x3C7c0ebFCD5786ef48df5ed127cdDEb806db976c) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract ScrollL2Gateway (0xd8428A59B60Df2d81514D429D57DF23293f1bCe7) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0xba17e846374d11726b45eed293ba3894a17344ac
 
 # Diff at Wed, 21 Aug 2024 10:08:56 GMT:

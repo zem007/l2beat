@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19816414,
   "configHash": "0x79ab0e953135f51ef67edee8308d7def1f7b57f24e77fe39d6d60da30592bd08",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "DefiBridgeProxy",
@@ -138,6 +138,7 @@
           "0xD64791E747188b0e5061fC65b56Bf20FeE2e3321"
         ],
         "rollupStateHash": "0xa0b5fd7668d98634fb7cbd339e1bb36d27da4976af2a8ccb8e9d47cb72d2d5fc",
+        "upgradeCount": 3,
         "verifier": "0xb7baA1420f88b7758E341c93463426A2b7651CFB"
       },
       "derivedName": "RollupProcessorV3"

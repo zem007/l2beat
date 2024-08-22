@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19531527,
   "configHash": "0xda2ff96fd6b62e3e863cfa2a09f32c1024251fbb46b4a150e1db5ed44869d008",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "DeBridgeGate",
@@ -40,6 +40,7 @@
         "paused": false,
         "signatureVerifier": "0x949b3B3c098348b879C9e4F15cecc8046d9C8A8c",
         "SUBMISSION_PREFIX": 1,
+        "upgradeCount": 6,
         "version": 421,
         "weth": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
         "wethGate": "0xFCf83648b8cDeF62e5d03319a6f1FCE16e4D6A59"
@@ -96,6 +97,7 @@
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "implementation": "0xCAceBE8c354b70Fa6E3107f3F6F699e4Fbb3A98B",
         "tokenImplementation": "0xCAceBE8c354b70Fa6E3107f3F6F699e4Fbb3A98B",
+        "upgradeCount": 1,
         "version": 110
       }
     },
@@ -118,6 +120,7 @@
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
         "submissionChainIdFrom": 0,
         "submissionNativeSender": "0x",
+        "upgradeCount": 6,
         "version": 423
       }
     },
@@ -159,6 +162,7 @@
         ],
         "requiredOraclesCount": 0,
         "submissionsInBlock": 1,
+        "upgradeCount": 2,
         "version": 201
       },
       "derivedName": "SignatureVerifier"
@@ -207,6 +211,7 @@
         "getChainId": 1,
         "paused": false,
         "treasury": "0xa0D6062Be29710c666aE850395Ac1A2AeCd14885",
+        "upgradeCount": 2,
         "version": 400
       }
     },

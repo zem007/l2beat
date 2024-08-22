@@ -1,3 +1,37 @@
+Generated with discovered.json: 0x4d4a010f203bd8bbb15a0035fcc156e7e1fe3f1c
+
+# Diff at Thu, 22 Aug 2024 11:20:16 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20568363
+- current block number: 20568363
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20568363 (main branch discovery), not current.
+
+```diff
+    contract L1ERC20Bridge_wstETH (0x41527B2d03844dB6b0945f25702cB958b6d55989) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract L1ERC20Bridge (0x57891966931Eb4Bb6FB81430E6cE0A03AAbDe063) {
+    +++ description: None
+      values.upgradeCount:
++        8
+    }
+```
+
 Generated with discovered.json: 0xa78edb0e13f75aefdf487a6a4a87de5623550883
 
 # Diff at Tue, 20 Aug 2024 07:32:29 GMT:

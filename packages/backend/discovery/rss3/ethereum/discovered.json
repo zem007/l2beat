@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 19918622,
   "configHash": "0x851dcefde7568133fa263a9fffe22037cc44668d4ad094c716282c29d4b5ba2a",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ProxyAdmin",
@@ -83,6 +83,7 @@
         "$implementation": "0xa5a46DAaDAF1b2ae96F6FE85Ae81470126967A0E",
         "bridge": "0x4cbab69108Aa72151EDa5A3c164eA86845f18438",
         "BRIDGE": "0x4cbab69108Aa72151EDa5A3c164eA86845f18438",
+        "upgradeCount": 1,
         "version": "1.8.0"
       },
       "derivedName": "OptimismMintableERC20Factory"
@@ -106,6 +107,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.0.0"
       }
     },
@@ -131,6 +133,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x3e5FaB39eD4eFB4fc29A5201059AE819f2f0418A",
+        "upgradeCount": 0,
         "version": "2.0.0"
       },
       "derivedName": "L1StandardBridge"
@@ -165,6 +168,7 @@
         "superchainConfig": "0x3e5FaB39eD4eFB4fc29A5201059AE819f2f0418A",
         "SYSTEM_CONFIG": "0x80e73D6BfC73c567032304C3891a06c2d9954d09",
         "systemConfig": "0x80e73D6BfC73c567032304C3891a06c2d9954d09",
+        "upgradeCount": 1,
         "version": "2.1.0"
       },
       "derivedName": "OptimismPortal"
@@ -223,6 +227,7 @@
         "sequencerInbox": "0xfFFF000000000000000000000000000000012553",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x6FD177Da12124769677C41AA83944f6efAfc7cd1",
+        "upgradeCount": 1,
         "version": "1.11.0",
         "VERSION": 0
       },
@@ -315,6 +320,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x3e5FaB39eD4eFB4fc29A5201059AE819f2f0418A",
+        "upgradeCount": 1,
         "version": "2.0.0"
       },
       "derivedName": "L1ERC721Bridge"
@@ -357,6 +363,7 @@
         "startingTimestamp": 1709858519,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 1,
         "version": "1.7.0"
       },
       "derivedName": "L2OutputOracle"

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20491473,
   "configHash": "0x5a18dc94a699ce771faca7fc8fd756e0d22f96fe60d5e177d853ca3c8c90f379",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "FflonkVerifier",
@@ -51,7 +51,8 @@
         "SIGNATURE_INITIALIZE_TX_V": 27,
         "TIMESTAMP_RANGE": 36,
         "trustedSequencer": "0x353800524721e11B453f73f523dD8840c215a213",
-        "trustedSequencerURL": "https://witnesschain-sequencer.eu-north-2.gateway.fm/"
+        "trustedSequencerURL": "https://witnesschain-sequencer.eu-north-2.gateway.fm/",
+        "upgradeCount": 1
       },
       "derivedName": "PolygonValidiumStorageMigration"
     },
@@ -100,7 +101,8 @@
           ]
         ],
         "owner": "0xd0676f1Ee81d7C6fe9B0F2EEf9FF74C3E984f94b",
-        "requiredAmountOfSignatures": 1
+        "requiredAmountOfSignatures": 1,
+        "upgradeCount": 1
       },
       "derivedName": "PolygonDataCommittee"
     }

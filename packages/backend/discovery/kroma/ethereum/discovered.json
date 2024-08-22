@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20232340,
   "configHash": "0x2dc78fa0c026b5bfa1b50ed5ae271d153b773a2e2f38e5ace3d7934eae709860",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "L2OutputOracle",
@@ -36,6 +36,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1693880387,
         "SUBMISSION_INTERVAL": 1800,
+        "upgradeCount": 1,
         "VALIDATOR_POOL": "0xFdFF462845953D90719A78Fd12a2d103541d2103",
         "version": "1.0.0"
       },
@@ -100,6 +101,7 @@
         "getMinDelay": 0,
         "PROPOSER_ROLE": "0xb09aa5aeb3702cfd50b6b62bc4532604938f21248a27a1d5ca736082b6819cc1",
         "TIMELOCK_ADMIN_ROLE": "0x5f58e3a2316349923ce3780f8d587db2d72378aed66a8261c916544fa6846ca5",
+        "upgradeCount": 2,
         "version": "1.0.0"
       },
       "derivedName": "TimeLock"
@@ -130,6 +132,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0x3971EB866AA9b2b8aFEa8a7C816F3b7e8b195a35",
+        "upgradeCount": 1,
         "VALIDATOR_POOL": "0xFdFF462845953D90719A78Fd12a2d103541d2103",
         "version": "1.0.0",
         "ZK_MERKLE_TRIE": "0x339208824010425cBE73201ceD4372308ACD610B"
@@ -182,6 +185,7 @@
         "sequencerInbox": "0xfF00000000000000000000000000000000000255",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x994C074BD9503e4f01CB834e2c409FA16b41E587",
+        "upgradeCount": 1,
         "validatorRewardScalar": 5000,
         "version": "1.0.0",
         "VERSION": 0
@@ -213,6 +217,7 @@
         "GOVERNOR": "0xb3c415c2Aad428D5570208e1772cb68e7D06a537",
         "quorum": 7,
         "transactionCount": 3,
+        "upgradeCount": 2,
         "version": "1.1.0"
       },
       "fieldMeta": {
@@ -255,6 +260,7 @@
         "RELAY_CONSTANT_OVERHEAD": 200000,
         "RELAY_GAS_CHECK_BUFFER": 5000,
         "RELAY_RESERVED_GAS": 40000,
+        "upgradeCount": 1,
         "version": "1.0.0"
       },
       "derivedName": "L1CrossDomainMessenger"
@@ -276,6 +282,7 @@
         "$implementation": "0xbB1cDB5Cc35B1c9801DA8772aCBcDbd323A912D9",
         "MESSENGER": "0x46B8bB4C5dd27bB42807Db477af4d1a7C8A5B746",
         "OTHER_BRIDGE": "0x420000000000000000000000000000000000000A",
+        "upgradeCount": 2,
         "version": "1.0.0"
       },
       "derivedName": "L1ERC721Bridge"
@@ -372,6 +379,7 @@
       "values": {
         "$admin": "0x665c23A5722B6A237fa6Be2B49c0A94504db1edd",
         "$implementation": "0x4cd05aB629055a449617a28E3466660403eA7126",
+        "upgradeCount": 3,
         "version": "0.1.5"
       }
     },
@@ -405,6 +413,7 @@
         "MAX_TXS": 100,
         "PROVING_TIMEOUT": 28800,
         "SECURITY_COUNCIL": "0x3de211088dF516da72efe68D386b561BEE256Ec4",
+        "upgradeCount": 3,
         "version": "1.1.0",
         "ZK_MERKLE_TRIE": "0x339208824010425cBE73201ceD4372308ACD610B",
         "ZK_VERIFIER": "0x6deb6a630D7b486c1C08d4016AEe3835a2F52Fa7"
@@ -434,6 +443,7 @@
         "$implementation": "0xE4e9F3AD8A6F224c4b39854D3550AD258441AfE3",
         "MESSENGER": "0x46B8bB4C5dd27bB42807Db477af4d1a7C8A5B746",
         "paused": false,
+        "upgradeCount": 1,
         "version": "1.0.0"
       },
       "derivedName": "USDCBridge"
@@ -479,7 +489,8 @@
         ],
         "owner": "0x7D76Ae60dcc2FdB57d3924024E2Ad940B76Ef81f",
         "paused": false,
-        "pendingOwner": "0x0000000000000000000000000000000000000000"
+        "pendingOwner": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 3
       },
       "derivedName": "SpectrumHub"
     },
@@ -500,6 +511,7 @@
         "$implementation": "0x404133EdF24F56b7dD9c6d89Fb56bb35244461B4",
         "MESSENGER": "0x46B8bB4C5dd27bB42807Db477af4d1a7C8A5B746",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000009",
+        "upgradeCount": 1,
         "version": "1.0.0"
       },
       "derivedName": "L1StandardBridge"
@@ -551,7 +563,8 @@
         },
         "owner": "0x7D76Ae60dcc2FdB57d3924024E2Ad940B76Ef81f",
         "paused": false,
-        "pendingOwner": "0x0000000000000000000000000000000000000000"
+        "pendingOwner": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 2
       },
       "derivedName": "SpectrumCore"
     },
@@ -579,7 +592,8 @@
         "$implementation": "0x0114fd85c342F39e22E2c8e1Be512ade856309C0",
         "owner": "0x7D76Ae60dcc2FdB57d3924024E2Ad940B76Ef81f",
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "EcoProxyAdmin"
     },
@@ -607,7 +621,8 @@
         "$implementation": "0x0114fd85c342F39e22E2c8e1Be512ade856309C0",
         "owner": "0x7D76Ae60dcc2FdB57d3924024E2Ad940B76Ef81f",
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "EcoProxyAdmin"
     },
@@ -648,6 +663,7 @@
         "state": [],
         "timelock": "0x22605A12cB77Fe420B0cC1263cEb58a77352FDc1",
         "token": "0xe4D08346609055c091D3DEECdAAd3Bf83119B08c",
+        "upgradeCount": 2,
         "version": "1.0.0",
         "votingDelay": 0,
         "votingPeriod": 21600
@@ -678,7 +694,8 @@
         "$implementation": "0x0114fd85c342F39e22E2c8e1Be512ade856309C0",
         "owner": "0x7D76Ae60dcc2FdB57d3924024E2Ad940B76Ef81f",
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "UPGRADE_INTERFACE_VERSION": "5.0.0"
+        "UPGRADE_INTERFACE_VERSION": "5.0.0",
+        "upgradeCount": 1
       },
       "derivedName": "EcoProxyAdmin"
     },
@@ -740,6 +757,7 @@
           "https://nft.kroma.network/sc/3.png"
         ],
         "totalSupply": 9,
+        "upgradeCount": 2,
         "version": "1.0.1"
       },
       "derivedName": "SecurityCouncilToken"
@@ -787,7 +805,8 @@
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "symbol": "spETH",
-        "totalSupply": "1213261748343680177753"
+        "totalSupply": "1213261748343680177753",
+        "upgradeCount": 1
       },
       "derivedName": "SPETH"
     },
@@ -825,6 +844,7 @@
         "TAX_DENOMINATOR": 100,
         "TAX_NUMERATOR": 20,
         "TRUSTED_VALIDATOR": "0x3aa00bb915A8e78b0523E4c365e3E70A19d329e6",
+        "upgradeCount": 3,
         "validatorCount": 361,
         "VAULT_REWARD_GAS_LIMIT": 100000,
         "version": "1.0.1"

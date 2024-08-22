@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20475247,
   "configHash": "0x85be15526d61d81a7d1d4555a2bb56835c1fd6e9c3d75cdfd5d4dd2ad6dd140f",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "LivenessModule",
@@ -104,6 +104,7 @@
         "$implementation": "0xE01efbeb1089D1d1dB9c6c8b135C934C0734c846",
         "bridge": "0x6d0f65D59b55B0FEC5d2d15365154DcADC140BF3",
         "BRIDGE": "0x6d0f65D59b55B0FEC5d2d15365154DcADC140BF3",
+        "upgradeCount": 3,
         "version": "1.9.0"
       }
     },
@@ -221,6 +222,7 @@
         "startingTimestamp": 1711563515,
         "SUBMISSION_INTERVAL": 21600,
         "submissionInterval": 21600,
+        "upgradeCount": 3,
         "version": "1.8.0"
       },
       "derivedName": "L2OutputOracle"
@@ -259,6 +261,7 @@
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
         "SYSTEM_CONFIG": "0x7BD909970B0EEdcF078De6Aeff23ce571663b8aA",
         "systemConfig": "0x7BD909970B0EEdcF078De6Aeff23ce571663b8aA",
+        "upgradeCount": 3,
         "version": "2.5.0"
       },
       "derivedName": "OptimismPortal"
@@ -340,6 +343,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 3,
         "version": "2.1.0"
       }
     },
@@ -458,6 +462,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x95703e0982140D16f8ebA6d158FccEde42f04a4C",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     },
@@ -518,6 +523,7 @@
         "startBlock": 19527368,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x4a65F5da5e80DEFfEA844eAa15CE130e80605dc5",
+        "upgradeCount": 3,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -585,6 +591,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 3,
         "version": "1.1.0"
       },
       "derivedName": "SuperchainConfig"

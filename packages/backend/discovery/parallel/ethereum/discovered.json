@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20539980,
   "configHash": "0x8988b388db1cfe91cd0e453ba76745b6238dfee80addb15d3e2e78e1a3695b85",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Inbox",
@@ -25,7 +25,8 @@
         "getProxyAdmin": "0x6d4bE7c1a618D43bE4a1Bd7F8eC8E079Ff52Fb4d",
         "maxDataSize": 117964,
         "paused": false,
-        "sequencerInbox": "0xb4795A0edae98d7820C37F06f6b858e7acb51DF8"
+        "sequencerInbox": "0xb4795A0edae98d7820C37F06f6b858e7acb51DF8",
+        "upgradeCount": 1
       }
     },
     {
@@ -46,7 +47,8 @@
         "counterpartGateway": "0x2bc118eC75c4154DC164Ee663E09F5F83232b1DC",
         "inbox": "0x12485B9d469c1D51d05b5C39e009D50eF0170cF7",
         "l2Weth": "0xe3bb30f7742eC97Be5D60789A2b1273e462C0287",
-        "router": "0x5D657b905275F36AD62C3d5C36966975613aFB96"
+        "router": "0x5D657b905275F36AD62C3d5C36966975613aFB96",
+        "upgradeCount": 1
       },
       "derivedName": "L1WethGateway"
     },
@@ -109,7 +111,8 @@
         "osp": "0x57EA090Ac0554d174AE0e2855B460e84A1A7C221",
         "resultReceiver": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877",
         "sequencerInbox": "0xb4795A0edae98d7820C37F06f6b858e7acb51DF8",
-        "totalChallengesCreated": 0
+        "totalChallengesCreated": 0,
+        "upgradeCount": 2
       },
       "derivedName": "ChallengeManager"
     },
@@ -135,7 +138,8 @@
         "$admin": "0x6d4bE7c1a618D43bE4a1Bd7F8eC8E079Ff52Fb4d",
         "$implementation": "0x13BE515E44Eefaf3eBEFAD684F1FBB574Ac0A494",
         "bridge": "0x5a961c7D162195a9Dc5a357Cc168b0694283382E",
-        "rollup": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877"
+        "rollup": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877",
+        "upgradeCount": 1
       }
     },
     {
@@ -180,7 +184,8 @@
         "rollup": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877",
         "sequencerInbox": "0xb4795A0edae98d7820C37F06f6b858e7acb51DF8",
         "sequencerMessageCount": 1249,
-        "sequencerReportedSubMessageCount": 533911
+        "sequencerReportedSubMessageCount": 533911,
+        "upgradeCount": 1
       },
       "derivedName": "Bridge"
     },
@@ -204,6 +209,7 @@
         "inbox": "0x12485B9d469c1D51d05b5C39e009D50eF0170cF7",
         "owner": "0xD368b8dC5cB6fA26A53b7588db9A87E509A72d89",
         "router": "0x0000000000000000000000000000000000000000",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       }
     },
@@ -367,6 +373,7 @@
         "inbox": "0x12485B9d469c1D51d05b5C39e009D50eF0170cF7",
         "l2BeaconProxyFactory": "0x533Ebf8893c5bB7DDe47938507e239789E299a5f",
         "router": "0x5D657b905275F36AD62C3d5C36966975613aFB96",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1ERC20Gateway"
@@ -425,6 +432,7 @@
         "inbox": "0x12485B9d469c1D51d05b5C39e009D50eF0170cF7",
         "owner": "0xD368b8dC5cB6fA26A53b7588db9A87E509A72d89",
         "router": "0x5D657b905275F36AD62C3d5C36966975613aFB96",
+        "upgradeCount": 1,
         "whitelist": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "L1CustomGateway"
@@ -474,6 +482,7 @@
         "setIsBatchPosterCount": 4,
         "totalDelayedMessagesRead": 3692,
         "TREE_DAS_MESSAGE_HEADER_FLAG": "0x08",
+        "upgradeCount": 3,
         "ZERO_HEAVY_MESSAGE_HEADER_FLAG": "0x20"
       },
       "derivedName": "SequencerInbox"
@@ -501,7 +510,8 @@
         "l2ToL1Sender": "0x0000000000000000000000000000000000000000",
         "l2ToL1Timestamp": 0,
         "OUTBOX_VERSION": 2,
-        "rollup": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877"
+        "rollup": "0x6594085ca55a2B3a5fAD1C57A270D060eEa99877",
+        "upgradeCount": 1
       },
       "derivedName": "Outbox"
     },
@@ -547,7 +557,8 @@
         },
         "ADMIN_ROLE": "0xa49807205ce4d355092ef5a8a18f56e8913cf4a201fbe287825b095693c21775",
         "DEFAULT_ADMIN_ROLE": "0x0000000000000000000000000000000000000000000000000000000000000000",
-        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63"
+        "EXECUTOR_ROLE": "0xd8aa0f3194971a2a116679f7c2090f6939c8d4e01a2a8d7e41d55e5351469e63",
+        "upgradeCount": 1
       },
       "derivedName": "UpgradeExecutor"
     }

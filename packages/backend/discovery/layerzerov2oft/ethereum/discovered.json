@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20240831,
   "configHash": "0x7fda11b24b5eed1d80b7cd4d4072385ee8cff7a3cc6537727d204842c13b9d88",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "WTIA_OFTAdapter",
@@ -41,7 +41,8 @@
       "sinceTimestamp": 1706308043,
       "values": {
         "$admin": "0xa36797bA947b378AefE5f726Cd87766CD3c25Ee3",
-        "$implementation": "0xDaC2d26317C42ae3CB21357B73404120E1dA4232"
+        "$implementation": "0xDaC2d26317C42ae3CB21357B73404120E1dA4232",
+        "upgradeCount": 2
       }
     },
     {
@@ -439,6 +440,7 @@
         "MESSAGE_TOPIC_V2": "0x1ab700d4ced0c005b164c0f789fd09fcbb0156d4c2041b8a3bfbcd961cd1567f",
         "mptValidator": "0x8022ceAa2771FdC188a6f3c783e7207F53B121D2",
         "owner": "0xA926F089e07A9fd7A1A9438b1Bb801963807A6d7",
+        "upgradeCount": 2,
         "zkMptValidator": "0x4b9D6177a832376867F1723158BD6eF5E9c7fc5f"
       },
       "derivedName": "ZkBridgeOracleV2"

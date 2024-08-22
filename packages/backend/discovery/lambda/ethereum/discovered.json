@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20111587,
   "configHash": "0xf40621ba52d032772863ef72d1755b0e07f65f39fab7b97ef138b43c34fa60db",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "SuperchainConfig",
@@ -29,6 +29,7 @@
         "GUARDIAN_SLOT": "0xd30e835d3f35624761057ff5b27d558f97bd5be034621e62240e5c0b784abe68",
         "paused": false,
         "PAUSED_SLOT": "0x54176ff9944c4784e5857ec4e5ef560a462c483bf534eda43f91bb01a470b1b6",
+        "upgradeCount": 1,
         "version": "1.1.0"
       }
     },
@@ -169,6 +170,7 @@
         "startingTimestamp": 1713345623,
         "SUBMISSION_INTERVAL": 1800,
         "submissionInterval": 1800,
+        "upgradeCount": 1,
         "version": "1.8.0"
       },
       "derivedName": "L2OutputOracle"
@@ -194,6 +196,7 @@
         "$implementation": "0x4CA20D48C87129Df90A3cAd73000568331548316",
         "bridge": "0xEEBd256da18d0BF20c3CEb785a0946D41A7F408F",
         "BRIDGE": "0xEEBd256da18d0BF20c3CEb785a0946D41A7F408F",
+        "upgradeCount": 1,
         "version": "1.9.0"
       }
     },
@@ -248,6 +251,7 @@
         "superchainConfig": "0x01Cf2c778E56360dCd5e1396373c0Aa6ae794E2c",
         "SYSTEM_CONFIG": "0xae809d42f861A6381b0DFCf7216556e95362a7a8",
         "systemConfig": "0xae809d42f861A6381b0DFCf7216556e95362a7a8",
+        "upgradeCount": 1,
         "version": "2.5.0"
       },
       "derivedName": "OptimismPortal"
@@ -312,6 +316,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000014",
         "paused": false,
         "superchainConfig": "0x01Cf2c778E56360dCd5e1396373c0Aa6ae794E2c",
+        "upgradeCount": 1,
         "version": "2.1.0"
       }
     },
@@ -377,6 +382,7 @@
         "startBlock": 19674409,
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0x4C61Be5626D1Fb101324f0F41542Da30C0aDa4D4",
+        "upgradeCount": 1,
         "version": "1.12.0",
         "VERSION": 0
       },
@@ -415,6 +421,7 @@
         "otherBridge": "0x4200000000000000000000000000000000000010",
         "paused": false,
         "superchainConfig": "0x01Cf2c778E56360dCd5e1396373c0Aa6ae794E2c",
+        "upgradeCount": 0,
         "version": "2.1.0"
       }
     }

@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20577574,
   "configHash": "0x8030550dbc89f807813311b14765b05cad184c040087b7442a7bf31243db9d3c",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "Permit2",
@@ -17,13 +17,23 @@
     {
       "name": "SharedProxyAdmin",
       "address": "0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A",
-      "assignedPermissions": {
-        "upgrade": [
-          "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
-          "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
-          "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb"
-        ]
-      },
+      "receivedPermissions": [
+        {
+          "permission": "upgrade",
+          "target": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
+          "via": []
+        },
+        {
+          "permission": "upgrade",
+          "target": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
+          "via": []
+        },
+        {
+          "permission": "upgrade",
+          "target": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb",
+          "via": []
+        }
+      ],
       "sinceTimestamp": 1679653103,
       "values": {
         "$immutable": true,
@@ -60,6 +70,13 @@
       "name": "Bridge",
       "address": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
       "proxyType": "EIP1967 proxy",
+      "issuedPermissions": [
+        {
+          "permission": "upgrade",
+          "target": "0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A",
+          "via": []
+        }
+      ],
       "ignoreInWatchMode": ["getRoot"],
       "sinceTimestamp": 1679653127,
       "values": {
@@ -74,6 +91,7 @@
         "isEmergencyState": false,
         "networkID": 0,
         "polygonRollupManager": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
+        "upgradeCount": 2,
         "WETHToken": "0x0000000000000000000000000000000000000000"
       },
       "derivedName": "PolygonZkEVMBridgeV2"
@@ -145,6 +163,13 @@
       "name": "PolygonRollupManager",
       "address": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
       "proxyType": "EIP1967 proxy",
+      "issuedPermissions": [
+        {
+          "permission": "upgrade",
+          "target": "0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A",
+          "via": []
+        }
+      ],
       "ignoreInWatchMode": [
         "getRollupExitRoot",
         "lastAggregationTimestamp",
@@ -325,6 +350,7 @@
         "totalSequencedBatches": 299892,
         "totalVerifiedBatches": 299334,
         "trustedAggregatorTimeout": 432000,
+        "upgradeCount": 4,
         "verifyBatchTimeTarget": 1800
       },
       "fieldMeta": {
@@ -346,6 +372,13 @@
       "name": "GlobalExitRootV2",
       "address": "0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb",
       "proxyType": "EIP1967 proxy",
+      "issuedPermissions": [
+        {
+          "permission": "upgrade",
+          "target": "0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A",
+          "via": []
+        }
+      ],
       "ignoreInWatchMode": ["getRoot", "depositCount"],
       "sinceTimestamp": 1679653151,
       "values": {
@@ -354,7 +387,8 @@
         "bridgeAddress": "0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe",
         "depositCount": 42129,
         "getRoot": "0xadadd391bfc2fed81be46efb1ebf2b271ff2f01c536ccd2b89aef6fb53dd3cbc",
-        "rollupManager": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2"
+        "rollupManager": "0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2",
+        "upgradeCount": 2
       },
       "derivedName": "PolygonZkEVMGlobalExitRootV2"
     },

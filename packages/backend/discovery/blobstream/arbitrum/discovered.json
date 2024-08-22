@@ -3,7 +3,7 @@
   "chain": "arbitrum",
   "blockNumber": 208089280,
   "configHash": "0x4dff8d7b222241b058a0a2d54be800864aecef46df03c61606f7c7f313a82491",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "SuccinctFeeVault",
@@ -130,6 +130,7 @@
         "nextHeaderFunctionId": "0x044611c8d01cf88e09811f3270a654e7faf319e96b38f3dd7f9d218c8bb4d0ef",
         "state_proofNonce": 1203,
         "TIMELOCK_ROLE": "0xf66846415d2bf9eabda9e84793ff9c0ea96d87f50fc41e66aa16469c6a442f05",
+        "upgradeCount": 2,
         "VERSION": "0.1.0"
       },
       "derivedName": "BlobstreamX"

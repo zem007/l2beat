@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20325087,
   "configHash": "0x1faa6e35d2bc7ed2a0ebe00bbb2796abcb918b5266d117b92e441acd4aded7bf",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "XLayerValidiumDAC",
@@ -34,7 +34,8 @@
           ]
         ],
         "owner": "0x491619874b866c3cDB7C8553877da223525ead01",
-        "requiredAmountOfSignatures": 2
+        "requiredAmountOfSignatures": 2,
+        "upgradeCount": 1
       },
       "derivedName": "PolygonDataCommittee"
     },
@@ -101,7 +102,8 @@
         "SIGNATURE_INITIALIZE_TX_V": 27,
         "TIMESTAMP_RANGE": 36,
         "trustedSequencer": "0xAF9d27ffe4d51eD54AC8eEc78f2785D7E11E5ab1",
-        "trustedSequencerURL": "https://rpc.xlayer.tech"
+        "trustedSequencerURL": "https://rpc.xlayer.tech",
+        "upgradeCount": 1
       },
       "derivedName": "PolygonValidiumStorageMigration"
     },

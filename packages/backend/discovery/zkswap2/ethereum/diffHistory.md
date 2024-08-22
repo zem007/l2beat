@@ -1,3 +1,61 @@
+Generated with discovered.json: 0x38119bf7909e723cebdcb70cbcc24e11e6bf853c
+
+# Diff at Thu, 22 Aug 2024 11:20:11 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 16767881
+- current block number: 16767881
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 16767881 (main branch discovery), not current.
+
+```diff
+    contract Verifier (0x42F15EFE22993C88441EF3467f2E6Fa8FFA9ADef) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract ZkSync (0x6dE5bDC580f55Bc9dAcaFCB67b91674040A247e3) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract Governance (0x86E527BC3C43E6Ba3eFf3A8CAd54A7Ed09cD8E8B) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract VerifierExit (0xb56878d21F6b101f48bb55f1AA9D3F624f04E513) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
+```diff
+    contract UniswapV2Factory (0xD2cbDcd7C6b3152BdFf6549C208052E4DBcd575D) {
+    +++ description: None
+      values.upgradeCount:
++        0
+    }
+```
+
 Generated with discovered.json: 0xd7aec79d514b27d98f6e997263c8b46ee37a00c4
 
 # Diff at Wed, 21 Aug 2024 10:07:13 GMT:

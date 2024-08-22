@@ -3,7 +3,7 @@
   "chain": "base",
   "blockNumber": 15661242,
   "configHash": "0x0c0d0bcd179872a8706b012c4ecadd3454541847850f80a127ceaea39a281aea",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "ProxyAdmin",
@@ -105,6 +105,7 @@
         "sequencerInbox": "0x39f15b577F4F9eD6b819169Ac9fa0bE6eD857258",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xf64605AEe9402BC964f37Fd5d355F7420099bb6E",
+        "upgradeCount": 1,
         "version": "1.3.1",
         "VERSION": 0
       },
@@ -162,6 +163,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0x52c901666Cfc8AeE9b46A3b7C101688351529B37",
+        "upgradeCount": 1,
         "version": "1.7.2"
       },
       "derivedName": "OptimismPortal"
@@ -222,6 +224,7 @@
         "messenger": "0x727a91e8251A262A4ad5F2D5811c6cD862961759",
         "MESSENGER": "0x727a91e8251A262A4ad5F2D5811c6cD862961759",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.1"
       },
       "derivedName": "L1StandardBridge"
@@ -259,6 +262,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1709680111,
         "SUBMISSION_INTERVAL": 43200,
+        "upgradeCount": 1,
         "version": "1.3.1"
       },
       "derivedName": "L2OutputOracle"

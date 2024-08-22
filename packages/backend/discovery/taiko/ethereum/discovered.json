@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20367491,
   "configHash": "0xe4e0c6fd03b9c9ec903e56fbea2b9b1029b8ba7e8af2de80d87a9adf173f478c",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "PEMCertChainLib",
@@ -122,6 +122,7 @@
         "taiko": "0x06a9Ab27c7e2255df1815E6CC0168d7755Feb19a",
         "taiko_token": "0x10dea67478c5F8C5E2D90e5E9B26dBe60c54d800",
         "tier_router": "0x6E997f1F22C40ba37F633B08f3b07E10Ed43155a",
+        "upgradeCount": 12,
         "verifier_TIER_GUARDIAN": "0xE3D777143Ea25A6E031d1e921F396750885f43aC",
         "verifier_TIER_GUARDIAN_MINORITY": "0x579A8d63a2Db646284CBFE31FE5082c9989E985c",
         "verifier_TIER_SGX": "0xb0f3186FC1963f774f52ff455DC86aEdD0b31F81",
@@ -169,7 +170,8 @@
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "proxiableUUID": "EXPECT_REVERT",
         "symbol": "TAIKO",
-        "totalSupply": "1000000000000000000000000000"
+        "totalSupply": "1000000000000000000000000000",
+        "upgradeCount": 5
       },
       "derivedName": "TaikoToken"
     },
@@ -294,6 +296,7 @@
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "provingAutoPauseEnabled": false,
         "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 6,
         "version": 1
       },
       "derivedName": "MainnetGuardianProver"
@@ -320,7 +323,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 6
       },
       "derivedName": "MainnetRollupAddressManager"
     },
@@ -350,7 +354,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 8
       },
       "derivedName": "MainnetProverSet"
     },
@@ -397,7 +402,8 @@
           "attributesMask": "0xfbffffffffffffff0000000000000000",
           "mrsigner": "0x8c4f5775d796503e96137f77c68a829a0056ac8ded70140b081b094490c57bff"
         },
-        "sigVerifyLib": "0x47bB416ee947fE4a4b655011aF7d6E3A1B80E6e9"
+        "sigVerifyLib": "0x47bB416ee947fE4a4b655011aF7d6E3A1B80E6e9",
+        "upgradeCount": 3
       },
       "derivedName": "AutomataDcapV3Attestation"
     },
@@ -425,7 +431,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 7
       },
       "derivedName": "MainnetERC20Vault"
     },
@@ -539,7 +546,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 5
       },
       "derivedName": "MainnetSignalService"
     },
@@ -652,7 +660,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 5
       },
       "derivedName": "MainnetSgxVerifier"
     },
@@ -700,7 +709,8 @@
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "proxiableUUID": "EXPECT_REVERT",
-        "RELAYER_MAX_PROOF_BYTES": 200000
+        "RELAYER_MAX_PROOF_BYTES": 200000,
+        "upgradeCount": 11
       },
       "derivedName": "MainnetBridge"
     },
@@ -741,6 +751,7 @@
         "pendingOwner": "0x0000000000000000000000000000000000000000",
         "provingAutoPauseEnabled": false,
         "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 6,
         "version": 1
       },
       "derivedName": "MainnetGuardianProver"
@@ -767,7 +778,8 @@
         "owner": "0x9CBeE534B5D8a6280e01a14844Ee8aF350399C7F",
         "paused": false,
         "pendingOwner": "0x0000000000000000000000000000000000000000",
-        "proxiableUUID": "EXPECT_REVERT"
+        "proxiableUUID": "EXPECT_REVERT",
+        "upgradeCount": 4
       },
       "derivedName": "MainnetSharedAddressManager"
     }

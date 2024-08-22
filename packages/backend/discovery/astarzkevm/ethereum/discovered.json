@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20325048,
   "configHash": "0xa75ac3d3673e70efc5004b51931bfbf779c046e09be2455ba9855c5111382b42",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "AstarVerifier",
@@ -68,7 +68,8 @@
         "SIGNATURE_INITIALIZE_TX_V": 27,
         "TIMESTAMP_RANGE": 36,
         "trustedSequencer": "0xA09F1c88C0194Da6b0a1c564CDBEcbF3AAd649E4",
-        "trustedSequencerURL": "https://rpc-zkevm.astar.network"
+        "trustedSequencerURL": "https://rpc-zkevm.astar.network",
+        "upgradeCount": 2
       },
       "derivedName": "PolygonValidiumStorageMigration"
     },
@@ -137,7 +138,8 @@
           ]
         ],
         "owner": "0xf98ee8c46baEa2B11e4f0450AD9D01861265F76E",
-        "requiredAmountOfSignatures": 3
+        "requiredAmountOfSignatures": 3,
+        "upgradeCount": 1
       },
       "derivedName": "PolygonDataCommittee"
     },

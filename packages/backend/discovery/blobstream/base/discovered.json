@@ -3,7 +3,7 @@
   "chain": "base",
   "blockNumber": 14061228,
   "configHash": "0xb9a699dc3638010b7b06fbf9da1dc1ffed4abf642060175f050881214908537d",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "SuccinctFeeVault",
@@ -120,6 +120,7 @@
         "nextHeaderFunctionId": "0x2ce8ca4f509cb09415b5a6ca6afa265571dac0b9f6ddb46f487e017fec71cf25",
         "state_proofNonce": 1203,
         "TIMELOCK_ROLE": "0xf66846415d2bf9eabda9e84793ff9c0ea96d87f50fc41e66aa16469c6a442f05",
+        "upgradeCount": 2,
         "VERSION": "0.1.0"
       },
       "derivedName": "BlobstreamX"

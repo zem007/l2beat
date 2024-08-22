@@ -3,7 +3,7 @@
   "chain": "ethereum",
   "blockNumber": 20491472,
   "configHash": "0xb7055c80cbad157609938410529e9cd3df380055c0f402a834c492918f2cba62",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "BridgeAdminMultiSig",
@@ -67,6 +67,7 @@
         "trustedAggregatorTimeout": 432000,
         "trustedSequencer": "0x9eed06d1566F0cAfdA3df624E2376864cA84Db6c",
         "trustedSequencerURL": "http://main-rpc-1.zkfair-internal.mainnet:8123",
+        "upgradeCount": 1,
         "verifyBatchTimeTarget": 1800
       },
       "derivedName": "CDKValidium"
@@ -123,7 +124,8 @@
         "$admin": "0xb57b9101dEc7dC1635B576fFf71F2f522C970EF3",
         "$implementation": "0xC4CD3D0b31904969a397A98AcE8bDF2A94ba8615",
         "bridgeAddress": "0x9cb4706e20A18E59a48ffa7616d700A3891e1861",
-        "rollupAddress": "0x1CbC08bf0D48b18F9f97796c61352b192d1850A5"
+        "rollupAddress": "0x1CbC08bf0D48b18F9f97796c61352b192d1850A5",
+        "upgradeCount": 1
       },
       "derivedName": "PolygonZkEVMGlobalExitRoot"
     },
@@ -202,7 +204,8 @@
           ]
         ],
         "owner": "0xa57c2B747193fe3F9CC8bea89103B7d76B8A0c70",
-        "requiredAmountOfSignatures": 3
+        "requiredAmountOfSignatures": 3,
+        "upgradeCount": 1
       },
       "fieldMeta": {
         "members": { "description": "URL and address of the DAC member" }
@@ -233,7 +236,8 @@
         "globalExitRootManager": "0x72abD6416Ea2d99ad30C86B90e7409Dc2d1ba40b",
         "isEmergencyState": false,
         "networkID": 0,
-        "polygonZkEVMaddress": "0x1CbC08bf0D48b18F9f97796c61352b192d1850A5"
+        "polygonZkEVMaddress": "0x1CbC08bf0D48b18F9f97796c61352b192d1850A5",
+        "upgradeCount": 1
       },
       "derivedName": "PolygonZkEVMBridge"
     },

@@ -1,3 +1,29 @@
+Generated with discovered.json: 0x5587fe472f868a2422f972b554068c62131d9c2d
+
+# Diff at Thu, 22 Aug 2024 11:19:37 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 19876012
+- current block number: 19876012
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 19876012 (main branch discovery), not current.
+
+```diff
+    contract SynapseBridge (0x2796317b0fF8538F253012862c06787Adfb8cEb6) {
+    +++ description: None
+      values.upgradeCount:
++        11
+    }
+```
+
 Generated with discovered.json: 0x58ed652b1e13572ac463ca791dbcd2520f17f327
 
 # Diff at Wed, 21 Aug 2024 10:06:20 GMT:

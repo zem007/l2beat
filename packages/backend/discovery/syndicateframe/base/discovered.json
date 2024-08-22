@@ -3,7 +3,7 @@
   "chain": "base",
   "blockNumber": 18674800,
   "configHash": "0xf98611165f5abbbf65d8da4632824d2cc0fcc293c72b7d86c7db088cb1fbd810",
-  "version": 11,
+  "version": 13,
   "contracts": [
     {
       "name": "L1CrossDomainMessenger",
@@ -64,6 +64,7 @@
         "startingBlockNumber": 0,
         "startingTimestamp": 1707367873,
         "SUBMISSION_INTERVAL": 720,
+        "upgradeCount": 1,
         "version": "1.3.1"
       },
       "derivedName": "L2OutputOracle"
@@ -94,6 +95,7 @@
         },
         "paused": false,
         "SYSTEM_CONFIG": "0xc2dA6Afd69F0ce69313F01c73f77E6471f06b4E4",
+        "upgradeCount": 1,
         "version": "1.7.2"
       },
       "derivedName": "OptimismPortal"
@@ -187,6 +189,7 @@
         "sequencerInbox": "0x97395dd253E2d096A0CaA62a574895c3C2F2b2e0",
         "UNSAFE_BLOCK_SIGNER_SLOT": "0x65a7ed542fb37fe237fdfbdd70b31598523fe5b32879e307bae27a0bd9581c08",
         "unsafeBlockSigner": "0xfa99F7392668247Ebb4F7e1Fb6d237692d64C99c",
+        "upgradeCount": 1,
         "version": "1.3.1",
         "VERSION": 0
       },
@@ -257,6 +260,7 @@
         "messenger": "0x0ED44be59Ea62a9960CB97f8aC54088304D05791",
         "MESSENGER": "0x0ED44be59Ea62a9960CB97f8aC54088304D05791",
         "OTHER_BRIDGE": "0x4200000000000000000000000000000000000010",
+        "upgradeCount": 0,
         "version": "1.1.1"
       }
     }

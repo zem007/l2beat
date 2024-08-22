@@ -1,3 +1,61 @@
+Generated with discovered.json: 0x7ece4243f8cc616a2015d02d2df5b3817874e220
+
+# Diff at Thu, 22 Aug 2024 11:18:52 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20577574
+- current block number: 20577574
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20577574 (main branch discovery), not current.
+
+```diff
+    contract SharedProxyAdmin (0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A) {
+    +++ description: None
+      assignedPermissions:
+-        {"upgrade":["0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe","0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2","0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb"]}
+      receivedPermissions:
++        [{"permission":"upgrade","target":"0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe","via":[]},{"permission":"upgrade","target":"0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2","via":[]},{"permission":"upgrade","target":"0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb","via":[]}]
+    }
+```
+
+```diff
+    contract Bridge (0x2a3DD3EB832aF982ec71669E178424b10Dca2EDe) {
+    +++ description: None
+      values.upgradeCount:
++        2
+      issuedPermissions:
++        [{"permission":"upgrade","target":"0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A","via":[]}]
+    }
+```
+
+```diff
+    contract PolygonRollupManager (0x5132A183E9F3CB7C848b0AAC5Ae0c4f0491B7aB2) {
+    +++ description: None
+      values.upgradeCount:
++        4
+      issuedPermissions:
++        [{"permission":"upgrade","target":"0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A","via":[]}]
+    }
+```
+
+```diff
+    contract GlobalExitRootV2 (0x580bda1e7A0CFAe92Fa7F6c20A3794F169CE3CFb) {
+    +++ description: None
+      values.upgradeCount:
++        2
+      issuedPermissions:
++        [{"permission":"upgrade","target":"0x0F99738B2Fc14D77308337f3e2596b63aE7BCC4A","via":[]}]
+    }
+```
+
 Generated with discovered.json: 0x71fee6329a04ca0a77fd7c6f70ad59ad5e7df866
 
 # Diff at Wed, 21 Aug 2024 14:24:32 GMT:

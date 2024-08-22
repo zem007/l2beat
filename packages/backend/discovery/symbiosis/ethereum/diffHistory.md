@@ -1,3 +1,45 @@
+Generated with discovered.json: 0x37b4edda28311a8ff2c8f19c6513f56bb2146dac
+
+# Diff at Thu, 22 Aug 2024 11:19:35 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 19532236
+- current block number: 19532236
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 19532236 (main branch discovery), not current.
+
+```diff
+    contract BridgeV2 (0x5523985926Aa12BA58DC5Ad00DDca99678D7227E) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
+```diff
+    contract Portal (0xb8f275fBf7A959F4BCE59999A2EF122A099e81A8) {
+    +++ description: None
+      values.upgradeCount:
++        6
+    }
+```
+
+```diff
+    contract Bridge (0xd5F0f8dB993D26F5df89E70a83d32b369DcCdaa0) {
+    +++ description: None
+      values.upgradeCount:
++        5
+    }
+```
+
 Generated with discovered.json: 0x3af51d8edb4635087182fcd8bccb9cd71783fdf9
 
 # Diff at Wed, 21 Aug 2024 10:06:18 GMT:

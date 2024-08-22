@@ -1,3 +1,29 @@
+Generated with discovered.json: 0xf13dbd793f5efb3a98c3f8cea02587a60d97fe1e
+
+# Diff at Thu, 22 Aug 2024 11:19:47 GMT:
+
+- author: Mateusz Radomski (<radomski.main@protonmail.com>)
+- comparing to: main@bf2d0ebf21a279d76dfafc24de12b751244afaf6 block: 20576820
+- current block number: 20576820
+
+## Description
+
+Discovery rerun on the same block number with only config-related changes.
+
+## Config/verification related changes
+
+Following changes come from updates made to the config file,
+or/and contracts becoming verified, not from differences found during
+discovery. Values are for block 20576820 (main branch discovery), not current.
+
+```diff
+    contract UpgradeableLockReleaseTokenPool (0x5756880B6a1EAba0175227bf02a7E87c1e02B28C) {
+    +++ description: None
+      values.upgradeCount:
++        1
+    }
+```
+
 Generated with discovered.json: 0x900a1becf6288cb4994a4f86502ce337ea8651ba
 
 # Diff at Wed, 21 Aug 2024 11:53:00 GMT:
